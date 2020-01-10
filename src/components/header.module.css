@@ -1,0 +1,14 @@
+.header {
+    background-color: white;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: black;
+}
+.navbar li {
+    text-decoration: none;
+    padding:1em 0;
+}
