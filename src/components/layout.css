@@ -1,3 +1,7 @@
+/******************************
+*Global Styles
+******************************/
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 article,
 aside,
 details,
@@ -43,7 +48,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 a:active,
 a:hover {
@@ -63,7 +68,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0;
 }
 mark {
@@ -210,6 +215,13 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+}
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.3em 0;
+  position: absolute;
 }
 img {
   max-width: 100%;

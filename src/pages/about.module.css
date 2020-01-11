@@ -1,0 +1,23 @@
+.content {
+  height: 90vh;
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.content h1 {
+    margin: 0 1em;
+}
+.about_wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.about_wrapper p {
+  width: 50%;
+  line-height: 2em;
+  text-align: justify;
+  font-size: 1.3em;
+}
