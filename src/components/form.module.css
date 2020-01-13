@@ -1,0 +1,38 @@
+.form{
+    background-color: rgba(128, 128, 128, 0.644);
+    width:35%;
+    height: auto;
+    margin:0 auto;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    padding:1em 0;
+}
+.form label {
+    margin:1em auto;
+    padding:0;
+    width:70%;
+   text-align: left;
+   color:white
+}
+.form label input{
+    width:100%;
+    background-color: white;
+    color: black;
+}
+.form label textarea {
+    width:100%;
+    background-color: white;
+    color: black;
+}
+.form button {
+    width:20%;
+    margin:1em auto;
+    border-radius: 10px;
+}
+
+@media (max-width:500px) {
+    .form {
+        width:90%
+    }
+}
