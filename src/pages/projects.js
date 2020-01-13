@@ -34,13 +34,13 @@ const Projects = () => (
           tech={"Javascript | jQuery | CSS | HTML | Git "}
           gitHub={"https://github.com/UncannyValle/Danny-Boy"}
         />
-        <Skills 
+        {/* <Skills 
 
 
         text={"Project for freeCodeCamp using React and then ported to gatsby to host in Netlify"}
         tech={'React | JS | CSS | HTML | Gatsby | Netlify'}
         gitHub={"https://github.com/UncannyValle/MovieQuote-machine"}
-        />
+        /> */}
       </div>
     </div>
   </Layout>
