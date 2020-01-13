@@ -1,0 +1,15 @@
+.projects {
+  background-color: black;
+  color: white;
+  height:auto;
+}
+.projects h1 {
+  padding: 1em 1em;
+}
+.skillsWrapper {
+  display: grid;
+  grid: auto-flow / 1fr 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+  grid-gap: 0.5em;
+}

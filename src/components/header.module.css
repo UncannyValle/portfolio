@@ -18,14 +18,12 @@
   height: 100%;
 }
 .navbar li {
-  padding: 1em;
   text-decoration: none;
   margin: 0;
 }
 .current_tab {
   background-color: black;
   color: white;
-  padding: 1em;
-  text-decoration: none;
-  margin: 0;
+  padding: 1em 0;
+  
 }

@@ -1,0 +1,22 @@
+.card {
+  background-color: gray;
+  padding: 1em;
+  text-align: center;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card img {
+  margin: 0;
+  padding:0;
+}
+
+.gitHub {
+  padding: 0.5em 1em;
+  background-color: white;
+  border-radius: 15px;
+}
+.gitHub:hover {
+  cursor: pointer;
+}

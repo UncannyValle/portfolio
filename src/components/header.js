@@ -1,24 +1,27 @@
 import { Link } from "gatsby"
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styles from "./header.module.css"
 const Header = () => {
-  const [currentTab, setCurrentTab] = useState("home")
-
-  const tabStyles = tab => (currentTab === tab ? styles.currentTab : null)
-
+  // const [currentTab, setCurrentTab] = useState("home")
+  // const tabStyles = tab => (currentTab === tab ? styles.current_tab : null)
+  // console.log(currentTab)
   return (
     <header className={styles.header}>
       <nav>
         <ul className={styles.navbar}>
           <li>
-            <Link className={tabStyles("home")} to="/">
+            <Link
+              // className={tabStyles("home")}
+              // onClick={() => setCurrentTab("home")}
+              to="/"
+            >
               Home
             </Link>
           </li>
           <li>
             <Link
-              className={tabStyles("about")}
-              onClick={setCurrentTab("about")}
+              // className={tabStyles("about")}
+              // onClick={() => setCurrentTab("about")}
               to="/about/"
             >
               About
@@ -26,8 +29,8 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className={tabStyles("projects")}
-              onClick={setCurrentTab("projects")}
+              // className={tabStyles("projects")}
+              // onClick={() => setCurrentTab("projects")}
               to="/projects/"
             >
               Projects
@@ -35,8 +38,8 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className={tabStyles("contact")}
-              onClick={setCurrentTab("contact")}
+              // className={tabStyles("contact")}
+              // onClick={() => setCurrentTab("contact")}
               to="/contact/"
             >
               Contact
