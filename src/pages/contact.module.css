@@ -1,8 +1,8 @@
 .contact {
     background-color: black;
   color: white;
-  height:90vh;
+  min-height:93vh;
 }
 .contact h1 {
-    padding: 1em 0;
+    padding: 1em 1em;
 }

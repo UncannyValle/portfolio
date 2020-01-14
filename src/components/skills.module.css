@@ -2,7 +2,7 @@
   background-color: gray;
   padding: 1em;
   text-align: center;
-  height: 25em;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

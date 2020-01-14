@@ -1,7 +1,11 @@
 .home {
-    margin-top: 15%;
     padding: 0 2em;
     font-size: 2em;
-    
-}
 
+}
+.wrapper {
+    min-height:90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

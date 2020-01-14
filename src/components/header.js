@@ -1,47 +1,47 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import styles from "./header.module.css"
+import menuImage from "../images/menu.png"
+
 const Header = () => {
-  // const [currentTab, setCurrentTab] = useState("home")
-  // const tabStyles = tab => (currentTab === tab ? styles.current_tab : null)
-  // console.log(currentTab)
+  const [menu, setMenu] = useState(styles.initMenu)
+  console.log(menu)
+
+  //Changes
+  let toggleMenu = () => {
+    menu === styles.initMenu || menu === styles.closeMenu
+      ? setMenu(styles.openMenu)
+      : setMenu(styles.closeMenu)
+  }
+  let closeMenu = () => {
+    if (menu === styles.openMenu) {
+      setMenu(styles.closeMenu)
+    }
+  }
   return (
     <header className={styles.header}>
-      <nav>
+      <button onClick={toggleMenu} className={styles.button}>
+        <img src={menuImage} alt="hamburger"></img>
+      </button>
+      <nav className={menu}>
         <ul className={styles.navbar}>
           <li>
-            <Link
-              // className={tabStyles("home")}
-              // onClick={() => setCurrentTab("home")}
-              to="/"
-            >
+            <Link className={styles.links} to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link
-              // className={tabStyles("about")}
-              // onClick={() => setCurrentTab("about")}
-              to="/about/"
-            >
+            <Link className={styles.links} to="/about/">
               About
             </Link>
           </li>
           <li>
-            <Link
-              // className={tabStyles("projects")}
-              // onClick={() => setCurrentTab("projects")}
-              to="/projects/"
-            >
+            <Link className={styles.links} to="/projects/">
               Projects
             </Link>
           </li>
           <li>
-            <Link
-              // className={tabStyles("contact")}
-              // onClick={() => setCurrentTab("contact")}
-              to="/contact/"
-            >
+            <Link className={styles.links} to="/contact/" onClick={closeMenu}>
               Contact
             </Link>
           </li>
