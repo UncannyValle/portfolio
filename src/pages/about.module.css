@@ -15,7 +15,6 @@
   justify-content: space-evenly;
   width: 90%;
   margin: 0 auto;
-  padding: 0.5em;
 }
 .about_wrapper p {
   width: 45%;
@@ -26,4 +25,17 @@
 .about_wrapper img {
   width: 45%;
   height: auto;
+}
+@media(max-width: 500px) {
+  .about_wrapper {
+    flex-wrap: wrap;
+    width:90%;
+  }
+  .about_wrapper p {
+    width:100%;
+  }
+  .about_wrapper img {
+    width: 70%;
+  }
+
 }
