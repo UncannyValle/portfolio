@@ -91,12 +91,12 @@
   }
 
   .openMenu {
-    animation-duration: 215ms;
+    animation-duration: 200ms;
     animation-name: fadeIn;
     visibility: visible;
   }
   .closeMenu {
-    animation-duration: 215ms;
+    animation-duration: 200ms;
     animation-name: fadeOut;
     visibility: hidden;
   }

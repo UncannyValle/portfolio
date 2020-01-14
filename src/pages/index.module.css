@@ -1,11 +1,19 @@
 .home {
-    padding: 0 2em;
-    font-size: 2em;
-
+  padding: 0 2em;
+  font-size: 2em;
 }
 .wrapper {
-    min-height:90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home {
+    padding: 0 0.5em;
+  }
+  .home p {
+      line-height: 1.5em;
+      font-size: .8em;
+  }
 }
