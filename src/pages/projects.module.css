@@ -12,5 +12,11 @@
   grid: auto-flow / 1fr 1fr 1fr;
   width: 90%;
   margin: 1em auto;
-  grid-gap: 0.5em 0.5em;
+  grid-gap: 1em 1em;
+}
+@media(max-width:500px) {
+  .skillsWrapper {
+    grid:auto-flow / 1fr;
+    padding-bottom: 2em;
+  }
 }
