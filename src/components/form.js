@@ -4,11 +4,13 @@ import style from "./form.module.css"
 const Form = () => (
   <form
     className={style.form}
+    name="contact"
     method="post"
-    netlify-honeypot="bot-field"
+    data-netlify-honeypot="bot-field"
     data-netlify="true"
   >
     <input type="hidden" name="bot-field" />
+    <input type="hidden" name="form-name" value="contact" />
     <label>
       E-mail
       <input
