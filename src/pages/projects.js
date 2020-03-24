@@ -25,7 +25,7 @@ const Projects = () => (
         />
         <Skills
           image={videothequePic}
-          site={"https://lenasvideotheque.com"}
+          site={"https://lenasvideotheque"}
           text={"A movie blog using netlify CMS"}
           tech={"Gatsby | React | JS | CSS | HTML | NetlifyCMS"}
           gitHub={"https://github.com/UncannyValle/Lena-s-Videotheque"}
