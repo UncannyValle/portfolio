@@ -1,7 +1,9 @@
 /******************************
 *Global Styles
 ******************************/
-
+*{
+  box-sizing: content-box;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

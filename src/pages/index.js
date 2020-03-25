@@ -1,18 +1,30 @@
 import React from "react"
-import styles from "./index.module.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
+
+// CSS
+const IndexWrapper = styled.div`
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+const Home = styled.div`
+  padding: 0 2em;
+  font-size: 2em;
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className={styles.wrapper}>
-      <div className={styles.home}>
+    <IndexWrapper>
+      <Home>
         <h1>Hi, I'm Julian!</h1>
         <p>Front End Developer</p>
         <p>React Programmer | Freelancer | Silly Husband</p>
-      </div>
-    </div>
+      </Home>
+    </IndexWrapper>
   </Layout>
 )
 

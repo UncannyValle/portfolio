@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styles from "./projects.module.css"
 import Skills from "../components/skills"
 
 import atolePic from "../images/atole_pic.png"
@@ -9,13 +8,36 @@ import videothequePic from "../images/videothequePic.png"
 import dannyPic from "../images/dannyAdventurePic.png"
 import moviePic from "../images/movie.png"
 import markdownPic from "../images/markdownPic.png"
+import styled from "styled-components"
+
+const ProjectsWrapper = styled.div`
+  background-color: black;
+  color: white;
+  min-height: 93vh;
+  padding: 1em auto;
+  h1 {
+    padding: 1em 1em;
+  }
+`
+const SkillsWrapper = styled.div`
+  display: grid;
+  grid: auto-flow / 1fr 1fr 1fr;
+  width: 90%;
+  margin: 1em auto;
+  grid-gap: 1em 1em;
+  padding: 1em;
+  @media only screen and (max-width: 520px) {
+    grid: auto-flow / 1fr;
+    padding-bottom: 2em;
+  }
+`
 
 const Projects = () => (
   <Layout>
     <SEO title="Projects Page" />
-    <div className={styles.projects}>
+    <ProjectsWrapper>
       <h1>A bit of my work</h1>
-      <div className={styles.skillsWrapper}>
+      <SkillsWrapper>
         <Skills
           image={atolePic}
           site={"https://atolemedia.com"}
@@ -51,14 +73,12 @@ const Projects = () => (
         <Skills
           image={markdownPic}
           site={"https://mrkdw-preview-machine.netlify.com/"}
-          text={
-            "A markdown previewer using React"
-          }
+          text={"A markdown previewer using React"}
           tech={"React | JS | CSS | HTML | Netlify"}
           gitHub={"https://github.com/UncannyValle/markdown-previewer"}
         />
-      </div>
-    </div>
+      </SkillsWrapper>
+    </ProjectsWrapper>
   </Layout>
 )
 export default Projects
