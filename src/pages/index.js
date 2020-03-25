@@ -13,6 +13,13 @@ const IndexWrapper = styled.div`
 const Home = styled.div`
   padding: 0 2em;
   font-size: 2em;
+  @media only screen and (max-width: 520px) {
+    padding: 0 0.5em;
+    p {
+      line-height: 1.5em;
+      font-size: 0.8em;
+    }
+  }
 `
 
 const IndexPage = () => (

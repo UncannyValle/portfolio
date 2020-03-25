@@ -17,7 +17,7 @@ const Layout = ({ children, style }) => {
       <Header />
       <div className={style}>
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}</footer>
+        <footer>Built by Julian Valle, © {new Date().getFullYear()}</footer>
       </div>
     </>
   )
