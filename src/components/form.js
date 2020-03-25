@@ -6,18 +6,13 @@ const Form = () => (
     className={style.form}
     name="contact"
     method="post"
-    data-netlify-honeypot="bot-field"
     data-netlify="true"
+    data-netlify-honeypot="bot-field"
   >
-    <input type="hidden" name="bot-field" />
-    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="Contact-Form" value="contact" />
     <label>
       E-mail
-      <input
-        type="email"
-        name="email"
-        required="required"
-      />
+      <input type="email" name="email" required="required" />
     </label>
     <label>
       Name
@@ -25,11 +20,7 @@ const Form = () => (
     </label>
     <label>
       Subject
-      <input
-        type="text"
-        name="subject"
-        required="required"
-      />
+      <input type="text" name="subject" required="required" />
     </label>
     <label>
       Message
