@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const StyledForm = styled.form`
   background-color: rgba(128, 128, 128, 0.644);
-  width: 35%;
+  width: 30rem;
   height: auto;
   margin: 0 auto;
   color: white;

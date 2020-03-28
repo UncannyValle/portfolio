@@ -3,66 +3,77 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import selfie from "../images/selfie.jpg"
+import Title from "../components/title"
+import SectionWrapper from "../components/sectionWrapper"
 
-const Wrapper = styled.div`
-  min-height: 90vh;
-  background-color: black;
-  color: white;
-  width:100vw;
-`
 const AboutWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  height: 30rem;
+  align-items: stretch;
+  margin: 0;
+  height: auto;
 
-  p {
-    width: 50%;
-    font-size: 1.125rem;
-    height: auto;
-    padding: 1rem;
-  }
-  img {
-    width: 50%;
-    height: 100%;
-  }
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: 768px) {
     flex-wrap: wrap;
-    width: 90%;
-    p {
-      width: 100%;
-    }
-    img {
-      width: 70%;
-    }
+    width: 100%;
+    align-items: center;
   }
 `
-const ImageWrapper = styled.div`
-
+const AboutFlexItem = styled.div`
+  width: 50%;
+  font-size: 1.125rem;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    height: auto;
+    width: 100%;
+  }
+  p {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 25rem;
+  }
 `
+
 const About = () => (
   <Layout>
     <SEO title="About me" />
-    <Wrapper>
-      <h2>A bit about me...</h2>
+    <SectionWrapper>
+      <Title>A bit about me...</Title>
       <AboutWrapper>
-        <img src={selfie} alt="Me!"></img>
-
-        <p>
-          I'm Julian Valle, a Front-End Web Developer who loves to make
-          creative, responsive and functional websites for small businesses and
-          beyond! I am a self taught developer who is constantly learning new
-          ways to solve everyday problems using code. <br />
-          <br /> I work mostly using Javascript (React, Gatsby), HTML and
-          CSS(Sass, CSS Modules) but I am always learning new technologies and
-          staying up to date. <br />
-          <br />I also have a background in Psychology, I am a great team
-          player, always there to help out the client, and I make extremely
-          delicious tacos!
-        </p>
+        <AboutFlexItem>
+          <img src={selfie} alt="Me!"></img>
+        </AboutFlexItem>
+        <AboutFlexItem>
+          <p>
+            I'm Julian Valle, a Front-End Web Developer who loves to make
+            creative, responsive and functional websites for small businesses
+            and beyond! I am a self taught developer who is constantly learning
+            new ways to solve everyday problems using code.{" "}
+          </p>
+          <br />
+          <p>
+            {" "}
+            I work mostly using Javascript (React, Gatsby), HTML and CSS(Sass,
+            CSS Modules) but I am always learning new technologies and staying
+            up to date.{" "}
+          </p>
+          <br />
+          <p>
+            I also have a background in Psychology, I am a great team player,
+            always there to help out the client, and I make extremely delicious
+            tacos!
+          </p>
+          <br />
+        </AboutFlexItem>
       </AboutWrapper>
-    </Wrapper>
+    </SectionWrapper>
   </Layout>
 )
 

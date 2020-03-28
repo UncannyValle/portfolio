@@ -17,9 +17,10 @@ const GlobalStyle = createGlobalStyle`
   font-size:100%;
   margin: 0;
   padding: 0;
-  max-width: 100vw;
+  
 body {
   margin:0;
+  max-width: 100vw;
 }
   @media (min-width: 768px) {
     font-size: 112.5%; 
@@ -27,9 +28,12 @@ body {
  }
  h1 {
    font-size: 4rem;
+   line-height:3.5rem;
+
  }
  h2 {
-   font-size: 3rem;
+   font-size: 2rem;
+   line-height:2rem;
  }
  a {
   text-decoration: none;
@@ -43,10 +47,10 @@ ul{
 `
 
 const Footer = styled.footer`
-  bottom: 1vh;
-  width: 100vw;
+  bottom: 0;
+  width: 100%;
   text-align: center;
-  position: absolute;
+  position: relative;
   left: 0;
 `
 const Layout = ({ children }) => {

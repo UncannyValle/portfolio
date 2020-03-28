@@ -9,19 +9,20 @@ const IndexWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media only screen and (max-width: 520px){
-    heigth:auto;
+  @media only screen and (max-width: 520px) {
+    heigth: auto;
   }
 `
 const Home = styled.div`
-margin-left: 3rem;
+  margin-left: 3rem;
+
   @media only screen and (max-width: 520px) {
-    margin:0;
-    h2{
+    margin: 0;
+    text-align: center;
+    h2 {
       font-size: 1.5rem;
       margin-left: 1rem;
     }
-
   }
 `
 

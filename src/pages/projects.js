@@ -2,19 +2,16 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Skills from "../components/skills"
+import Title from "../components/title"
 
 import atolePic from "../images/atole_pic.png"
-import videothequePic from "../images/videothequePic.png"
+// import videothequePic from "../images/videothequePic.png"
 import dannyPic from "../images/dannyAdventurePic.png"
 import moviePic from "../images/movie.png"
 import markdownPic from "../images/markdownPic.png"
 import styled from "styled-components"
+import SectionWrapper from "../components/sectionWrapper"
 
-const ProjectsWrapper = styled.div`
-  background-color: black;
-  color: white;
-  min-height: 90vh;
-`
 const SkillsWrapper = styled.div`
   display: grid;
   grid: auto-flow / 1fr 1fr 1fr;
@@ -30,8 +27,8 @@ const SkillsWrapper = styled.div`
 const Projects = () => (
   <Layout>
     <SEO title="Projects Page" />
-    <ProjectsWrapper>
-      <h2>A bit of my work</h2>
+    <SectionWrapper>
+      <Title>A bit of my work</Title>
       <SkillsWrapper>
         <Skills
           image={atolePic}
@@ -40,13 +37,13 @@ const Projects = () => (
           tech={"Gatsby | React | JS | CSS | HTML"}
           gitHub={"https://github.com/UncannyValle/Atole-Media"}
         />
-        <Skills
+        {/* <Skills
           image={videothequePic}
           site={"https://lenasvideotheque"}
           text={"A movie blog using netlify CMS"}
           tech={"Gatsby | React | JS | CSS | HTML | NetlifyCMS"}
           gitHub={"https://github.com/UncannyValle/Lena-s-Videotheque"}
-        />
+        /> */}
         <Skills
           image={dannyPic}
           site={"https://lbalvarez8.github.io/Happy-Birthday-Danny/"}
@@ -73,7 +70,7 @@ const Projects = () => (
           gitHub={"https://github.com/UncannyValle/markdown-previewer"}
         />
       </SkillsWrapper>
-    </ProjectsWrapper>
+    </SectionWrapper>
   </Layout>
 )
 export default Projects
