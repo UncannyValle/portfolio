@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   background-color: gray;
   padding: 1em;
   text-align: center;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,6 +12,7 @@ const Wrapper = styled.div`
   img {
     margin: 0;
     padding: 0;
+    max-width:100%;
   }
 `
 const GitHubButton = styled.a`

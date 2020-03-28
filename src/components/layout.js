@@ -7,17 +7,43 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
 import Header from "./header"
-import "./layout.css"
+import styled, { createGlobalStyle } from "styled-components"
 
-const Layout = ({ children, style }) => {
+const GlobalStyle = createGlobalStyle`
+ html {
+  box-sizing: content-box;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+ }
+ h1 {
+   font-size: 4rem;
+ }
+ h2 {
+   font-size: 2rem;
+ }
+ a:visited {
+   color: black;
+ }
+`
+
+const Footer = styled.footer`
+  bottom: 1vh;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+`
+const Layout = ({ children }) => {
   return (
     <>
+      <GlobalStyle />
       <Header />
-      <div className={style}>
+      <div>
         <main>{children}</main>
-        <footer>Built by Julian Valle, © {new Date().getFullYear()}</footer>
+        <Footer>Built by Julian Valle, © {new Date().getFullYear()}</Footer>
       </div>
     </>
   )

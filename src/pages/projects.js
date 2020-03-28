@@ -13,19 +13,14 @@ import styled from "styled-components"
 const ProjectsWrapper = styled.div`
   background-color: black;
   color: white;
-  min-height: 93vh;
-  padding: 1em auto;
-  h1 {
-    padding: 1em 1em;
-  }
+  min-height: 90vh;
 `
 const SkillsWrapper = styled.div`
   display: grid;
   grid: auto-flow / 1fr 1fr 1fr;
   width: 90%;
-  margin: 1em auto;
   grid-gap: 1em 1em;
-  padding: 1em;
+  margin: 0 auto;
   @media only screen and (max-width: 520px) {
     grid: auto-flow / 1fr;
     padding-bottom: 2em;
@@ -36,7 +31,7 @@ const Projects = () => (
   <Layout>
     <SEO title="Projects Page" />
     <ProjectsWrapper>
-      <h1>A bit of my work</h1>
+      <h2>A bit of my work</h2>
       <SkillsWrapper>
         <Skills
           image={atolePic}

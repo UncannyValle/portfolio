@@ -5,25 +5,21 @@ import SEO from "../components/seo"
 import selfie from "../images/selfie.jpg"
 
 const Wrapper = styled.div`
-  min-height: 93vh;
+  min-height: 90vh;
   background-color: black;
   color: white;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  h1 {
-    margin: 1em 1em;
+  h2 {
+    padding: 3em 0 1em 10em;
   }
 `
 const AboutWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
-  width: 90%;
   margin: 0 auto;
+
   p {
     width: 45%;
-    line-height: 1.5em;
     text-align: justify;
     font-size: 1.125em;
   }
@@ -47,7 +43,7 @@ const About = () => (
   <Layout>
     <SEO title="About me" />
     <Wrapper>
-      <h1>A bit about me...</h1>
+      <h2>A bit about me...</h2>
       <AboutWrapper>
         <img src={selfie} alt="Me!"></img>
         <p>

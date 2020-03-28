@@ -1,26 +1,30 @@
 /******************************
 *Global Styles
 ******************************/
-*{
+* {
   box-sizing: content-box;
-}
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-body {
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 2.5em;
+  font-size: 14px;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-article,
+body {
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
+/* article,
 aside,
 details,
 figcaption,
@@ -223,14 +227,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-footer {
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  height: 2.5em;
-  padding: 0.5em 0;
-}
+
 img {
   max-width: 100%;
   margin-left: 0;
@@ -642,4 +639,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */

@@ -7,8 +7,8 @@ import styled from "styled-components"
 const ContactWrapper = styled.div`
   background-color: black;
   color: white;
-  min-height: 93vh;
-  h1 {
+  min-height: 90vh;
+  h2 {
     padding: 1em 1em;
   }
 `
@@ -16,7 +16,7 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact Page" />
     <ContactWrapper>
-      <h1>Contact Me</h1>
+      <h2>Contact Me</h2>
       <Form />
     </ContactWrapper>
   </Layout>
