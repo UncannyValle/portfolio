@@ -14,17 +14,29 @@ const GlobalStyle = createGlobalStyle`
  html {
   box-sizing: content-box;
   line-height: 1.5rem;
+  font-size:100%;
   margin: 0;
   padding: 0;
-  list-style: none;
-  text-decoration: none;
+  max-width: 100vw;
+body {
+  margin:0;
+}
+  @media (min-width: 768px) {
+    font-size: 112.5%; 
+  }
  }
  h1 {
    font-size: 4rem;
  }
  h2 {
-   font-size: 2rem;
+   font-size: 3rem;
  }
+ a {
+  text-decoration: none;
+ }
+ul{
+  list-style:none;
+}
  a:visited {
    color: black;
  }
@@ -32,9 +44,10 @@ const GlobalStyle = createGlobalStyle`
 
 const Footer = styled.footer`
   bottom: 1vh;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   position: absolute;
+  left: 0;
 `
 const Layout = ({ children }) => {
   return (

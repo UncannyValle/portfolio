@@ -9,16 +9,19 @@ const IndexWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 520px){
+    heigth:auto;
+  }
 `
 const Home = styled.div`
-  padding: 0 2em;
-  font-size: 2em;
+margin-left: 3rem;
   @media only screen and (max-width: 520px) {
-    padding: 0 0.5em;
-    p {
-      line-height: 1.5em;
-      font-size: 0.8em;
+    margin:0;
+    h2{
+      font-size: 1.5rem;
+      margin-left: 1rem;
     }
+
   }
 `
 
@@ -28,8 +31,8 @@ const IndexPage = () => (
     <IndexWrapper>
       <Home>
         <h1>Hi, I'm Julian!</h1>
-        <p>Front End Developer</p>
-        <p>React Programmer | Freelancer | Silly Husband</p>
+        <h2>Front End Developer</h2>
+        <h2>React Programmer | Freelancer | Silly Husband</h2>
       </Home>
     </IndexWrapper>
   </Layout>

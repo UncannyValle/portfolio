@@ -8,24 +8,24 @@ const Wrapper = styled.div`
   min-height: 90vh;
   background-color: black;
   color: white;
-  h2 {
-    padding: 3em 0 1em 10em;
-  }
+  width:100vw;
 `
 const AboutWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   margin: 0 auto;
+  height: 30rem;
 
   p {
-    width: 45%;
-    text-align: justify;
-    font-size: 1.125em;
+    width: 50%;
+    font-size: 1.125rem;
+    height: auto;
+    padding: 1rem;
   }
   img {
-    width: 45%;
-    height: auto;
+    width: 50%;
+    height: 100%;
   }
   @media only screen and (max-width: 520px) {
     flex-wrap: wrap;
@@ -38,7 +38,9 @@ const AboutWrapper = styled.div`
     }
   }
 `
+const ImageWrapper = styled.div`
 
+`
 const About = () => (
   <Layout>
     <SEO title="About me" />
@@ -46,6 +48,7 @@ const About = () => (
       <h2>A bit about me...</h2>
       <AboutWrapper>
         <img src={selfie} alt="Me!"></img>
+
         <p>
           I'm Julian Valle, a Front-End Web Developer who loves to make
           creative, responsive and functional websites for small businesses and

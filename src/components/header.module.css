@@ -12,7 +12,6 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  text-decoration: none;
   color: black;
   margin: 0;
   height: 100%;
@@ -76,6 +75,7 @@
     background-color: white;
     padding: auto 0;
     text-align: center;
+    
   }
   .links {
     margin: 0;
