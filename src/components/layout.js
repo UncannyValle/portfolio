@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
   font-size:100%;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
+
   
 body {
   margin:0;
@@ -28,12 +30,13 @@ body {
  }
  h1 {
    font-size: 4rem;
-   line-height:3.5rem;
-
+   line-height: 3.5rem;
+   font-family: 'Poppins' sans-serif;
  }
  h2 {
    font-size: 2rem;
    line-height:2rem;
+   font-family: 'Poppins' sans-serif;
  }
  a {
   text-decoration: none;
