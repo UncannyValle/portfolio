@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Skills from "../components/skills"
 import Title from "../components/title"
@@ -25,7 +24,7 @@ const SkillsWrapper = styled.div`
 `
 
 const Projects = () => (
-  <Layout>
+  <>
     <SEO title="Projects Page" />
     <SectionWrapper>
       <Title>A bit of my work</Title>
@@ -71,6 +70,6 @@ const Projects = () => (
         />
       </SkillsWrapper>
     </SectionWrapper>
-  </Layout>
+  </>
 )
 export default Projects

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import selfie from "../images/selfie.jpg"
 import Title from "../components/title"
@@ -42,7 +41,7 @@ const AboutFlexItem = styled.div`
 `
 
 const About = () => (
-  <Layout>
+  <>
     <SEO title="About me" />
     <SectionWrapper>
       <Title>A bit about me...</Title>
@@ -74,7 +73,7 @@ const About = () => (
         </AboutFlexItem>
       </AboutWrapper>
     </SectionWrapper>
-  </Layout>
+  </>
 )
 
 export default About

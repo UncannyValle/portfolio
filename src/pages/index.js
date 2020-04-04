@@ -1,11 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import About from "./about"
 
 // CSS
 const IndexWrapper = styled.div`
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,16 +26,14 @@ const Home = styled.div`
 `
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <IndexWrapper>
-      <Home>
-        <h1>Hi, I'm Julian!</h1>
-        <h2>Front End Developer</h2>
-        <h2>React Programmer | Freelancer | Silly Husband</h2>
-      </Home>
-    </IndexWrapper>
-  </Layout>
+    <Home>
+      <h1>Hi, I'm Julian!</h1>
+      <h2>Front End Developer</h2>
+      <h2>React Programmer | Freelancer | Silly Husband</h2>
+    </Home>
+  </>
 )
 
 export default IndexPage
