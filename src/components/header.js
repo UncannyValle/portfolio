@@ -5,11 +5,15 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
   position: fixed;
+  z-index:5;
   top: 0;
-  background-color: white-space;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0 2.5px 2.5px 0;
   ul {
     display: flex;
     margin: 1rem 0;
+    justify-content: space-evenly;
   }
 `
 const Header = () => {

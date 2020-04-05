@@ -3,8 +3,9 @@ import styled from "styled-components"
 
 const Home = () => {
   const HomeWrapper = styled.div`
-    margin-left: 3rem;
-    height: 95vh;
+    position: fixed;
+    top:33vh;
+
     @media (max-width: 520px) {
       margin: 0;
       text-align: center;

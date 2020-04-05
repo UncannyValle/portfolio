@@ -7,12 +7,13 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "./header"
 import styled from "styled-components"
-import Home from "../pages/home"
-import About from "../pages/about"
-import Projects from "../pages/projects"
-import Contact from "../pages/contact"
+
+import Header from "./header"
+import Home from "../sections/home"
+import About from "../sections/about"
+import Projects from "../sections/projects"
+import Contact from "../sections/contact"
 
 const Footer = styled.footer`
   bottom: 0;
@@ -22,15 +23,16 @@ const Footer = styled.footer`
   left: 0;
 `
 const Main = styled.main`
-  margin-top: 5rem;
+  position: relative;
+  top: 100vh;
 `
 
 const Layout = () => {
   return (
     <>
       <Header />
+      <Home />
       <Main>
-        <Home />
         <About />
         <Projects />
         <Contact />
