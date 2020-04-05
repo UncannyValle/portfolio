@@ -1,53 +1,40 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
-import styles from "./header.module.css"
-import menuImage from "../images/menu.png"
+import React from "react"
+// import menuImage from "../images/menu.png"
+import styled from "styled-components"
 
+const HeaderWrapper = styled.header`
+  position: fixed;
+  top: 0;
+  background-color: white-space;
+  ul {
+    display: flex;
+    margin: 1rem 0;
+  }
+`
 const Header = () => {
-  const [menu, setMenu] = useState(styles.initMenu)
-  console.log(menu)
-
-  //Changes
-  let toggleMenu = () => {
-    menu === styles.initMenu || menu === styles.closeMenu
-      ? setMenu(styles.openMenu)
-      : setMenu(styles.closeMenu)
-  }
-  let closeMenu = () => {
-    if (menu === styles.openMenu) {
-      setMenu(styles.closeMenu)
-    }
-  }
   return (
-    <header className={styles.header}>
-      <button onClick={toggleMenu} className={styles.button}>
+    <HeaderWrapper>
+      {/* <button onClick={toggleMenu} >
         <img src={menuImage} alt="hamburger"></img>
-      </button>
-      <nav className={menu}>
-        <ul className={styles.navbar}>
+      </button> */}
+      <nav>
+        <ul>
           <li>
-            <Link className={styles.links} to="/">
-              Home
-            </Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link className={styles.links} to="/about/">
-              About
-            </Link>
+            <Link to="/about/">ABOUT</Link>
           </li>
           <li>
-            <Link className={styles.links} to="/projects/">
-              Projects
-            </Link>
+            <Link to="/projects/">PROJECTS</Link>
           </li>
           <li>
-            <Link className={styles.links} to="/contact/" onClick={closeMenu}>
-              Contact
-            </Link>
+            <Link to="/contact/">CONTACT</Link>
           </li>
         </ul>
       </nav>
-    </header>
+    </HeaderWrapper>
   )
 }
 export default Header

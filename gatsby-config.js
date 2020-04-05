@@ -32,11 +32,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Poppins`,
-            variants: [`400`, `700`, `800`],
+            family: `Montserrat Subrayada`,
+            variants: [`400`, `700`],
           },
           {
-            family: `Open Sans`,
+            family: `Montserrat`,
             variants: [`400`, `400i`, `700`],
           },
         ],

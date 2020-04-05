@@ -1,9 +1,3 @@
-import React from "react"
-import { GlobalStyle } from "./globalstyle"
-import Layout from "./src/components/layout"
-export const wrapRootElement = ({element}) => (
-  <>
-    <GlobalStyle />
-    <Layout>{element}</Layout>
-  </>
-)
+import { wrapRootElement as wrap } from './root-wrapper';
+
+export const wrapRootElement = wrap;
