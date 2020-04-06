@@ -11,7 +11,6 @@ const AboutWrapper = styled.div`
   margin: 0;
   height: auto;
 
-
   @media only screen and (max-width: 768px) {
     flex-wrap: wrap;
     width: 100%;
@@ -37,11 +36,10 @@ const AboutFlexItem = styled.div`
   }
   @media only screen and (max-width: 768px) {
     width: 100%;
-    height: 25rem;
   }
 `
 
-const About = (props) => (
+const About = props => (
   <div id={props.id}>
     <SEO title="About me" />
     <SectionWrapper>
@@ -57,12 +55,16 @@ const About = (props) => (
             and beyond! I am a self taught developer who is constantly learning
             new ways to solve everyday problems using code.{" "}
           </p>
+          <hr/>
           <p>
             {" "}
-            I work mostly using Javascript (React), HTML and CSS(Sass,
-            CSS Modules, Styled Components) as well as working with CMS's like Wordpress and Shopify. I am always learning new technologies and staying
-            up to date.{" "}
+            I work mostly using Javascript (React), HTML and CSS(Sass, CSS
+            Modules, Styled Components) as well as working with CMS's like
+            Wordpress and Shopify. I am always learning new technologies and
+            staying up to date.{" "}
           </p>
+          <hr/>
+
           <p>
             I also have a background in Psychology, I am a great team player,
             always there to help out the client, and I make extremely delicious

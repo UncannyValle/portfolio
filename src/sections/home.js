@@ -12,10 +12,8 @@ const Home = () => {
     background: url(${splash});
     background-size: cover;
     text-align: right;
-    /* img{
-      
-      width:100%;
-    } */
+    background-position: center; 
+
 
     @media (max-width: 520px) {
       margin: 0;
@@ -34,7 +32,6 @@ const Home = () => {
     @media (max-width: 520px) {
       width: 100%;
       position: absolute;
-      bottom: 0;
       h1 {
         font-size: 3rem;
       }
