@@ -11,6 +11,7 @@ const AboutWrapper = styled.div`
   margin: 0;
   height: auto;
 
+
   @media only screen and (max-width: 768px) {
     flex-wrap: wrap;
     width: 100%;
@@ -40,8 +41,8 @@ const AboutFlexItem = styled.div`
   }
 `
 
-const About = () => (
-  <>
+const About = (props) => (
+  <div id={props.id}>
     <SEO title="About me" />
     <SectionWrapper>
       <Title>A bit about me...</Title>
@@ -73,7 +74,7 @@ const About = () => (
         </AboutFlexItem>
       </AboutWrapper>
     </SectionWrapper>
-  </>
+  </div>
 )
 
 export default About

@@ -10,6 +10,7 @@ import moviePic from "../images/movie.png"
 import markdownPic from "../images/markdownPic.png"
 import styled from "styled-components"
 import SectionWrapper from "../components/sectionWrapper"
+import { checkPropTypes } from "prop-types"
 
 const SkillsWrapper = styled.div`
   display: grid;
@@ -23,8 +24,8 @@ const SkillsWrapper = styled.div`
   }
 `
 
-const Projects = () => (
-  <>
+const Projects = (props) => (
+  <div id={props.id}>
     <SEO title="Projects Page" />
     <SectionWrapper>
       <Title>A bit of my work</Title>
@@ -70,6 +71,6 @@ const Projects = () => (
         />
       </SkillsWrapper>
     </SectionWrapper>
-  </>
+  </div>
 )
 export default Projects

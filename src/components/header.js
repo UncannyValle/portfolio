@@ -5,15 +5,23 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
   position: fixed;
-  z-index:5;
+  z-index: 5;
   top: 0;
   width: 100vw;
-  background-color: white;
-  box-shadow: 0 2.5px 2.5px 0;
+  background-color: #95e6d594;
   ul {
     display: flex;
     margin: 1rem 0;
     justify-content: space-evenly;
+  }
+  a {
+    color: #0d0d0d;
+    font-weight: 700;
+  }
+  @media (max-width: 520px) {
+    #title {
+      display: none;
+    }
   }
 `
 const Header = () => {
@@ -24,17 +32,17 @@ const Header = () => {
       </button> */}
       <nav>
         <ul>
-          <li>
-            <Link to="/">HOME</Link>
+          <li id="title">
+            <Link to="/">The Uncanny Valle</Link>
           </li>
           <li>
-            <Link to="/about/">ABOUT</Link>
+            <a href="#about">ABOUT</a>
           </li>
           <li>
-            <Link to="/projects/">PROJECTS</Link>
+            <a href="#projects">PROJECTS</a>
           </li>
           <li>
-            <Link to="/contact/">CONTACT</Link>
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </nav>

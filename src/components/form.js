@@ -2,11 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledForm = styled.form`
-  background-color: rgba(128, 128, 128, 0.644);
+  background-color: #ffeaa6;
   width: 30rem;
   height: auto;
   margin: 0 auto;
-  color: white;
   display: flex;
   flex-direction: column;
   padding: 1em 0;
@@ -16,7 +15,7 @@ const StyledForm = styled.form`
     padding: 0;
     width: 70%;
     text-align: left;
-    color: white;
+    color: black;
   }
   label input {
     width: 100%;

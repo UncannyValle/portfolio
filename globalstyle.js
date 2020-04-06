@@ -3,8 +3,8 @@ import reset from "styled-reset"
 
 export const theme = {
   font: {
-    title: "Montserrat Subrayada, sans-serif",
-    text: "Montserrat, sans-serif",
+    title: "Shadows Into Light, sans-serif",
+    text: "Lato, sans-serif",
   },
 }
 
@@ -20,11 +20,11 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     letter-spacing: 0;
-    background-color: '#f7fafc';
+    height:auto;
   }
   h1{
     font-family: ${({ theme }) => theme.font.title};
-    font-size: 4rem;
+    font-size: 5rem;
   }h2{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 2rem;
@@ -32,5 +32,8 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none ;
     color:black;
+    font-family: ${({ theme }) => theme.font.title};
+    font-size:1.5rem;
+
  }  
 `
