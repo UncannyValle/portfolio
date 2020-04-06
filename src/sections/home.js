@@ -11,7 +11,7 @@ const Home = () => {
     color: #364399;
     padding-top: 30vh;
     background: url(${splash});
-    background-size: cover;
+    background-size: contain;
     text-align: right;
 
     @media (max-width: 520px) {
@@ -30,6 +30,12 @@ const Home = () => {
       width: 100%;
       position: absolute;
       bottom: 0;
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
     }
   `
   return (

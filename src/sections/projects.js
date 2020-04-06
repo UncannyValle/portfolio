@@ -10,7 +10,6 @@ import moviePic from "../images/movie.png"
 import markdownPic from "../images/markdownPic.png"
 import styled from "styled-components"
 import SectionWrapper from "../components/sectionWrapper"
-import { checkPropTypes } from "prop-types"
 
 const SkillsWrapper = styled.div`
   display: grid;
