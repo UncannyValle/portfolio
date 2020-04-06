@@ -5,11 +5,20 @@ import Form from "../components/form"
 import Title from "../components/title"
 import ContactWrapper from "../components/sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faTwitter,faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import {
+  faGithub,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
+import { faFile } from "@fortawesome/free-solid-svg-icons"
 
 const SocialWrapper = styled.div`
-  display: flex;
-  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+  a {
+    font-size: 3rem;
+    color: white;
+  }
 `
 
 const Contact = props => (
@@ -19,9 +28,34 @@ const Contact = props => (
       <Title>Contact Me</Title>
       <Form />
       <SocialWrapper>
-        <FontAwesomeIcon icon={faLinkedin} />
-        <FontAwesomeIcon icon={faGithub} />
-        <FontAwesomeIcon icon={faTwitter} />
+        <a
+          href="https://linkedin.com/in/uncannyvalle/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a
+          href="https://github.com/uncannyvalle/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a
+          href="https://twitter.com/theuncannyvalle/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a href="./JulianValleGarcia_Resume.pdf" download>
+          {" "}
+          <FontAwesomeIcon icon={faFile} />
+        </a>
       </SocialWrapper>
     </ContactWrapper>
   </div>

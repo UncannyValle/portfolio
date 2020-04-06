@@ -9,10 +9,13 @@ const Home = () => {
     top: 0;
     height: 100vh;
     color: #364399;
-    padding-top: 30vh;
     background: url(${splash});
-    background-size: contain;
+    background-size: cover;
     text-align: right;
+    /* img{
+      
+      width:100%;
+    } */
 
     @media (max-width: 520px) {
       margin: 0;
@@ -22,10 +25,12 @@ const Home = () => {
   const TextWrap = styled.div`
     background-color: #ffffffdb;
     display: block;
-    width: 50%;
+    width: 100%;
     text-align: center;
-    margin: 0 0 0 auto;
-    padding: 1.5rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    top: 0;
+    position: absolute;
     @media (max-width: 520px) {
       width: 100%;
       position: absolute;
@@ -40,6 +45,7 @@ const Home = () => {
   `
   return (
     <HomeWrapper>
+      {/* <img src={splash} alt="me drinking some atole" /> */}
       <TextWrap>
         <h1>Hi, I'm Julian!</h1>
         <h2>Web Developer</h2>

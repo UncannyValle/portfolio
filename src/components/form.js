@@ -30,8 +30,8 @@ const StyledForm = styled.form`
   button {
     margin: 1em auto;
     padding: 0.25em 1.5em;
-    border-radius: 10px;
-    background-color: white;
+    border-radius: 7px;
+    background-color: #95E6D5;
   }
 
   @media only screen and (max-width: 520px) {

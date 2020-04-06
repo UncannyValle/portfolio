@@ -25,7 +25,7 @@ const AboutFlexItem = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   img {
     height: auto;
     width: 100%;
@@ -57,20 +57,17 @@ const About = (props) => (
             and beyond! I am a self taught developer who is constantly learning
             new ways to solve everyday problems using code.{" "}
           </p>
-          <br />
           <p>
             {" "}
-            I work mostly using Javascript (React, Gatsby), HTML and CSS(Sass,
-            CSS Modules) but I am always learning new technologies and staying
+            I work mostly using Javascript (React), HTML and CSS(Sass,
+            CSS Modules, Styled Components) as well as working with CMS's like Wordpress and Shopify. I am always learning new technologies and staying
             up to date.{" "}
           </p>
-          <br />
           <p>
             I also have a background in Psychology, I am a great team player,
             always there to help out the client, and I make extremely delicious
             tacos!
           </p>
-          <br />
         </AboutFlexItem>
       </AboutWrapper>
     </SectionWrapper>
