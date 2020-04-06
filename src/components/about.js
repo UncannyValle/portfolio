@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import SEO from "../components/seo"
+import SEO from "./seo"
 import selfie from "../images/selfie.jpg"
-import Title from "../components/title"
-import SectionWrapper from "../components/sectionWrapper"
+import Title from "./title"
+import SectionWrapper from "./sectionWrapper"
 
 const AboutWrapper = styled.div`
   display: flex;

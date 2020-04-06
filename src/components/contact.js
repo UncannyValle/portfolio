@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import SEO from "../components/seo"
-import Form from "../components/form"
-import Title from "../components/title"
-import ContactWrapper from "../components/sectionWrapper"
+import SEO from "./seo"
+import Form from "./form"
+import Title from "./title"
+import ContactWrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGithub,

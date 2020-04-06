@@ -6,14 +6,13 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Header from "./header"
-import Home from "../sections/home"
-import About from "../sections/about"
-import Projects from "../sections/projects"
-import Contact from "../sections/contact"
+import Header from "../components/header"
+import Home from "../components/home"
+import About from "../components/about"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
 
 const Footer = styled.footer`
   width: 100%;
@@ -35,7 +34,7 @@ const Main = styled.main`
   height: 100%;
 `
 
-const Layout = () => {
+const IndexPage = () => {
   return (
     <>
       <Header />
@@ -50,8 +49,6 @@ const Layout = () => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
-export default Layout
+
+export default IndexPage

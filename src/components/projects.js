@@ -1,7 +1,7 @@
 import React from "react"
-import SEO from "../components/seo"
-import Skills from "../components/skills"
-import Title from "../components/title"
+import SEO from "./seo"
+import Skills from "./skills"
+import Title from "./title"
 
 import atolePic from "../images/atole_pic.png"
 // import videothequePic from "../images/videothequePic.png"
@@ -9,7 +9,7 @@ import dannyPic from "../images/dannyAdventurePic.png"
 import moviePic from "../images/movie.png"
 import markdownPic from "../images/markdownPic.png"
 import styled from "styled-components"
-import SectionWrapper from "../components/sectionWrapper"
+import SectionWrapper from "./sectionWrapper"
 
 const SkillsWrapper = styled.div`
   display: grid;
