@@ -52,7 +52,11 @@ const Contact = props => (
           {" "}
           <FontAwesomeIcon icon={faTwitter} />
         </a>
-        <a href="./Julian_Valle_Garcia_-_Junior_Web_Developer.pdf" download="JulianValleResume">
+        <a
+          href="https://resume.io/r/xhD8EPtnQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {" "}
           <FontAwesomeIcon icon={faFile} />
         </a>
