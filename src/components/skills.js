@@ -15,7 +15,11 @@ const Wrapper = styled.div`
   img {
     margin: 0;
     padding: 0;
-    max-width: 100%;
+    width: 90%;
+    transition: .2s;
+    &:hover {
+      width: 100%;
+    }
   }
 `
 const GitHubButton = styled.a`
@@ -25,6 +29,11 @@ const GitHubButton = styled.a`
   width: 50%;
   color: black;
   margin: 1rem 0;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #95e6d5;
+  }
 `
 
 const Skills = props => {

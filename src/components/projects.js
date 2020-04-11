@@ -8,7 +8,10 @@ import atolePic from "../images/atole_pic.png"
 import dannyPic from "../images/dannyAdventurePic.png"
 import moviePic from "../images/movie.png"
 import markdownPic from "../images/markdownPic.png"
+import soundMachinePic from "../images/mp-image.png"
+import calcPic from "../images/calcutron.png"
 import styled from "styled-components"
+
 import SectionWrapper from "./sectionWrapper"
 
 const SkillsWrapper = styled.div`
@@ -67,6 +70,19 @@ const Projects = (props) => (
           text={"A markdown previewer using React"}
           tech={"React | JS | CSS | HTML | Netlify"}
           gitHub={"https://github.com/UncannyValle/markdown-previewer"}
+        />
+        <Skills 
+        image={soundMachinePic}
+          site={"https://mp-soundmaker.netlify.com"}
+          text={"A fun little sound tester"}
+          tech={"React | JS | CSS | HTML | Netlify"}
+          gitHub={"https://github.com/UncannyValle/MarioPaintSoundMachine"}
+        /><Skills 
+        image={calcPic}
+          site={"https://calcutron.netlify.com"}
+          text={"Just a calculator made with React"}
+          tech={"React | JS | CSS | HTML | Netlify"}
+          gitHub={"https://github.com/UncannyValle/calcutron"}
         />
       </SkillsWrapper>
     </SectionWrapper>
