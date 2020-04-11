@@ -52,7 +52,7 @@ const Contact = props => (
           {" "}
           <FontAwesomeIcon icon={faTwitter} />
         </a>
-        <a href="./Julian_Valle_Garcia_-_Junior_Web_Developer.pdf" download>
+        <a href="./Julian_Valle_Garcia_-_Junior_Web_Developer.pdf" download="JulianValleResume">
           {" "}
           <FontAwesomeIcon icon={faFile} />
         </a>
