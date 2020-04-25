@@ -27,7 +27,7 @@ const Main = styled.main`
   height: 100%;
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
     <>
       <Header />
