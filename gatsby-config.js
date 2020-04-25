@@ -34,7 +34,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Shadows Into Light`,
+            family: `Karma`,
             variants: [`400`, `700`],
           },
           {

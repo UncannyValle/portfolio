@@ -3,7 +3,7 @@ import reset from "styled-reset"
 
 export const theme = {
   font: {
-    title: "Shadows Into Light, sans-serif",
+    title: "Karma, sans-serif",
     text: "Lato, sans-serif",
   },
 }
@@ -25,9 +25,11 @@ export const GlobalStyle = createGlobalStyle`
   h1{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 5rem;
+    color: #364399;
   }h2{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 2rem;
+    color: #364399;
   }
   a {
     text-decoration: none ;

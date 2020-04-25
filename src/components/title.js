@@ -2,9 +2,12 @@ import styled from "styled-components"
 
 const Title = styled.h1`
   font-size: 3rem;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
   text-align: center;
-  padding: 3rem 0;
+  background-color: #ffeaa6;
+  display: inline-block;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   @media only screen and (max-width: 768px) {
     text-align: center;
   }

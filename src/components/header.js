@@ -8,7 +8,7 @@ const HeaderWrapper = styled.header`
   z-index: 5;
   top: 0;
   width: 100vw;
-  background-color: #95e6d594;
+  background-color: #95e6d5;
   ul {
     display: flex;
     margin: 1rem 0;
@@ -17,7 +17,16 @@ const HeaderWrapper = styled.header`
   a {
     color: #0d0d0d;
     font-weight: 700;
+    transition: .2s;
+    padding: 2rem;
+    &:hover {
+      color:#64562c;
+    }
+    &:active{
+      text-decoration:underline;
+    }
   }
+
   @media (max-width: 520px) {
     #title {
       display: none;

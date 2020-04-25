@@ -6,12 +6,11 @@ const Home = () => {
   const HomeWrapper = styled.div`
     width: 100%;
     height: 100vh;
-    color: #364399;
     background: url(${splash});
     background-size: cover;
     text-align: right;
-    background-position: center; 
-
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);..
 
     @media (max-width: 520px) {
       margin: 0;
