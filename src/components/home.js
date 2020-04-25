@@ -5,8 +5,6 @@ import splash from "../images/splash.jpg"
 const Home = () => {
   const HomeWrapper = styled.div`
     width: 100%;
-    position: fixed;
-    top: 0;
     height: 100vh;
     color: #364399;
     background: url(${splash});
