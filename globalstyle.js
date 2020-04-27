@@ -25,11 +25,12 @@ export const GlobalStyle = createGlobalStyle`
   h1{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 5rem;
-    color: #364399;
+     color: #2c26ff;
+;
   }h2{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 2rem;
-    color: #364399;
+    color: #2c26ff;
   }
   a {
     text-decoration: none ;

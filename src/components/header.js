@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState, useRef, useLayoutEffect } from "react"
 // import menuImage from "../images/menu.png"
 import styled from "styled-components"
 
@@ -7,23 +7,34 @@ const HeaderWrapper = styled.header`
   position: fixed;
   z-index: 5;
   top: 0;
-  width: 100vw;
-  background-color: #95e6d5;
+  width: 100%;
+  height: 15vh;
+  background-color: white;
+  box-shadow: ${({ animate }) =>
+    animate
+      ? "1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)"
+      : "none"};
+  transition: all 200ms ease-in;
+  nav {
+    height: 100%;
+  }
   ul {
     display: flex;
-    margin: 1rem 0;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
   }
   a {
-    color: #0d0d0d;
+    transition: 0.2s;
+    padding: 1rem 1.5rem;
     font-weight: 700;
-    transition: .2s;
-    padding: 2rem;
+    box-shadow: none;
+    border-radius: 290486px;
     &:hover {
-      color:#64562c;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
-    &:active{
-      text-decoration:underline;
+    &:active {
+      text-decoration: underline;
     }
   }
 
@@ -33,25 +44,43 @@ const HeaderWrapper = styled.header`
     }
   }
 `
+const Title = styled(Link)`
+  background-color: white;
+`
+const Button = styled(Link)`
+  background-color: #349aff;
+  color: white;
+`
+
 const Header = () => {
+  const [shadow, setShadow] = useState(false)
+  const ourRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const topPos = element => element.getBoundingClientRect().top
+    const headerPos = topPos(ourRef.current)
+
+    const onScroll = () => {
+      const scrollPosition = window.scrollY
+      if (scrollPosition > headerPos) {
+        setShadow(true)
+      } else setShadow(false)
+    }
+    window.addEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper ref={ourRef} animate={shadow}>
       {/* <button onClick={toggleMenu} >
         <img src={menuImage} alt="hamburger"></img>
       </button> */}
       <nav>
         <ul>
           <li id="title">
-            <Link to="/">The Uncanny Valle</Link>
+            <Title to="/">The Uncanny Valle</Title>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
-          </li>
-          <li>
-            <a href="#projects">PROJECTS</a>
-          </li>
-          <li>
-            <a href="#contact">CONTACT</a>
+            <Button to="/blog/test">Hit me up!</Button>
           </li>
         </ul>
       </nav>

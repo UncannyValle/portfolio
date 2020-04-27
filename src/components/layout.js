@@ -13,7 +13,7 @@ import Header from "./header"
 import styled from "styled-components"
 
 const BodyWrapper = styled.div`
-  background-color: #ffeaa6;
+  background-color: #ffffff;
 
 `
 
