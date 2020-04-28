@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none ;
     color:black;
     font-family: ${({ theme }) => theme.font.title};
-    font-size:1.5rem;
+    font-size:1.3rem;
 
  }  
 `
