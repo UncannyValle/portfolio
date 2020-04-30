@@ -22,6 +22,9 @@ const Home = () => {
     margin: 0 auto;
     top: 0;
     color: #2c26ff;
+    hr{
+      width:30%;
+    }
     @media (max-width: 520px) {
       width: 100%;
       h1 {
@@ -30,13 +33,15 @@ const Home = () => {
       h2 {
         font-size: 2rem;
       }
+      
     }
   `
   return (
     <HomeWrapper>
       <TextWrap>
         <h1>Hi, I'm Julian!</h1>
-        <h2>Web Developer</h2>
+        <hr />
+        <h2>Designer | Web Developer | Hubby</h2>
       </TextWrap>
     </HomeWrapper>
   )
