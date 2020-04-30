@@ -26,12 +26,12 @@ const Home = () => {
       width:30%;
     }
     @media (max-width: 520px) {
-      width: 100%;
+      width: 80%;
       h1 {
         font-size: 3rem;
       }
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       
     }

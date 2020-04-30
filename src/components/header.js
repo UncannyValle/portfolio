@@ -37,12 +37,13 @@ const HeaderWrapper = styled.header`
     &:active {
       text-decoration: underline;
     }
-  }
-
-  @media (max-width: 520px) {
-    #title {
-      display: none;
+    @media (max-width: 520px) {
+      width: 30%;
+      font-size: ${({ animate }) => (animate ? ".75rem" : "1rem")};
     }
+  }
+  @media (max-width: 520px) {
+    padding: 1rem 0;
   }
 `
 const Title = styled(Link)`
@@ -59,7 +60,7 @@ const Button = styled(Link)`
   background-color: #2352e8;
   &:hover {
     background-color: #26fff9;
-    color: #2C26FF;
+    color: #2c26ff;
     border: none;
   }
 `
