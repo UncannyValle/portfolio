@@ -33,7 +33,7 @@ const Footer = styled.footer`
   left: 0;
   padding: 1rem 0;
   position: relative;
-  color: white;
+  color: black;
   @media (max-width: 520px) {
     margin: 0;
     color: black;

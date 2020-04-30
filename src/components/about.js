@@ -50,26 +50,21 @@ const About = props => (
         </AboutFlexItem>
         <AboutFlexItem>
           <p>
-            I'm Julian Valle, a Front-End Web Developer who loves to make
-            creative, responsive and functional websites for small businesses
+            I'm Julian Valle, I love to make
+            creative, beautiful and responsive websites for small businesses
             and beyond! I am a self taught developer who is constantly learning
-            new ways to solve everyday problems using code.{" "}
+            new ways to solve everyday problems using code. If you are looking to hire me to help in your project click here! or have a look at my resume here: 
+            {" "}
           </p>
           <hr/>
           <p>
             {" "}
-            I work mostly using Javascript (React), HTML and CSS(Sass, CSS
-            Modules, Styled Components) as well as working with CMS's like
-            Wordpress and Shopify. I am always learning new technologies and
-            staying up to date.{" "}
+            Here are the languages I speak and technologies I use:
           </p>
-          <hr/>
-
-          <p>
-            I also have a background in Psychology, I am a great team player,
-            always there to help out the client, and I make extremely delicious
-            tacos!
-          </p>
+          <ul>
+            <li>React</li>
+            <li>Javascript</li>
+          </ul>
         </AboutFlexItem>
       </AboutWrapper>
     </SectionWrapper>

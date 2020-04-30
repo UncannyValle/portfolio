@@ -25,7 +25,7 @@ const HeaderWrapper = styled.header`
     align-items: center;
   }
   a {
-    transition: all 150ms ease-in;
+    transition: all 200ms ease-in;
     padding: 0.5rem 1.5rem 0.25rem;
     font-weight: 700;
     box-shadow: none;
