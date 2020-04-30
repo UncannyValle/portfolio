@@ -2,13 +2,14 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledForm = styled.form`
-  background-color: #ffeaa6;
+  background-color: #23B9E8;
   width: 30rem;
   height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 1em 0;
+  box-shadow:0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   label {
     margin: 1em auto;

@@ -8,7 +8,7 @@ const HeaderWrapper = styled.header`
   z-index: 5;
   top: 0;
   width: 100%;
-  height: 15vh;
+  padding: 1.5rem 0;
   background-color: white;
   box-shadow: ${({ animate }) =>
     animate
@@ -25,11 +25,12 @@ const HeaderWrapper = styled.header`
     align-items: center;
   }
   a {
-    transition: 0.2s;
-    padding: 1rem 1.5rem;
+    transition: all 150ms ease-in;
+    padding: 0.5rem 1.5rem 0.25rem;
     font-weight: 700;
     box-shadow: none;
     border-radius: 290486px;
+    font-size: ${({ animate }) => (animate ? "1.5rem" : "2.5rem")};
     &:hover {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
@@ -46,10 +47,21 @@ const HeaderWrapper = styled.header`
 `
 const Title = styled(Link)`
   background-color: white;
+  &:hover {
+    background-color: #2352e8;
+    color: white;
+  }
 `
 const Button = styled(Link)`
-  background-color: #349aff;
   color: white;
+  font-size: 1rem;
+  border: solid 3px;
+  background-color: #2352e8;
+  &:hover {
+    background-color: #26fff9;
+    color: #2C26FF;
+    border: none;
+  }
 `
 
 const Header = () => {
@@ -62,7 +74,7 @@ const Header = () => {
 
     const onScroll = () => {
       const scrollPosition = window.scrollY
-      if (scrollPosition > headerPos) {
+      if (scrollPosition > headerPos + 1) {
         setShadow(true)
       } else setShadow(false)
     }
