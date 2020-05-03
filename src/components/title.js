@@ -6,10 +6,10 @@ const Title = styled.h1`
   padding: 0.5rem 1rem;
   text-align: center;
   background-color: #26FFF9;
-  color: black;
-  display: inline-block;
-  border-radius: 290486px;
-
+  color: #2c26ff;
+  display: block;
+  border-radius: 7px;
+  width:30%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   @media only screen and (max-width: 768px) {
     text-align: center;

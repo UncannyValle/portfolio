@@ -10,7 +10,6 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
-import { faFile } from "@fortawesome/free-solid-svg-icons"
 
 const SocialWrapper = styled.div`
   text-align: center;
@@ -52,14 +51,7 @@ const Contact = props => (
           {" "}
           <FontAwesomeIcon icon={faTwitter} />
         </a>
-        <a
-          href="https://resume.io/r/xhD8EPtnQ"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <FontAwesomeIcon icon={faFile} />
-        </a>
+       
       </SocialWrapper>
     </ContactWrapper>
   </div>
