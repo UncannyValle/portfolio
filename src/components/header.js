@@ -37,9 +37,9 @@ const HeaderWrapper = styled.header`
     &:active {
       text-decoration: underline;
     }
-    @media (max-width: 520px) {
-      width: 30%;
-      font-size: ${({ animate }) => (animate ? ".75rem" : "1rem")};
+    @media (max-width: 720px) {
+      font-size: ${({ animate }) => (animate ? "1rem" : "1.5rem")};
+      padding: 0.25rem 0.75rem 0.125rem;
     }
   }
   @media (max-width: 520px) {
@@ -92,7 +92,7 @@ const Header = () => {
             <Title to="/">The Uncanny Valle</Title>
           </li>
           <li>
-            <Button to="/blog/test">Hit me up!</Button>
+            <Button to="#contact">Hit me up!</Button>
           </li>
         </ul>
       </nav>

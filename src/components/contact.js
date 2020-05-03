@@ -15,8 +15,12 @@ const SocialWrapper = styled.div`
   text-align: center;
   margin: 2rem;
   a {
-    font-size: 3rem;
     color: white;
+    font-size: 3rem;
+    transition:.5s;
+  }
+  a:hover {
+    color: #2c26ff;
   }
 `
 

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "./seo"
-import selfie from "../images/selfie.jpg"
+// import selfie from "../images/selfie.jpg"
 import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -28,6 +28,9 @@ const AboutWrapper = styled.div`
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    .text{
+      width:90%;
+    }
   }
 
   .skills {
