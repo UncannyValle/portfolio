@@ -13,6 +13,7 @@ const Title = styled.h1`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   @media only screen and (max-width: 768px) {
     text-align: center;
+    width:80%;
   }
 `
 export default Title

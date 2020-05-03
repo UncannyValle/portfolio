@@ -56,7 +56,6 @@ const Title = styled(Link)`
 const Button = styled(Link)`
   color: white;
   font-size: 1rem;
-  border: solid 3px;
   background-color: #2352e8;
   &:hover {
     background-color: #26fff9;

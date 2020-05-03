@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     visibility: hidden;
     opacity: 0;
     padding-top: 30%;
-    transition: opacity .2s, visibility .2s;
+    transition: opacity 0.2s, visibility 0.2s;
   }
   .img_wrap:hover .hoverText {
     visibility: visible;
@@ -49,14 +49,21 @@ const Wrapper = styled.div`
 const GitHubButton = styled.a`
   padding: 0.5rem 1rem;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 290486px;
   width: 50%;
   color: black;
   margin: 1rem 0;
-  transition: 0.5s;
+  transition: 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   &:hover {
     background-color: #95e6d5;
+    color: #2c26ff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    width: 80%;
   }
 `
 

@@ -14,6 +14,10 @@ const AboutWrapper = styled.div`
   a {
     color: white;
     font-size: 3rem;
+    transition:.2s;
+  }
+  a:hover {
+    color: #2c26ff;
   }
   .text {
     width: 60%;
