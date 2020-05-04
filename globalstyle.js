@@ -3,8 +3,8 @@ import reset from "styled-reset"
 
 export const theme = {
   font: {
-    title: "Karma, sans-serif",
-    text: "Lato, sans-serif",
+    title: "Titillium Web, sans-serif",
+    text: "Roboto, sans-serif",
   },
 }
 

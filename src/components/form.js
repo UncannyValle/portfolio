@@ -2,21 +2,21 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledForm = styled.form`
-  background-color: #23B9E8;
+  background-color: #23b9e8;
   width: 30rem;
   height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 1em 0;
-  box-shadow:0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   label {
     margin: 1em auto;
     padding: 0;
     width: 70%;
     text-align: left;
-    color: black;
+    color: white;
   }
   label input {
     width: 100%;
@@ -31,8 +31,15 @@ const StyledForm = styled.form`
   button {
     margin: 1em auto;
     padding: 0.25em 1.5em;
-    border-radius: 7px;
-    background-color: #95E6D5;
+    background-color: #95e6d5;
+    border-radius: 290486px;
+    color: #2352e8;
+    transition: .2s;
+    &:hover {
+      background-color: #2352e8;
+      color: white;
+      border-radius: 290486px;
+    }
   }
 
   @media only screen and (max-width: 520px) {

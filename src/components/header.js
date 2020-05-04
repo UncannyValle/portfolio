@@ -26,7 +26,7 @@ const HeaderWrapper = styled.header`
   }
   a {
     transition: all 200ms ease-in;
-    padding: 0.5rem 1.5rem 0.25rem;
+    padding: 0.5rem 2rem 1rem 2rem;
     font-weight: 700;
     box-shadow: none;
     border-radius: 290486px;

@@ -34,11 +34,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Karma`,
+            family: `Titillium Web`,
             variants: [`400`, `700`],
           },
           {
-            family: `Lato`,
+            family: `Roboto`,
             variants: [`400`, `400i`, `700`],
           },
         ],
