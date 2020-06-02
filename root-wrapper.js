@@ -4,8 +4,8 @@ import { GlobalStyle, theme } from "./src/theme/globalstyle"
 import { ThemeProvider } from "styled-components"
 
 export const wrapRootElement = ({ element }) => (
-  // <ThemeProvider theme={theme}>
-    /* <GlobalStyle /> */
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
     <Layout>{element}</Layout>
-  // </ThemeProvider>
+  </ThemeProvider>
 )
