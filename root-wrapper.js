@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components"
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
-    <GlobalStyle />
+    {/* <GlobalStyle /> */}
     <Layout>{element}</Layout>
   </ThemeProvider>
 )
