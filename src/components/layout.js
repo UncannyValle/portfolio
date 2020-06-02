@@ -8,60 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { GlobalStyle } from "../theme/globalstyle"
 import Header from "./header"
 import styled from "styled-components"
 
-// start of global styles
-import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
-
-export const theme = {
-  font: {
-    title: "Titillium Web, sans-serif",
-    text: "Roboto, sans-serif",
-  },
-}
-
-export const GlobalStyle = createGlobalStyle`
-  ${reset}
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-  html {
-    box-sizing: border-box;
-    font-family: ${({ theme }) => theme.font.text}
-  }
-  body {
-    line-height: 1.5;
-    letter-spacing: 0;
-    height:auto;
-  }
-  h1{
-    font-family: ${({ theme }) => theme.font.title};
-    font-size: 5rem;
-     color: #2c26ff;
-
-  }
-  h2{
-    font-family: ${({ theme }) => theme.font.title};
-    font-size: 2rem;
-    color: #2c26ff;
-  }
-  a {
-    text-decoration: none ;
-    color:black;
-    font-family: ${({ theme }) => theme.font.title};
-    font-size:1.3rem;
-
- }  
-`
-
-// end of global styles
-
 const BodyWrapper = styled.div`
   background-color: #ffffff;
-
 `
 
 const Main = styled.main`
@@ -70,8 +22,7 @@ const Main = styled.main`
   height: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  text-align:center;
-
+  text-align: center;
 `
 
 const Footer = styled.footer`
@@ -100,15 +51,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
+    <>
+      <GlobalStyle />
+      <BodyWrapper>
 
-    <BodyWrapper>
-    <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} />
 
-      <Main>{children}</Main>
+        <Main>{children}</Main>
 
-      <Footer>Built by Julian Valle, © {new Date().getFullYear()}</Footer>
-    </BodyWrapper>
+        <Footer>Built by Julian Valle, © {new Date().getFullYear()}</Footer>
+      </BodyWrapper>
+    </>
   )
 }
 
