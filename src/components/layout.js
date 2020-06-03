@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import styled from "styled-components"
+import { GlobalStyle,theme } from "../theme/globalstyle"
+import {ThemeProvider} from "styled-components";
 
 const BodyWrapper = styled.div`
   background-color: #ffffff;
@@ -50,16 +52,16 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <BodyWrapper>
-
         <Header siteTitle={data.site.siteMetadata.title} />
 
         <Main>{children}</Main>
 
         <Footer>Built by Julian Valle, © {new Date().getFullYear()}</Footer>
       </BodyWrapper>
-    </>
+    </ThemeProvider>
   )
 }
 
