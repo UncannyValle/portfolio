@@ -53,6 +53,7 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
+    
       <GlobalStyle />
       <BodyWrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
