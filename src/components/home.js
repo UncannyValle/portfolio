@@ -64,6 +64,9 @@ const Home = () => {
       color: #2c26ff;
       transform: scale(2);
     }
+    @media(max-width: 768px) {
+      width: 60%;
+    }
   `
   return (
     <HomeWrapper>
