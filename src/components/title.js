@@ -15,5 +15,8 @@ const Title = styled.h1`
     text-align: center;
     width:80%;
   }
+  @media (max-width: 520px) {
+     font-size:2.5rem;
+    }
 `
 export default Title

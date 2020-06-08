@@ -11,25 +11,43 @@ const AboutWrapper = styled.div`
   height: auto;
   width: 100%;
   margin: 0 auto;
-  a {
-    color: white;
-    font-size: 3rem;
-    transition:.2s;
-  }
-  a:hover {
-    color: #2c26ff;
-  }
+
   .text {
     width: 60%;
     margin: 0 auto;
     font-size: 1.25rem;
   }
+  .resume {
+    background-color: white;
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10%;
+    color: #2c26ff;
+    font-size: 3rem;
+    transition: 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    h2 {
+      color: #2c26ff;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+      color: black;
+      h2 {
+        color: black;
+      }
+    }
+  }
   @media only screen and (max-width: 768px) {
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    .text{
-      width:90%;
+    .text {
+      width: 90%;
+      text-align: justify;
     }
   }
 
@@ -48,8 +66,6 @@ const About = props => (
     <SectionWrapper>
       <Title>A bit about me...</Title>
       <AboutWrapper>
-    
-
         <p className="text">
           I'm Julian Valle, I love to make creative, beautiful and responsive
           websites for small businesses and beyond! I am a self taught developer
@@ -57,14 +73,15 @@ const About = props => (
           code. If you are looking to hire me to help in your project click
           here! or have a look at my resume here:{" "}
         </p>
-
         <a
+          className="resume"
           href="https://resume.io/r/xhD8EPtnQ"
           target="_blank"
           rel="noopener noreferrer"
         >
           {" "}
           <FontAwesomeIcon icon={faFile} />
+          <h2>RESUME</h2>{" "}
         </a>
 
         <Title>Skills</Title>
