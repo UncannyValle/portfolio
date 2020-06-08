@@ -45,25 +45,21 @@ const Home = () => {
   `
   const SocialWrapper = styled.div`
     text-align: center;
-    width: 25%;
+    width: 30%;
     height: 5rem;
     display: flex;
-    margin: 0 auto;
+    margin: 2rem auto;
     justify-content: space-evenly;
+    align-items:center;
     a {
       color: black;
       font-size: 3rem;
       transition: 0.5s;
-      padding-top:1.5rem;
-      height:auto;
+      width: 33%; 
     }
     a:hover {
       color: #2c26ff;
       font-size: 5rem;
-      padding-top: 0;
-    }
-    @media (max-width: 520px) {
-     width: 60%;
     }
   `
   return (
