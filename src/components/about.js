@@ -48,9 +48,7 @@ const About = props => (
     <SectionWrapper>
       <Title>A bit about me...</Title>
       <AboutWrapper>
-        {/* <AboutFlexItem>
-          <img src={selfie} alt="Me!"></img>
-        </AboutFlexItem> */}
+    
 
         <p className="text">
           I'm Julian Valle, I love to make creative, beautiful and responsive
