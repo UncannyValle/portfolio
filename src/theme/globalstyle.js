@@ -27,7 +27,8 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 5rem;
      color: #2c26ff;
 
-  }h2{
+  }
+  h2{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 2rem;
     color: #2c26ff;

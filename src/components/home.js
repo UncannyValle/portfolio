@@ -55,7 +55,6 @@ const Home = () => {
       font-size: 3rem;
       transition: 0.5s;
       padding-top:1.5rem;
-      width:33%;
       height:auto;
     }
     a:hover {
