@@ -6,6 +6,7 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 const Home = () => {
   const HomeWrapper = styled.div`
@@ -46,20 +47,22 @@ const Home = () => {
   const SocialWrapper = styled.div`
     text-align: center;
     width: 30%;
-    height: 5rem;
     display: flex;
     margin: 2rem auto;
     justify-content: space-evenly;
-    align-items:center;
+    align-items: center;
+    a svg {
+      width: 100%;
+      height: 100%;
+    }
     a {
       color: black;
-      font-size: 3rem;
       transition: 0.5s;
-      width: 33%; 
+      font-size: 50px;
     }
     a:hover {
       color: #2c26ff;
-      font-size: 5rem;
+      transform: scale(2);
     }
   `
   return (
