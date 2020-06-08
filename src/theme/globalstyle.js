@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.title};
     font-size: 5rem;
      color: #2c26ff;
-;
+
   }h2{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 2rem;
@@ -36,7 +36,5 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none ;
     color:black;
     font-family: ${({ theme }) => theme.font.title};
-    font-size:1.3rem;
-
  }  
 `
