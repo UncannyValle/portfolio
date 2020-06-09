@@ -8,8 +8,8 @@ const HeaderWrapper = styled.header`
   z-index: 5;
   top: 0;
   width: 100%;
-  padding: 1.5rem 0 2rem 0;
-  background-color: #FF584D;
+  padding: 1rem 0 1.5rem 0;
+  background-color: #ff584d;
   box-shadow: ${({ animate }) =>
     animate
       ? "1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)"
@@ -26,20 +26,23 @@ const HeaderWrapper = styled.header`
   }
   a {
     transition: all 200ms ease-in;
-    padding: 0.5rem 2rem 1rem 2rem;
+    padding: 0.25rem 1.5rem 0.5rem 1.5rem;
     font-weight: 700;
     box-shadow: none;
     border-radius: 290486px;
-    font-size: ${({ animate }) => (animate ? "1.5rem" : "2.5rem")};
+    font-size: ${({ animate }) => (animate ? "1.5rem" : "2.2rem")};
     &:hover {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
     &:active {
       text-decoration: underline;
     }
-    @media (max-width: 720px) {
-      font-size: ${({ animate }) => (animate ? "1rem" : "1.5rem")};
-      padding: 0.25rem 0.75rem 0.125rem;
+    @media (max-width: 768px) {
+      font-size: ${({ animate }) => (animate ? "1.2rem" : "1.7rem")};
+      padding: 0.25rem 0.75rem 0.5rem 0.75rem;
+    }
+    @media (max-width: 520px) {
+      padding: 0.1rem 0.5rem 0.2rem 0.5rem;
     }
   }
   @media (max-width: 520px) {
@@ -47,10 +50,13 @@ const HeaderWrapper = styled.header`
   }
 `
 const Title = styled(Link)`
-  background-color: white;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 2px 4px #ff0000;
   &:hover {
     background-color: #2352e8;
     color: white;
+    text-shadow: none;
   }
 `
 const Button = styled(Link)`

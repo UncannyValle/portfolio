@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-  background-color: #E7FF19;
+  background-color: #e7ff19;
   padding: 1em;
   text-align: center;
   display: flex;
@@ -14,19 +15,11 @@ const Wrapper = styled.div`
 
   .img_wrap {
     position: relative;
-    margin: 0;
-  }
-  img {
-    /* margin: 0;
-    padding: 0; */
+    margin-bottom: 1rem;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    &:hover {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-    }
+  }
+  .img_wrap:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
   .hoverText {
     position: absolute;
@@ -38,12 +31,21 @@ const Wrapper = styled.div`
     color: #fff;
     visibility: hidden;
     opacity: 0;
-    padding-top: 30%;
+    padding-top: 25%;
     transition: opacity 0.2s, visibility 0.2s;
   }
   .img_wrap:hover .hoverText {
     visibility: visible;
     opacity: 1;
+  }
+`
+const Image = styled(Img)`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 `
 const GitHubButton = styled.a`
@@ -71,7 +73,7 @@ const Skills = props => {
   return (
     <Wrapper>
       <a className="img_wrap" href={props.site}>
-        <img src={props.image} alt="project"></img>
+        <Image fluid={props.image} alt="project" />
         <h2 className="hoverText">Visit Page</h2>
       </a>
       <p>{props.text}</p>
