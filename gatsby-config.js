@@ -3,7 +3,7 @@ module.exports = {
     title: `Julian Valle's Web Development Portfolio`,
     description: `Web developer extraordinaire! Let me make your new site in style!`,
     author: `Julian Valle`,
-    url: `https://theuncannyvalle.com`,
+    siteUrl: `https://theuncannyvalle.com`,
     social: {
       twitter: `@theuncannyvalle`,
     },
@@ -72,15 +72,15 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }]    }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-robots-txt',
+    //   options: {
+    //     policy: [{ userAgent: '*', allow: '/' }]    }
+    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `G-833SXFTRYN`,},
+        trackingId: `UA-168962340-1`,},
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`

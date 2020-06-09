@@ -32,10 +32,10 @@ function SEO({ description, lang, meta, title }) {
               linkedIn
               twitter
             }
-            url
+            siteUrl
           }
         }
-      }      
+      }
     `
   )
 
