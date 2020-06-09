@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import SEO from "./seo"
 import Form from "./form"
 import Title from "./title"
 import ContactWrapper from "./sectionWrapper"
@@ -26,7 +25,6 @@ const SocialWrapper = styled.div`
 
 const Contact = props => (
   <div id={props.id}>
-    <SEO title="Contact Page" />
     <ContactWrapper>
       <Title>Contact Me</Title>
       <Form />

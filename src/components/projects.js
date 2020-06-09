@@ -1,5 +1,4 @@
 import React from "react"
-import SEO from "./seo"
 import Skills from "./skills"
 import Title from "./title"
 import { graphql, useStaticQuery } from "gatsby"
@@ -69,7 +68,6 @@ const Projects = props => {
   `)
   return (
     <div id={props.id}>
-      <SEO title="Projects Page" />
       <SectionWrapper>
         <Title>A bit of my work</Title>
         <SkillsWrapper>

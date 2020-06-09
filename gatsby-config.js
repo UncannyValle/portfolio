@@ -1,8 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: `Julian Valle's Portfolio`,
-    description: `Web Developer, Gamer, Husband`,
-    author: `@theuncannyvalle`,
+    title: `Julian Valle's Web Development Portfolio`,
+    description: `Web developer extraordinaire! Let me make your new site in style!`,
+    author: `Julian Valle`,
+    url: `https://theuncannyvalle.com`,
+    social: {
+      twitter: `@theuncannyvalle`,
+    },
+    socialLinks: {
+      twitter:`https://twitter.com/theuncannyvalle`,
+      gitHub:`https://github.com/uncannyvalle`,
+      linkedIn:`https://linkedin/in/uncannyvalle`
+    },
+    organization: {
+      name: `Atole Media`,
+      url: `https://atolemedia.com`
+    },
+    keywords: 'Portfolio, web, web design, web development'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -58,7 +72,18 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `G-833SXFTRYN`,},
+    },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

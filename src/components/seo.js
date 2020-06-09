@@ -19,9 +19,23 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
+            organization {
+              name
+              url
+            }
+            social {
+              twitter
+            }
+            socialLinks {
+              gitHub
+              linkedIn
+              twitter
+            }
+            url
           }
         }
-      }
+      }      
     `
   )
 

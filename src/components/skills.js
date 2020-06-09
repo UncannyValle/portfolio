@@ -33,6 +33,7 @@ const Wrapper = styled.div`
     opacity: 0;
     padding-top: 25%;
     transition: opacity 0.2s, visibility 0.2s;
+    font-size: 3rem;
   }
   .img_wrap:hover .hoverText {
     visibility: visible;

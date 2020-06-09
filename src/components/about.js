@@ -1,12 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import SEO from "./seo"
-// import selfie from "../images/selfie.jpg"
 import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
-import resume from "../downloads/Julian_Valle_Garcia_-_Web_Developer.pdf"
+import resumePDF from "../downloads/Julian_Valle_Web_Dev_Resume.pdf"
 
 const AboutWrapper = styled.div`
   height: auto;
@@ -21,16 +19,20 @@ const AboutWrapper = styled.div`
   .resume {
     background-color: white;
     display: inline-block;
-    margin: 1rem auto;
+    margin: 1rem 2rem;
     padding: 1rem;
     border-radius: 10%;
     color: #2c26ff;
     font-size: 3rem;
-    transition: 0.2s;
+    transition: 0.2s all ease-in-out;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     h2 {
       color: #2c26ff;
       font-size: 1.5rem;
+    }
+    p {
+      visibility: hidden;
+      font-size: 1rem;
     }
 
     &:hover {
@@ -40,6 +42,9 @@ const AboutWrapper = styled.div`
       color: #2c26ff;
       h2 {
         color: #2c26ff;
+      }
+      p {
+        visibility: visible;
       }
     }
   }
@@ -62,7 +67,6 @@ const AboutWrapper = styled.div`
     font-size: 1.5rem;
     li {
       transition: all 200ms ease-in;
-
     }
     li:hover {
       background-color: #26fff9;
@@ -75,7 +79,6 @@ const AboutWrapper = styled.div`
 `
 const About = props => (
   <div id={props.id}>
-    <SEO title="About me" />
     <SectionWrapper>
       <Title>A bit about me...</Title>
       <AboutWrapper>
@@ -88,15 +91,27 @@ const About = props => (
         </p>
         <a
           className="resume"
-          href={resume}
+          href={resumePDF}
           target="_blank"
           rel="noopener noreferrer"
         >
           {" "}
           <FontAwesomeIcon icon={faFile} />
-          <h2>RESUME</h2>{" "}
+          <h2>RESUME</h2>
+          <p>PDF</p>{" "}
         </a>
-
+        <a
+          className="resume"
+          href="../downloads/Julian_Valle_WebDev_Resume.docx"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          {" "}
+          <FontAwesomeIcon icon={faFile} />
+          <h2>RESUME</h2>
+          <p>DOCX</p>{" "}
+        </a>
         <Title>Skills</Title>
 
         <ul className="skills">
