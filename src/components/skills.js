@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  background-color: #23b9e8;
+  background-color: #E7FF19;
   padding: 1em;
   text-align: center;
   display: flex;
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 3px 3px 0 #000000;
-  color: #ffffff;
+  color: #2c26ff;
 
   .img_wrap {
     position: relative;
@@ -57,8 +57,8 @@ const GitHubButton = styled.a`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   &:hover {
-    background-color: #95e6d5;
-    color: #2c26ff;
+    background-color: #2c26ff;
+    color: #ffffff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
   @media only screen and (max-width: 768px) {

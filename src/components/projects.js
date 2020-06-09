@@ -35,8 +35,8 @@ const Projects = (props) => (
         <Skills
           image={atolePic}
           site={"https://atolemedia.com"}
-          text={"A React website for a videogame studio "}
-          tech={"Gatsby | React | JS | CSS | HTML"}
+          text={"A Wordpress website for a videogame studio "}
+          tech={"Wordpress | JS | CSS | PHP"}
           gitHub={"https://github.com/UncannyValle/Atole-Media"}
         />
         {/* <Skills

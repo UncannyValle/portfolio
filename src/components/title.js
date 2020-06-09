@@ -5,8 +5,8 @@ const Title = styled.h1`
   margin: 2rem auto;
   padding: 0.5rem 1rem;
   text-align: center;
-  background-color: #26fff9;
-  color: #2c26ff;
+  background-color: #FF584D;
+  color: #ffffff;
   display: block;
   border-radius: 7px;
   width: 50%;

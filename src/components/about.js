@@ -6,6 +6,7 @@ import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
+import resume from "../downloads/Julian_Valle_Garcia_-_Web_Developer.pdf"
 
 const AboutWrapper = styled.div`
   height: auto;
@@ -35,9 +36,10 @@ const AboutWrapper = styled.div`
     &:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
-      color: black;
+      background-color: #e7ff19;
+      color: #2c26ff;
       h2 {
-        color: black;
+        color: #2c26ff;
       }
     }
   }
@@ -58,6 +60,17 @@ const AboutWrapper = styled.div`
     margin: 0 auto;
     height: 10rem;
     font-size: 1.5rem;
+    li {
+      transition: all 200ms ease-in;
+
+    }
+    li:hover {
+      background-color: #26fff9;
+      color: #2c26ff;
+      border: none;
+      border-radius: 290486px;
+      cursor: context-menu;
+    }
   }
 `
 const About = props => (
@@ -75,7 +88,7 @@ const About = props => (
         </p>
         <a
           className="resume"
-          href="https://resume.io/r/xhD8EPtnQ"
+          href={resume}
           target="_blank"
           rel="noopener noreferrer"
         >
