@@ -60,15 +60,15 @@ const query = graphql`
   query {
     site {
       siteMetadata {
-        title
+        defaultTitle: title
         defaultDescription: description
         author
-        defaultImage:image
+        defaultImage: image
         titleTemplate
         gitHub
         imageAlt
         linkedIn
-        siteUrl:url
+        siteUrl
         twitter
         twitterUsername
       }
