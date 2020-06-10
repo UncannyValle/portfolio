@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `The Uncanny Valle | Julian Valle's Portfolio`,
+    titleTemplate: `%s | Julian Valle's Portfolio`,
+
     description: `Front-end web developer with an eye for detail! I make sites, apps and tacos!`,
     author: `Julian Valle`,
     siteUrl: `https://theuncannyvalle.com`,
-    titleTemplate: "%s | ${site.siteMetadata.title}",
     defaultImage: `/selfie.jpg`,
     imageAlt: `Me drinking some coffee before coding.`,
     twitterUsername: `@theuncannyvalle`,
