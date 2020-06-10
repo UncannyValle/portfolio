@@ -52,7 +52,6 @@ const SEO = ({ description, image, title, article }) => {
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
-   
   )
 }
 
