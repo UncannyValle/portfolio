@@ -52,43 +52,7 @@ const SEO = ({ description, image, title, article }) => {
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
-    //   meta={[
-    //     {
-    //       name: `description`,
-    //       content: seo.description,
-    //     },
-    //     {
-    //       property: `og:title`,
-    //       content: seo.title,
-    //     },
-    //     {
-    //       property: `og:description`,
-    //       content: seo.description,
-    //     },
-    //     {
-    //       property: `og:type`,
-    //       content: isBlogPost ? `article` : `website`,
-    //     },
-    //     { property: "og:image:alt", content: "seo.imageAlt" },
-    //     {
-    //       property: "twitter:image:alt",
-    //       content: seo.image,
-    //     },
-    //     {
-    //       name: `twitter:card`,
-    //       content: `summary`,
-    //     },
-    //     {
-    //       name: `twitter:creator`,
-    //       content: {twitterUsername},
-    //     },
-    //     {
-    //       name: `twitter:title`,
-    //       content: title,
-    //     },
-
-    //   ].concat(meta)}
-    // />
+   
   )
 }
 
@@ -97,14 +61,14 @@ const query = graphql`
     site {
       siteMetadata {
         title
-        description
+        defaultDescription: description
         author
-        defaultImage
+        defaultImage:image
         titleTemplate
         gitHub
         imageAlt
         linkedIn
-        siteUrl
+        siteUrl:url
         twitter
         twitterUsername
       }
@@ -114,7 +78,7 @@ const query = graphql`
 export default SEO
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `EN`,
   meta: [],
   description: ``,
   title: null,
