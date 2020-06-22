@@ -20,51 +20,50 @@ const SkillsWrapper = styled.div`
 
 const Projects = props => {
   const data = useStaticQuery(graphql`
-  {
-    calcutron:file(relativePath:{eq:"calcutron.png"}){
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+    {
+      calcutron: file(relativePath: { eq: "calcutron.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      atole: file(relativePath: { eq: "atole_pic.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      markdown: file(relativePath: { eq: "markdownPic.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      movie: file(relativePath: { eq: "movie.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      mario: file(relativePath: { eq: "mp-image.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      danny: file(relativePath: { eq: "dannyAdventurePic.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
         }
       }
     }
-    atole:file(relativePath:{eq:"atole_pic.png"}){
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-    markdown:file(relativePath:{eq:"markdownPic.png"}){
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-    movie:file(relativePath:{eq:"movie.png"}){
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-    mario:file(relativePath:{eq:"mp-image.png"}){
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-    danny:file(relativePath:{eq:"dannyAdventurePic.png"}){
-      childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-    
-  }
   `)
   return (
     <div id={props.id}>
