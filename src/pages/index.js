@@ -8,11 +8,11 @@ import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <Layout >
+    <Layout>
       <SEO title="Uncanny Valle" />
       <Home />
-      <About id="about" />
       <Projects id="projects" />
+      <About id="about" />
       <Contact id="contact" />
     </Layout>
   )

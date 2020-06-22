@@ -8,63 +8,75 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 const HomeWrapper = styled.div`
-width: 100%;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-margin: 0 auto;
-flex-wrap: wrap;
-
-@media (max-width: 520px) {
-  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  @media (max-width: 520px) {
+    margin: 0;
+    text-align: center;
+  }
 `
 const TextWrap = styled.div`
-width: 100%;
-text-align: center;
-margin: 0 auto;
-top: 0;
-color: #2c26ff;
-hr {
-  width: 30%;
-}
-@media (max-width: 520px) {
-  width: 80%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  top: 0;
+  color: #2c26ff;
+  hr {
+    width: 30%;
+  }
   h1 {
-    font-size: 3rem;
+    font-size: 7rem;
   }
   h2 {
+    font-size: 3rem;
+  }
+  p {
     font-size: 1.5rem;
   }
-}
+  @media (max-width: 520px) {
+    width: 95%;
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
 `
 const SocialWrapper = styled.div`
-text-align: center;
-width: 30%;
-display: flex;
-margin: 2rem auto;
-justify-content: space-evenly;
-align-items: center;
-a svg {
-  width: 100%;
-  height: 100%;
-}
-a {
-  color: black;
-  transition: 0.5s;
-  font-size: 50px;
-}
-a:hover {
-  color: #2c26ff;
-  transform: scale(2);
-}
-@media(max-width: 768px) {
-  width: 60%;
-}
+  text-align: center;
+  width: 30%;
+  display: flex;
+  margin: 2rem auto;
+  justify-content: space-evenly;
+  align-items: center;
+  a svg {
+    width: 100%;
+    height: 100%;
+  }
+  a {
+    color: black;
+    transition: 0.5s;
+    font-size: 50px;
+  }
+  a:hover {
+    color: #2c26ff;
+    transform: scale(2);
+  }
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `
 
 const Home = () => {
@@ -74,6 +86,7 @@ const Home = () => {
         <h1>Hi, I'm Julian!</h1>
         <hr />
         <h2>Designer | Web Developer | Hubby</h2>
+        <p>Thanks for coming to visit my portfolio!</p>
       </TextWrap>
       <SocialWrapper>
         <a

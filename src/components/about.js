@@ -56,6 +56,12 @@ const AboutWrapper = styled.div`
       width: 90%;
       text-align: justify;
     }
+    .resume {
+      margin: 1rem 0.5rem;
+      p {
+        visibility: visible;
+      }
+    }
   }
 
   .skills {

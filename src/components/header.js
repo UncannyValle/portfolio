@@ -24,6 +24,12 @@ const HeaderWrapper = styled.header`
     height: inherit;
     align-items: center;
   }
+  #title {
+    p {
+      text-align: center;
+      color: white;
+    }
+  }
   a {
     transition: all 200ms ease-in;
     padding: 0.25rem 1.5rem 0.5rem 1.5rem;
@@ -95,7 +101,9 @@ const Header = () => {
       <nav>
         <ul>
           <li id="title">
-            <Title to="/">The Uncanny Valle</Title>
+            <Title to="/">
+              The Uncanny Valle
+            </Title>
           </li>
           <li>
             <Button to="#contact">Hit me up!</Button>
