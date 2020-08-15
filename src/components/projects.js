@@ -56,7 +56,21 @@ const Projects = props => {
           }
         }
       }
+      sapa: file(relativePath: { eq: "sapa.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
       danny: file(relativePath: { eq: "dannyAdventurePic.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      avocado: file(relativePath: { eq: "avocado.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -77,13 +91,20 @@ const Projects = props => {
             tech={"Wordpress | JS | CSS | PHP"}
             gitHub={"https://github.com/UncannyValle/Atole-Media"}
           />
-          {/* <Skills
-          image={videothequePic}
-          site={"https://lenasvideotheque"}
-          text={"A movie blog using netlify CMS"}
-          tech={"Gatsby | React | JS | CSS | HTML | NetlifyCMS"}
-          gitHub={"https://github.com/UncannyValle/Lena-s-Videotheque"}
-        /> */}
+          <Skills
+            image={data.sapa.childImageSharp.fluid}
+            site={"https://sapa-fashion.netlify.app/"}
+            text={"An Ecomerce Site Using Shopify"}
+            tech={"Gatsby | React | JS | GraphQl | Shopify"}
+            gitHub={"https://github.com/UncannyValle/Sapa-fashion"}
+          />
+          <Skills
+            image={data.avocado.childImageSharp.fluid}
+            site={"https://avocadoclock.netlify.com/"}
+            text={"An anti procrastination timer using react"}
+            tech={"React | JS | XML | CSS"}
+            gitHub={"https://github.com/UncannyValle/Avocado-Clock"}
+          />
           <Skills
             image={data.danny.childImageSharp.fluid}
             site={"https://lbalvarez8.github.io/Happy-Birthday-Danny/"}
