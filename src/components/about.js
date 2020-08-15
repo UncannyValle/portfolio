@@ -16,6 +16,7 @@ const AboutWrapper = styled.div`
     margin: 0 auto;
     font-size: 1.25rem;
     color: #212121;
+    text-align: justify;
   }
   .resume {
     background-color: #7c4dff;
@@ -90,8 +91,8 @@ const About = props => (
           I'm Julian Valle, I love to make creative, beautiful and responsive
           websites for small businesses and beyond! I am a self taught developer
           who is constantly learning new ways to solve everyday problems using
-          code. If you are looking to hire me to help in your project click
-          here! or have a look at my resume here:{" "}
+          code. Hit me up if you want to collaborate or want to share salsa
+          recipes.
         </p>
         <a
           className="resume"
