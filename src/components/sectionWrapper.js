@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const SectionWrapper = styled.div`
-  background-color: #349aff;
+  background-color: #c5cae9;
   color: white;
   max-width: 100vw;
   height: auto;

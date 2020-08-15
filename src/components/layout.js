@@ -14,7 +14,7 @@ import { GlobalStyle,theme } from "../theme/globalstyle"
 import {ThemeProvider} from "styled-components";
 
 const BodyWrapper = styled.div`
-  background-color: #ffffff;
+  background-color: #3f51b5;
 `
 
 const Main = styled.main`
@@ -32,7 +32,7 @@ const Footer = styled.footer`
   left: 0;
   padding: 1rem 0;
   position: relative;
-  color: black;
+  color: white;
   @media (max-width: 520px) {
     margin: 0;
     color: black;

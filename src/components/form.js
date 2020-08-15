@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledForm = styled.form`
-  background-color: #E7FF19;
+  background-color: #303f9f;
   width: 30rem;
   height: auto;
   margin: 0 auto;
@@ -16,7 +16,7 @@ const StyledForm = styled.form`
     padding: 0;
     width: 70%;
     text-align: left;
-    color: #2352e8;
+    color: white;
   }
   label input {
     width: 100%;
@@ -34,11 +34,11 @@ const StyledForm = styled.form`
     background-color: #ffffff;
     border-radius: 290486px;
     color: #2352e8;
-    transition: .2s;
-    font-size:1.5rem;
-    border:none;
+    transition: 0.2s;
+    font-size: 1.5rem;
+    border: none;
     &:hover {
-      background-color: #2352e8;
+      background-color: #7c4dff;
       color: white;
       border-radius: 290486px;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

@@ -28,7 +28,7 @@ const TextWrap = styled.div`
   text-align: center;
   margin: 0 auto;
   top: 0;
-  color: #2c26ff;
+  color: white;
   hr {
     width: 30%;
   }
@@ -37,6 +37,7 @@ const TextWrap = styled.div`
   }
   h2 {
     font-size: 3rem;
+    color: white;
   }
   p {
     font-size: 1.5rem;
@@ -66,12 +67,11 @@ const SocialWrapper = styled.div`
     height: 100%;
   }
   a {
-    color: black;
+    color: white;
     transition: 0.5s;
     font-size: 50px;
   }
   a:hover {
-    color: #2c26ff;
     transform: scale(2);
   }
   @media (max-width: 768px) {

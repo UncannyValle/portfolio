@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   h1{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 5rem;
-     color: #2c26ff;
+     color: #FFFFFF;
 
   }
   h2{

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-  background-color: #e7ff19;
+  background-color: white;
   padding: 1em;
   text-align: center;
   display: flex;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 3px 3px 0 #000000;
-  color: #2c26ff;
+  color: #757575;
 
   .img_wrap {
     position: relative;
@@ -34,6 +34,10 @@ const Wrapper = styled.div`
     padding-top: 25%;
     transition: opacity 0.2s, visibility 0.2s;
     font-size: 3rem;
+    @media (max-width: 768px) {
+      visibility: visible;
+      opacity: 1;
+    }
   }
   .img_wrap:hover .hoverText {
     visibility: visible;
@@ -51,18 +55,16 @@ const Image = styled(Img)`
 `
 const GitHubButton = styled.a`
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: #7c4dff;
   border-radius: 290486px;
   width: 50%;
-  color: black;
+  color: white;
   margin: 1rem 0;
-  transition: 0.2s;
+  transition: 0.2s all ease-in-out;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   &:hover {
-    background-color: #2c26ff;
-    color: #ffffff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
   @media only screen and (max-width: 768px) {
     text-align: center;

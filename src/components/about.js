@@ -15,34 +15,31 @@ const AboutWrapper = styled.div`
     width: 60%;
     margin: 0 auto;
     font-size: 1.25rem;
+    color: #212121;
   }
   .resume {
-    background-color: white;
+    background-color: #7c4dff;
     display: inline-block;
     margin: 1rem 2rem;
     padding: 1rem;
     border-radius: 10%;
-    color: #2c26ff;
+    color: white;
     font-size: 3rem;
     transition: 0.2s all ease-in-out;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     h2 {
-      color: #2c26ff;
+      color: white;
       font-size: 1.5rem;
     }
     p {
       visibility: hidden;
       font-size: 1rem;
+      color: white;
     }
 
     &:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
-      background-color: #e7ff19;
-      color: #2c26ff;
-      h2 {
-        color: #2c26ff;
-      }
       p {
         visibility: visible;
       }
@@ -71,12 +68,13 @@ const AboutWrapper = styled.div`
     margin: 0 auto;
     height: 10rem;
     font-size: 1.5rem;
+    color: black;
     li {
       transition: all 200ms ease-in;
     }
     li:hover {
-      background-color: #26fff9;
-      color: #2c26ff;
+      background-color: #7c4dff;
+      color: white;
       border: none;
       border-radius: 290486px;
       cursor: context-menu;

@@ -5,7 +5,7 @@ const Title = styled.h1`
   margin: 2rem auto;
   padding: 0.5rem 1rem;
   text-align: center;
-  background-color: #FF584D;
+  background-color: #3f51b5;
   color: #ffffff;
   display: block;
   border-radius: 7px;
@@ -19,6 +19,5 @@ const Title = styled.h1`
   @media (max-width: 520px) {
     font-size: 2rem;
   }
-  
 `
 export default Title

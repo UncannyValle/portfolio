@@ -16,10 +16,10 @@ const SocialWrapper = styled.div`
   a {
     color: white;
     font-size: 3rem;
-    transition:.5s;
+    transition: 0.5s;
   }
   a:hover {
-    color: #2c26ff;
+    color: #7c4dff;
   }
 `
 
