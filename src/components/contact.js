@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Form from "./form"
 import Title from "./title"
-import ContactWrapper from "./sectionWrapper"
+import Wrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGithub,
@@ -10,9 +10,11 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 
+const ContactWrapper = styled(Wrapper)`
+  margin-bottom: 0rem;
+`
 const SocialWrapper = styled.div`
   text-align: center;
-  margin: 2rem;
   a {
     color: white;
     font-size: 3rem;
@@ -53,7 +55,6 @@ const Contact = props => (
           {" "}
           <FontAwesomeIcon icon={faTwitter} />
         </a>
-       
       </SocialWrapper>
     </ContactWrapper>
   </div>

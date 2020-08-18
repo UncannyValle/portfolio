@@ -18,12 +18,11 @@ const BodyWrapper = styled.div`
 `
 
 const Main = styled.main`
-  position: relative;
-  top: 10vh;
-  height: 100%;
+  margin-top: 10vh;
   max-width: 1366px;
   margin: 0 auto;
   text-align: center;
+  
 `
 
 const Footer = styled.footer`

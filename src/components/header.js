@@ -31,7 +31,7 @@ const HeaderWrapper = styled.header`
     }
   }
   a {
-    transition: all 300ms ease-in;
+    transition: all 200ms ease-in;
     padding: 0.25rem 1.5rem 0.5rem 1.5rem;
     font-weight: 700;
     box-shadow: none;
@@ -66,7 +66,7 @@ const Title = styled(Link)`
     text-shadow: none;
   }
 `
-const Button = styled(Link)`
+const Button = styled.a`
   color: white;
   font-size: 1rem;
   background-color: #7c4dff;
@@ -100,7 +100,7 @@ const Header = () => {
             <Title to="/">The Uncanny Valle</Title>
           </li>
           <li>
-            <Button to="#contact">Hit me up!</Button>
+            <Button href="#contact">Hit me up!</Button>
           </li>
         </ul>
       </nav>

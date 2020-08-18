@@ -38,13 +38,6 @@ const Projects = props => {
           }
         }
       }
-      markdown: file(relativePath: { eq: "markdownPic.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
       movie: file(relativePath: { eq: "movie.png" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
@@ -66,13 +59,7 @@ const Projects = props => {
           }
         }
       }
-      danny: file(relativePath: { eq: "dannyAdventurePic.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
+     
       avocado: file(relativePath: { eq: "avocado.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
@@ -108,7 +95,7 @@ const Projects = props => {
             tech={"React | JS | XML | CSS"}
             gitHub={"https://github.com/UncannyValle/Avocado-Clock"}
           />
-          <Skills
+          {/* <Skills
             image={data.danny.childImageSharp.fluid}
             site={"https://lbalvarez8.github.io/Happy-Birthday-Danny/"}
             text={
@@ -116,23 +103,23 @@ const Projects = props => {
             }
             tech={"Javascript | jQuery | CSS | HTML | Git "}
             gitHub={"https://github.com/UncannyValle/Danny-Boy"}
-          />
+          /> */}
           <Skills
             image={data.movie.childImageSharp.fluid}
             site={"https://movie-quote-machine.netlify.com/"}
             text={
-              "Project for freeCodeCamp using React and then ported to Gatsby to host in Netlify"
+              "Built in React, uses an external API to access data"
             }
             tech={"React | JS | CSS | HTML | Netlify"}
             gitHub={"https://github.com/UncannyValle/MovieQuote-machine"}
           />
-          <Skills
+          {/* <Skills
             image={data.markdown.childImageSharp.fluid}
             site={"https://mrkdw-preview-machine.netlify.com/"}
             text={"A markdown previewer using React"}
             tech={"React | JS | CSS | HTML | Netlify"}
             gitHub={"https://github.com/UncannyValle/markdown-previewer"}
-          />
+          /> */}
           <Skills
             image={data.mario.childImageSharp.fluid}
             site={"https://mp-soundmaker.netlify.com"}
