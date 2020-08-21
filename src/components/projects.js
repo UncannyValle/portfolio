@@ -45,7 +45,7 @@ const Projects = props => {
           }
         }
       }
-      mario: file(relativePath: { eq: "mp-image.png" }) {
+      mario: file(relativePath: { eq: "mario.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -123,7 +123,7 @@ const Projects = props => {
           <Skills
             image={data.mario.childImageSharp.fluid}
             site={"https://mp-soundmaker.netlify.com"}
-            text={"A fun little sound tester"}
+            text={"A sound tester with the music of Mario Paint"}
             tech={"React | JS | CSS | HTML | Netlify"}
             gitHub={"https://github.com/UncannyValle/MarioPaintSoundMachine"}
           />
