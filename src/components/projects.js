@@ -77,9 +77,9 @@ const Projects = props => {
           <Skills
             image={data.atole.childImageSharp.fluid}
             site={"https://atolemedia.com"}
-            text={"A Wordpress website for a videogame studio "}
-            tech={"Wordpress | JS | CSS | PHP"}
-            gitHub={"https://github.com/UncannyValle/Atole-Media"}
+            text={"A Blog website for game and movie reviews"}
+            tech={"React | JS | CSS | GraphQl"}
+            gitHub={"https://github.com/UncannyValle/AtoleMedia"}
           />
           <Skills
             image={data.sapa.childImageSharp.fluid}
