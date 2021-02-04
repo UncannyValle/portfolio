@@ -10,19 +10,19 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import styled from "styled-components"
-import { GlobalStyle,theme } from "../theme/globalstyle"
-import {ThemeProvider} from "styled-components";
+import { GlobalStyle, theme } from "../theme/globalstyle"
+import { ThemeProvider } from "styled-components"
 
 const BodyWrapper = styled.div`
   background-color: #3f51b5;
 `
 
 const Main = styled.main`
-  margin-top: 10vh;
   max-width: 1366px;
   margin: 0 auto;
+  top: 15vh;
+  position: relative;
   text-align: center;
-  
 `
 
 const Footer = styled.footer`

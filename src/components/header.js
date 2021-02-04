@@ -31,11 +31,11 @@ const HeaderWrapper = styled.header`
     }
   }
   a {
-    transition: all 200ms ease-in;
+    transition: all 200ms ease-in-out;
     padding: 0.25rem 1.5rem 0.5rem 1.5rem;
     font-weight: 700;
     box-shadow: none;
-    border-radius: 290486px;
+    border-radius: 35px;
     font-size: ${({ animate }) => (animate ? "1.5rem" : "2.2rem")};
     &:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
@@ -66,12 +66,13 @@ const Title = styled(Link)`
     text-shadow: none;
   }
 `
-const Button = styled.a`
+const Button = styled(Link)`
   color: white;
   font-size: 1rem;
   background-color: #7c4dff;
   &:hover {
     border: none;
+    cursor: pointer;
   }
 `
 
@@ -98,6 +99,12 @@ const Header = () => {
         <ul>
           <li id="title">
             <Title to="/">The Uncanny Valle</Title>
+          </li>
+          <li id="projects-link">
+            <Button to="project-page" >Projects</Button>
+          </li>
+          <li id="about-link">
+            <Button>About Me</Button>
           </li>
           <li>
             <Button href="#contact">Hit me up!</Button>
