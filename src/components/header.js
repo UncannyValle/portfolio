@@ -104,10 +104,10 @@ const Header = () => {
             <Button to="project-page" >Projects</Button>
           </li>
           <li id="about-link">
-            <Button>About Me</Button>
+            <Button to="blog">About Me</Button>
           </li>
           <li>
-            <Button href="#contact">Hit me up!</Button>
+            <Button to="contact-page">Hit me up!</Button>
           </li>
         </ul>
       </nav>
