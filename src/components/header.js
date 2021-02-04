@@ -1,4 +1,5 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React, { useState, useRef, useLayoutEffect } from "react"
 // import menuImage from "../images/menu.png"
 import styled from "styled-components"
@@ -15,6 +16,12 @@ const HeaderWrapper = styled.header`
       ? "1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)"
       : "none"};
   transition: all 200ms ease-in;
+
+  .selected {
+    background-color: rebeccapurple;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+  }
   nav {
     height: 100%;
   }
@@ -31,19 +38,15 @@ const HeaderWrapper = styled.header`
     }
   }
   a {
-    transition: all 200ms ease-in;
-    padding: 0.25rem 1.5rem 0.5rem 1.5rem;
-    font-weight: 700;
+    transition: all 200ms ease-in-out;
+    padding: 0.5rem 1.5rem;
     box-shadow: none;
-    border-radius: 290486px;
-    font-size: ${({ animate }) => (animate ? "1.5rem" : "2.2rem")};
+    border-radius: 35px;
     &:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
     }
-    &:active {
-      text-decoration: underline;
-    }
+
     @media (max-width: 768px) {
       font-size: ${({ animate }) => (animate ? "1.2rem" : "1.7rem")};
       padding: 0.25rem 0.75rem 0.5rem 0.75rem;
@@ -56,22 +59,25 @@ const HeaderWrapper = styled.header`
     padding: 1rem 0;
   }
 `
-const Title = styled(Link)`
+const Title = styled(AniLink)`
   color: white;
-  font-size: 5rem;
   text-shadow: 1px 1px #bdbdbd;
+  font-size: ${({ animate }) => (animate ? "1.5rem" : "2.5rem")};
+
   &:hover {
-    background-color: #7c4dff;
     color: white;
     text-shadow: none;
   }
 `
-const Button = styled.a`
+const Button = styled(AniLink)`
   color: white;
-  font-size: 1rem;
+  padding: 2rem;
   background-color: #7c4dff;
+  font-size: ${({ animate }) => (animate ? "1.5rem" : "1.8rem")};
+
   &:hover {
     border: none;
+    cursor: pointer;
   }
 `
 
@@ -97,10 +103,48 @@ const Header = () => {
       <nav>
         <ul>
           <li id="title">
-            <Title to="/">The Uncanny Valle</Title>
+            <Title
+              paintDrip
+              color="rebeccapurple"
+              duration={0.75}
+              to="/"
+              activeClassName="selected"
+            >
+              The Uncanny Valle
+            </Title>
+          </li>
+          <li id="projects-link">
+            <Button
+              paintDrip
+              color="rebeccapurple"
+              duration={0.75}
+              to="/project-page"
+              activeClassName="selected"
+            >
+              Projects
+            </Button>
+          </li>
+          <li id="about-link">
+            <Button
+              paintDrip
+              color="rebeccapurple"
+              duration={0.75}
+              to="/blog"
+              activeClassName="selected"
+            >
+              About Me
+            </Button>
           </li>
           <li>
-            <Button href="#contact">Hit me up!</Button>
+            <Button
+              paintDrip
+              color="rebeccapurple"
+              duration={0.75}
+              to="/contact-page"
+              activeClassName="selected"
+            >
+              Hit me up!
+            </Button>
           </li>
         </ul>
       </nav>

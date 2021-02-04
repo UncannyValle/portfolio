@@ -9,7 +9,8 @@ import {
 import "@fortawesome/fontawesome-svg-core/styles.css"
 const HomeWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  position: relative;
+  top: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

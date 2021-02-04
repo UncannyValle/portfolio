@@ -10,28 +10,32 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import styled from "styled-components"
-import { GlobalStyle,theme } from "../theme/globalstyle"
-import {ThemeProvider} from "styled-components";
+import { GlobalStyle, theme } from "../theme/globalstyle"
+import { ThemeProvider } from "styled-components"
 
 const BodyWrapper = styled.div`
   background-color: #3f51b5;
+  position: relative;
 `
 
 const Main = styled.main`
-  margin-top: 10vh;
   max-width: 1366px;
   margin: 0 auto;
+  min-height: 100vh;
   text-align: center;
-  
+  padding-top: 13vh;
+  padding-bottom: 3.5rem;
 `
 
 const Footer = styled.footer`
   width: 100%;
-  text-align: center;
-  left: 0;
-  padding: 1rem 0;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   color: white;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 520px) {
     margin: 0;
     color: black;

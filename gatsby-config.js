@@ -15,6 +15,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-transition-link`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,21 +53,21 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Titillium Web`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`400`, `400i`, `700`],
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Titillium Web`,
+    //         variants: [`400`, `700`],
+    //       },
+    //       {
+    //         family: `Roboto`,
+    //         variants: [`400`, `400i`, `700`],
+    //       },
+    //     ],
+    //   },
+    // },
     // {
     //   resolve: 'gatsby-plugin-robots-txt',
     //   options: {
