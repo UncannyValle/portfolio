@@ -19,6 +19,11 @@ const StyledBurger = styled.button`
   @media (max-width: ${({ theme }) => theme.tablet}) {
     display: flex;
   }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+  }
 
   &:focus {
     outline: none;
@@ -32,15 +37,31 @@ const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      width: 2.5rem;
+      height: 0.25rem;
+    }
+  }
+  #one {
+    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+  }
+
+  #two {
+    opacity: ${({ open }) => (open ? "0" : "1")};
+    transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+  }
+
+  #three {
+    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
   }
 `
 
 const Hamburger = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
+      <div id="one" />
+      <div id="two" />
+      <div id="three" />
     </StyledBurger>
   )
 }

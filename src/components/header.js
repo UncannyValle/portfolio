@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
   top: 0;
   width: 100%;
   background-color: #303f9f;
-  height: 6rem;
+  height: 10vh;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 200ms ease-in;
 
@@ -19,8 +19,10 @@ const HeaderWrapper = styled.header`
     font-size: 2.5rem;
     color: ${({ theme }) => theme.color.neon};
     @media (max-width: 768px) {
-      padding: 0;
       font-size: 3rem;
+    }
+    @media (max-width: 520px) {
+      font-size: 1.7rem;
     }
   }
   .navbar {
@@ -31,14 +33,6 @@ const HeaderWrapper = styled.header`
     justify-content: space-between;
   }
 
-  a {
-    @media (max-width: 768px) {
-      padding: 0.25rem 0.75rem 0.5rem 0.75rem;
-    }
-    @media (max-width: 520px) {
-      padding: 0.1rem 0.5rem 0.2rem 0.5rem;
-    }
-  }
   @media (max-width: 520px) {
     padding: 1rem 0;
   }
@@ -54,6 +48,10 @@ const Title = styled(AniLink)`
   @media (max-width: 768px) {
     width: 70%;
     font-size: 3.5rem;
+  }
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin-left: 1.5rem;
+    font-size: 2rem;
   }
 `
 
