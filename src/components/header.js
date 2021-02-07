@@ -16,14 +16,15 @@ const HeaderWrapper = styled.header`
   transition: all 200ms ease-in;
 
   .selected {
-    font-size: 2.5rem;
     color: ${({ theme }) => theme.color.neon};
-    @media (max-width: 768px) {
-      font-size: 3rem;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    /* @media (max-width: 768px) {
+      font-size: 2.7rem;
     }
     @media (max-width: 520px) {
       font-size: 1.7rem;
-    }
+    } */
   }
   .navbar {
     height: 100%;
@@ -40,17 +41,15 @@ const HeaderWrapper = styled.header`
 const Title = styled(AniLink)`
   color: white;
   font-size: 2.5rem;
-  text-align: left;
   transition: all 0.2s ease-out;
-  width: 30%;
-  margin-left: 3rem;
+  padding-left: 3rem;
+  text-align: center;
 
   @media (max-width: 768px) {
-    width: 70%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    margin-left: 1.5rem;
+    padding-left: 2rem;
     font-size: 2rem;
   }
 `
