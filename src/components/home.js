@@ -10,7 +10,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 const HomeWrapper = styled.div`
   width: 100%;
   position: relative;
-  top: 15vh;
+  top: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,11 @@ const HomeWrapper = styled.div`
   text-align: center;
   margin: 0 auto;
   flex-wrap: wrap;
-
+  @media (max-width: 768px) {
+    margin: 0;
+    text-align: center;
+    top: 25vh;
+  }
   @media (max-width: 520px) {
     margin: 0;
     text-align: center;
@@ -43,7 +47,7 @@ const TextWrap = styled.div`
   p {
     font-size: 1.5rem;
   }
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     width: 95%;
     h1 {
       font-size: 4rem;
@@ -53,6 +57,15 @@ const TextWrap = styled.div`
     }
     p {
       font-size: 1rem;
+    }
+  }
+  @media (max-width: 520px) {
+    width: 95%;
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.2rem;
     }
   }
 `
@@ -78,6 +91,12 @@ const SocialWrapper = styled.div`
   @media (max-width: 768px) {
     width: 70%;
   }
+  @media (max-width: 520px) {
+    width: 50%;
+    a {
+      font-size: 40px;
+    }
+  }
 `
 
 const Home = () => {
@@ -87,7 +106,6 @@ const Home = () => {
         <h1>Hi, I'm Julian!</h1>
         <hr />
         <h2>Technophile | Web Developer | Hubby</h2>
-        <p>Thanks for visiting my portfolio!</p>
       </TextWrap>
       <SocialWrapper>
         <a

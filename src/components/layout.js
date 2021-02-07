@@ -16,15 +16,15 @@ import { ThemeProvider } from "styled-components"
 const BodyWrapper = styled.div`
   background-color: #3f51b5;
   position: relative;
+  min-height: 100vh;
 `
 
 const Main = styled.main`
   max-width: 1366px;
   margin: 0 auto;
-  min-height: 100vh;
   text-align: center;
-  padding-top: 13vh;
   padding-bottom: 3.5rem;
+  
 `
 
 const Footer = styled.footer`
