@@ -87,7 +87,6 @@ const Home = () => {
         <h1>Hi, I'm Julian!</h1>
         <hr />
         <h2>Technophile | Web Developer | Hubby</h2>
-        <p>Thanks for visiting my portfolio!</p>
       </TextWrap>
       <SocialWrapper>
         <a

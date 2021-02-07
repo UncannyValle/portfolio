@@ -6,6 +6,13 @@ export const theme = {
     title: "Titillium Web, sans-serif",
     text: "Roboto, sans-serif",
   },
+  color: {
+    mainBlue: "#3F51B5",
+    mainPurple: "#7C4DFF",
+    neon: "#4DEEEA",
+  },
+  mobile: "520px",
+  tablet: "768px",
 }
 
 export const GlobalStyle = createGlobalStyle`
