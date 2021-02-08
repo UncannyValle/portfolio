@@ -87,6 +87,7 @@ const SocialWrapper = styled.div`
   }
   a:hover {
     transform: scale(2);
+    color: ${({ theme }) => theme.color.neon};
   }
   @media (max-width: 768px) {
     width: 70%;

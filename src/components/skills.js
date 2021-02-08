@@ -3,16 +3,18 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-  background-color: white;
+  /* background-color: white; */
   padding: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 3px 3px 0 #000000;
-  color: #757575;
-
+  /* box-shadow: 0 3px 3px 0 #000000; */
+  color: #000000;
+  p {
+    font-size: 1.5rem;
+  }
   .img_wrap {
     position: relative;
     margin-bottom: 1rem;
@@ -61,9 +63,11 @@ const GitHubButton = styled.a`
   color: white;
   margin: 1rem 0;
   transition: 0.2s all ease-in-out;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   &:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  &:active {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
   @media only screen and (max-width: 768px) {
