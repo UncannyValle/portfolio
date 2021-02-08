@@ -19,12 +19,7 @@ const HeaderWrapper = styled.header`
     color: ${({ theme }) => theme.color.neon};
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
-    /* @media (max-width: 768px) {
-      font-size: 2.7rem;
-    }
-    @media (max-width: 520px) {
-      font-size: 1.7rem;
-    } */
+    text-decoration: underline;
   }
   .navbar {
     height: 100%;

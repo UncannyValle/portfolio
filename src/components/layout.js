@@ -36,11 +36,7 @@ const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 520px) {
-    margin: 0;
-    color: black;
-    padding: 0;
-  }
+  
 `
 
 const Layout = ({ children }) => {

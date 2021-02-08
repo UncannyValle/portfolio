@@ -14,14 +14,21 @@ const ContactWrapper = styled(Wrapper)`
   margin-bottom: 0rem;
 `
 const SocialWrapper = styled.div`
-  text-align: center;
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-around;
+  height: 7rem;
+  align-items: center;
   a {
-    color: white;
+    color: ${({ theme }) => theme.color.mainPurple};
     font-size: 3rem;
     transition: 0.5s;
   }
   a:hover {
-    color: #7c4dff;
+    color: ${({ theme }) => theme.color.neon};
+    transform: scale(2);
+    --webkit-transform: scale(2);
   }
 `
 
