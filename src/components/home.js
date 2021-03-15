@@ -7,17 +7,17 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+
 const HomeWrapper = styled.div`
   width: 100%;
-  position: relative;
-  top: 20vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
   flex-wrap: wrap;
+
   @media (max-width: 768px) {
     margin: 0;
     text-align: center;
@@ -31,18 +31,24 @@ const HomeWrapper = styled.div`
 const TextWrap = styled.div`
   width: 100%;
   text-align: center;
-  margin: 0 auto;
-  top: 0;
-  color: white;
+  color: #303f9f;
+  .top {
+    width: 25%;
+    display: flex;
+  }
+  .bottom {
+    width: 65vw;
+  }
   hr {
     width: 30%;
   }
   h1 {
     font-size: 7rem;
+    color: white;
   }
   h2 {
     font-size: 3rem;
-    color: white;
+    color: cyan;
   }
   p {
     font-size: 1.5rem;
@@ -87,7 +93,7 @@ const SocialWrapper = styled.div`
   }
   a:hover {
     transform: scale(2);
-    color: ${({ theme }) => theme.color.neon};
+    color: cyan;
   }
   @media (max-width: 768px) {
     width: 70%;
@@ -99,14 +105,36 @@ const SocialWrapper = styled.div`
     }
   }
 `
+const Animated = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 70%;
+  & > * {
+    transition: all 0.1s ease-in;
+  }
+  & > *:hover {
+    transform: scale(1.5);
+    color: cyan;
+    cursor: default;
+  }
+`
+function animateLetters(string, classword) {
+  let split = string.split("").map((letter, index) => {
+    return <h1 key={index}>{letter}</h1>
+  })
+  return <Animated className={classword}>{split}</Animated>
+}
 
 const Home = () => {
   return (
     <HomeWrapper>
       <TextWrap>
-        <h1>Hi, I'm Julian!</h1>
+        {animateLetters("Hi,", "top")}
+        {animateLetters("I'm Julian", "bottom")}
         <hr />
-        <h2>Technophile | Web Developer | Hubby</h2>
+        <h2>Front-End Developer</h2>
       </TextWrap>
       <SocialWrapper>
         <a

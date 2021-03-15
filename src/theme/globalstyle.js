@@ -5,6 +5,7 @@ export const theme = {
   font: {
     title: "Titillium Web, sans-serif",
     text: "Roboto, sans-serif",
+    display: "Bungee Shade, cursive",
   },
   color: {
     mainBlue: "#3F51B5",
@@ -28,9 +29,12 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     letter-spacing: 0;
     height:auto;
+    background-color: #3f51b5;
+    position: relative;
+    min-height: 100vh;
   }
   h1{
-    font-family: ${({ theme }) => theme.font.title};
+    font-family: ${({ theme }) => theme.font.display};
     font-size: 5rem;
      color: #FFFFFF;
 
