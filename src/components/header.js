@@ -6,10 +6,10 @@ import DesktopMenu from "../components/desktopMenu"
 import MobileMenu from "../components/mobileMenu"
 
 const HeaderWrapper = styled.header`
-  position: relative;
+  position: fixed;
   z-index: 5;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background-color: #303f9f;
   height: 10vh;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -19,7 +19,6 @@ const HeaderWrapper = styled.header`
     color: ${({ theme }) => theme.color.neon};
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
-    text-decoration: underline;
   }
   .navbar {
     height: 100%;
@@ -58,11 +57,11 @@ const Header = () => {
         <Title
           paintDrip
           hex="#7c4dff"
-          duration={0.75}
+          duration={0.5}
           to="/"
           activeClassName="selected"
         >
-          The Uncanny Valle
+          Julian Valle
         </Title>
         <DesktopMenu />
         <MobileMenu open={open} setOpen={setOpen} />

@@ -13,18 +13,10 @@ import styled from "styled-components"
 import { GlobalStyle, theme } from "../theme/globalstyle"
 import { ThemeProvider } from "styled-components"
 
-const BodyWrapper = styled.div`
-  background-color: #3f51b5;
-  position: relative;
-  min-height: 100vh;
-`
-
 const Main = styled.main`
   max-width: 1366px;
-  margin: 0 auto;
   text-align: center;
-  padding-bottom: 3.5rem;
-  
+  margin: 0 auto;
 `
 
 const Footer = styled.footer`
@@ -36,7 +28,6 @@ const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  
 `
 
 const Layout = ({ children }) => {
@@ -53,13 +44,12 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <BodyWrapper>
-        <Header siteTitle={data.site.siteMetadata.title} />
 
-        <Main>{children}</Main>
+      <Header siteTitle={data.site.siteMetadata.title} />
 
-        <Footer>Built by Julian Valle, © {new Date().getFullYear()}</Footer>
-      </BodyWrapper>
+      <Main>{children}</Main>
+
+      <Footer>Built by Julian Valle, © {new Date().getFullYear()}</Footer>
     </ThemeProvider>
   )
 }
