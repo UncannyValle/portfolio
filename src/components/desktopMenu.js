@@ -13,7 +13,7 @@ const Button = styled(AniLink)`
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.color.neon};
+    color: ${({ theme }) => theme.colors.uncannyCyan};
     /* font-size: 2rem; */
     padding: none;
     transform: scale(1.2);

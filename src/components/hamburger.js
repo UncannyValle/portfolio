@@ -32,7 +32,7 @@ const StyledBurger = styled.button`
   div {
     width: 4rem;
     height: 0.3rem;
-    background: ${({ theme }) => theme.color.neon};
+    background: ${({ theme }) => theme.colors.uncannyCyan};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

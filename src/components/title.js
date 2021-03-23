@@ -5,12 +5,12 @@ const Title = styled.h1`
   margin: 0 auto;
   padding: 0.5rem 1rem;
   text-align: center;
-  /* background-color: #3f51b5; */
-  color: #3f51b5;
+
+  color: #b5a33f;
   display: block;
   border-radius: 7px;
   width: 50%;
-  font-weight:800;
+  font-weight: 800;
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
   @media only screen and (max-width: 768px) {
     text-align: center;

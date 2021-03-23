@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const SectionWrapper = styled.div`
   background-color: #c5cae9;
-  color: white;
   height: auto;
   padding: 1rem;
   text-align: center;

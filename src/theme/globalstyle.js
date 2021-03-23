@@ -7,10 +7,13 @@ export const theme = {
     text: "Roboto, sans-serif",
     display: "Bungee Shade, cursive",
   },
-  color: {
-    mainBlue: "#3F51B5",
-    mainPurple: "#7C4DFF",
-    neon: "#4DEEEA",
+  colors: {
+    uncannyBlue: "#3F51B5",
+    uncannyCyan: "cyan",
+    uncannyOrange: "#ED6A5A",
+    uncannyPlatinum: "#E9E3E6",
+    uncannyYellow: "#FFBC0A",
+    uncannyTurquoise: "#50C5B7",
   },
   mobile: "520px",
   tablet: "768px",
@@ -36,8 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   h1{
     font-family: ${({ theme }) => theme.font.display};
     font-size: 5rem;
-     color: #FFFFFF;
-
+    color: white;
   }
   h2{
     font-family: ${({ theme }) => theme.font.title};

@@ -7,7 +7,7 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: ${({ theme }) => theme.color.mainPurple};
+  background: ${({ theme }) => theme.colors.uncannyPurple};
   height: 90vh;
   text-align: center;
   padding: 0 10rem;
@@ -31,11 +31,11 @@ const Links = styled(AniLink)`
   font-weight: bold;
   height: 7rem;
   letter-spacing: 0.5rem;
-  color: ${({ theme }) => theme.color.neon};
+  color: ${({ theme }) => theme.colors.uncannyCyan};
   text-decoration: none;
   transition: color 0.3s linear;
   border-radius: 15px;
-  border: solid 5px ${({ theme }) => theme.color.neon};
+  border: solid 5px ${({ theme }) => theme.colors.uncannyCyan};
   display: flex;
   align-items: center;
   justify-content: center;

@@ -16,7 +16,7 @@ const HeaderWrapper = styled.header`
   transition: all 200ms ease-in;
 
   .selected {
-    color: ${({ theme }) => theme.color.neon};
+    color: ${({ theme }) => theme.colors.uncannyCyan};
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
   }
@@ -33,12 +33,11 @@ const HeaderWrapper = styled.header`
   }
 `
 const Title = styled(AniLink)`
-  color: white;
   font-size: 2.5rem;
   transition: all 0.2s ease-out;
   padding-left: 3rem;
   text-align: center;
-
+  font-family: ${({ theme }) => theme.font.display};
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }

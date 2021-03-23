@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -7,6 +7,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import { theme } from "../theme/globalstyle"
 
 const HomeWrapper = styled.div`
   width: 100%;
@@ -31,7 +32,6 @@ const HomeWrapper = styled.div`
 const TextWrap = styled.div`
   width: 100%;
   text-align: center;
-  color: #303f9f;
   .top {
     width: 25%;
     display: flex;
@@ -44,11 +44,10 @@ const TextWrap = styled.div`
   }
   h1 {
     font-size: 7rem;
-    color: white;
   }
   h2 {
     font-size: 3rem;
-    color: cyan;
+    color: #50c5b7;
   }
   p {
     font-size: 1.5rem;
@@ -111,23 +110,52 @@ const Animated = styled.div`
   justify-content: space-around;
   margin: 0 auto;
   width: 70%;
+  align-items: center;
+  height: 9rem;
   & > * {
     transition: all 0.1s ease-in;
+    font-size: 7rem;
+    font-family: ${({ theme }) => theme.font.display};
+    border: none;
+    background: none;
+    color: white;
   }
   & > *:hover {
     transform: scale(1.5);
-    color: cyan;
+    color: ${({ color }) => color};
     cursor: default;
   }
 `
-function animateLetters(string, classword) {
-  let split = string.split("").map((letter, index) => {
-    return <h1 key={index}>{letter}</h1>
-  })
-  return <Animated className={classword}>{split}</Animated>
-}
 
 const Home = () => {
+  const [rand, setRand] = useState("uncannyCyan")
+
+  function randomizer() {
+    const keys = Object.keys(theme.colors)
+    const rando = theme.colors[keys[(keys.length * Math.random()) << 0]]
+
+    if (rando !== "#3F51B5") {
+      setRand(rando)
+    }
+    console.log(rand)
+  }
+
+  function animateLetters(string, classword) {
+    let split = string.split("").map((letter, index) => {
+      return (
+        <button key={index} onMouseEnter={randomizer}>
+          {letter}
+        </button>
+      )
+    })
+
+    return (
+      <Animated className={classword} color={rand}>
+        {split}
+      </Animated>
+    )
+  }
+
   return (
     <HomeWrapper>
       <TextWrap>

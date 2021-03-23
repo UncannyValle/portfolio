@@ -52,7 +52,12 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Roboto", "Titillium Web", "Bungee Shade"],
+          families: [
+            "Roboto",
+            "Titillium Web",
+            "Bungee Shade",
+            "Bungee Inline",
+          ],
         },
       },
     },
