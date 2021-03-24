@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { bool } from "prop-types"
+import { Link } from "gatsby"
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -25,7 +25,7 @@ const StyledMenu = styled.nav`
     padding: 0 3rem;
   }
 `
-const Links = styled(AniLink)`
+const Links = styled(Link)`
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -40,28 +40,29 @@ const Links = styled(AniLink)`
   align-items: center;
   justify-content: center;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     height: 5rem;
+    background-color: ${({ theme }) => theme.colors.uncannyBlue};
   }
 `
 
 const MobileMenu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <Links to="/project-page" paintDrip hex="#7c4dff" duration={0.75}>
+      <Links to="/project-page">
         <span role="img" aria-label="projects">
           &#x1f4b8;
         </span>
         Projects
       </Links>
-      <Links to="/blog" paintDrip hex="#7c4dff" duration={0.75}>
+      <Links to="/blog">
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
         </span>
         About me
       </Links>
-      <Links to="/contact-page" paintDrip hex="#7c4dff" duration={0.75}>
+      <Links to="/contact-page">
         <span role="img" aria-label="contact">
           &#x1f4e9;
         </span>

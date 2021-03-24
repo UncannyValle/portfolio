@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -7,7 +7,6 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import { theme } from "../theme/globalstyle"
 
 const HomeWrapper = styled.div`
   width: 100%;
@@ -34,7 +33,6 @@ const TextWrap = styled.div`
   text-align: center;
   .top {
     width: 25%;
-    display: flex;
   }
   .bottom {
     width: 65vw;
@@ -43,7 +41,12 @@ const TextWrap = styled.div`
     width: 30%;
   }
   h1 {
-    font-size: 7rem;
+    font-size: 5rem;
+    transition: all 0.3s ease-in;
+    font-family: ${({ theme }) => theme.font.display};
+    width: 5rem;
+    color: white;
+    display: block;
   }
   h2 {
     font-size: 3rem;
@@ -67,10 +70,16 @@ const TextWrap = styled.div`
   @media (max-width: 520px) {
     width: 95%;
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     h2 {
       font-size: 1.2rem;
+    }
+    .top {
+      width: 30vw;
+    }
+    .bottom {
+      width: 75vw;
     }
   }
 `
@@ -109,51 +118,25 @@ const Animated = styled.div`
   flex-wrap: nowrap;
   justify-content: space-around;
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   align-items: center;
-  height: 9rem;
+  height: auto;
   & > * {
-    transition: all 0.1s ease-in;
-    font-size: 7rem;
-    font-family: ${({ theme }) => theme.font.display};
-    border: none;
-    background: none;
-    color: white;
   }
   & > *:hover {
     transform: scale(1.5);
-    color: ${({ color }) => color};
+    color: ${({ theme }) => theme.colors.cyan};
     cursor: default;
   }
 `
 
 const Home = () => {
-  const [rand, setRand] = useState("uncannyCyan")
-
-  function randomizer() {
-    const keys = Object.keys(theme.colors)
-    const rando = theme.colors[keys[(keys.length * Math.random()) << 0]]
-
-    if (rando !== "#3F51B5") {
-      setRand(rando)
-    }
-    console.log(rand)
-  }
-
   function animateLetters(string, classword) {
     let split = string.split("").map((letter, index) => {
-      return (
-        <button key={index} onMouseEnter={randomizer}>
-          {letter}
-        </button>
-      )
+      return <h1 key={index}>{letter}</h1>
     })
 
-    return (
-      <Animated className={classword} color={rand}>
-        {split}
-      </Animated>
-    )
+    return <Animated className={classword}>{split}</Animated>
   }
 
   return (
@@ -163,6 +146,7 @@ const Home = () => {
         {animateLetters("I'm Julian", "bottom")}
         <hr />
         <h2>Front-End Developer</h2>
+        <p></p>
       </TextWrap>
       <SocialWrapper>
         <a

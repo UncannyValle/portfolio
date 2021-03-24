@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 //styles
-const Button = styled(AniLink)`
+const Button = styled(Link)`
   color: white;
   display: block;
   font-size: 1.5rem;
@@ -40,9 +40,6 @@ const DesktopMenu = () => (
   <Menu>
     <li id="projects-link">
       <Button
-        paintDrip
-        hex="#7c4dff"
-        duration={0.75}
         to="/project-page"
         activeClassName="selected"
       >
