@@ -4,7 +4,6 @@ import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
-import resumePDF from "../downloads/Julian_Valle_Web_Dev_Resume.pdf"
 
 const AboutWrapper = styled.div`
   height: auto;

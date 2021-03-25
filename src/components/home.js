@@ -31,14 +31,12 @@ const TextWrap = styled.div`
     width: 20vw;
     h1 {
       font-size: 3rem;
-      /* font-family: ${({ theme }) => theme.font.title}; */
     }
   }
   .middle {
     width: 70vw;
     h1 {
       font-size: 3.5rem;
-      /* font-family: ${({ theme }) => theme.font.title}; */
     }
   }
   .bottom {
@@ -76,17 +74,27 @@ const TextWrap = styled.div`
   }
   @media (max-width: 768px) {
     width: 95%;
-    h1 {
-      font-size: 4rem;
+    .top {
+      h1 {
+        font-size: 1.5rem;
+      }
     }
-    h2 {
-      font-size: 1.5rem;
+    .middle {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+    .bottom {
+      h1 {
+        font-size: 2rem;
+      }
     }
     p {
       font-size: 1rem;
+      width: 90vw;
     }
   }
-  @media (max-width: 520px) {
+  @media (max-width: 768px) {
     width: 95%;
     h1 {
       font-size: 2.5rem;
@@ -96,9 +104,21 @@ const TextWrap = styled.div`
     }
     .top {
       width: 30vw;
+      h1 {
+        font-size: 2.5rem;
+      }
     }
     .bottom {
+      width: 50vw;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .middle {
       width: 75vw;
+      h1 {
+        font-size: 2rem;
+      }
     }
   }
 `

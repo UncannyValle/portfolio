@@ -35,6 +35,11 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   background-color: #7c4dff;
+  @media (max-width: 768px) {
+    p {
+      margin: 0 1rem;
+    }
+  }
 `
 const SocialWrapper = styled.div`
   text-align: center;
@@ -58,10 +63,8 @@ const SocialWrapper = styled.div`
     width: 70%;
   }
   @media (max-width: 520px) {
-    width: 50%;
-    a {
-      font-size: 40px;
-    }
+    width: 30%;
+    flex-direction: column;
   }
 `
 
@@ -85,8 +88,8 @@ const Layout = ({ children }) => {
       <Main>{children}</Main>
 
       <Footer>
-        The Uncanny Valle© | Made by Julian Valle 2020 -{" "}
-        {new Date().getFullYear()}
+        <p>The Uncanny Valle©</p> <p>|</p>
+        <p> Made by Julian Valle 2020 - {new Date().getFullYear()}</p>
         <SocialWrapper>
           <a
             href="https://linkedin.com/in/uncannyvalle/"
