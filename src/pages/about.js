@@ -3,13 +3,13 @@ import Layout from "../components/layout"
 import About from "../components/about"
 import SEO from "../components/seo"
 
-const BlogPage = () => {
+const AboutPage = () => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="About" />
       <About />
     </Layout>
   )
 }
 
-export default BlogPage
+export default AboutPage

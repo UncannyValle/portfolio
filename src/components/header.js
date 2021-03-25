@@ -59,7 +59,7 @@ const Header = () => {
           to="/"
           activeClassName="selected"
         >
-          Julian Valle
+          JV
         </Title>
         <DesktopMenu />
         <MobileMenu open={open} setOpen={setOpen} />

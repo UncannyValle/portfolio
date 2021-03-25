@@ -32,10 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     letter-spacing: 0;
-    height:auto;
     background-color: #3f51b5;
-    position: relative;
-    min-height: 100vh;
   }
   h1{
     font-family: ${({ theme }) => theme.font.display};
@@ -45,11 +42,18 @@ export const GlobalStyle = createGlobalStyle`
   h2{
     font-family: ${({ theme }) => theme.font.title};
     font-size: 2rem;
-    color: #2c26ff;
+    color: ${({ theme }) => theme.colors.uncannyPlatinum};
+    margin:.5rem 0;
+  }
+  h3{
+    text-align:center;
   }
   a {
     text-decoration: none ;
     color:black;
     font-family: ${({ theme }) => theme.font.title};
  }  
+ p{
+   text-align: left;
+ }
 `

@@ -3,18 +3,19 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-  /* background-color: white; */
-  padding: 1em;
+  padding: 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 0 3px 3px 0 #000000; */
-  color: #000000;
+  color: #ffffff;
+  background-color: #3f51b5;
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin: 1.5rem 1rem;
   }
+
   .img_wrap {
     position: relative;
     margin-bottom: 1rem;
@@ -47,9 +48,6 @@ const Wrapper = styled.div`
   }
 `
 const Image = styled(Img)`
-  width: 100%;
-  margin: 0;
-  padding: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -63,12 +61,12 @@ const GitHubButton = styled.a`
   color: white;
   margin: 1rem 0;
   transition: 0.2s all ease-in-out;
-
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   &:hover {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
   &:active {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: none;
   }
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -79,13 +77,16 @@ const GitHubButton = styled.a`
 const Skills = props => {
   return (
     <Wrapper>
+    <h2>{props.title}</h2>
       <a className="img_wrap" href={props.site}>
         <Image fluid={props.image} alt="project" />
         <h2 className="hoverText">Visit Page</h2>
       </a>
       <p>{props.text}</p>
-      <p>{props.tech}</p>
-      <GitHubButton href={props.gitHub}>GitHub</GitHubButton>{" "}
+      <h3>{props.tech}</h3>
+      <GitHubButton href={props.gitHub} target="_blank">
+        GitHub
+      </GitHubButton>{" "}
     </Wrapper>
   )
 }

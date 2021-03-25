@@ -1,22 +1,18 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faGithub,
-  faTwitter,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
+
 import "@fortawesome/fontawesome-svg-core/styles.css"
 
 const HomeWrapper = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
+  position: relative;
+  top: 12vh;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -32,19 +28,38 @@ const TextWrap = styled.div`
   width: 100%;
   text-align: center;
   .top {
-    width: 25%;
+    width: 20vw;
+    h1 {
+      font-size: 3rem;
+      /* font-family: ${({ theme }) => theme.font.title}; */
+    }
+  }
+  .middle {
+    width: 70vw;
+    h1 {
+      font-size: 3.5rem;
+      /* font-family: ${({ theme }) => theme.font.title}; */
+    }
   }
   .bottom {
-    width: 65vw;
+    width: 40vw;
+    h1 {
+      font-size: 5rem;
+    }
   }
   hr {
-    width: 30%;
+    width: 50%;
+    margin: 1.5rem auto;
+  }
+  .front {
+    margin: 1rem auto;
   }
   h1 {
     font-size: 5rem;
     transition: all 0.3s ease-in;
-    font-family: ${({ theme }) => theme.font.display};
     width: 5rem;
+    font-family: ${({ theme }) => theme.font.display};
+
     color: white;
     display: block;
   }
@@ -53,7 +68,11 @@ const TextWrap = styled.div`
     color: #50c5b7;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
   }
   @media (max-width: 768px) {
     width: 95%;
@@ -83,36 +102,7 @@ const TextWrap = styled.div`
     }
   }
 `
-const SocialWrapper = styled.div`
-  text-align: center;
-  width: 30%;
-  display: flex;
-  margin: 2rem auto;
-  justify-content: space-evenly;
-  align-items: center;
-  a svg {
-    width: 100%;
-    height: 100%;
-  }
-  a {
-    color: white;
-    transition: 0.5s;
-    font-size: 50px;
-  }
-  a:hover {
-    transform: scale(2);
-    color: cyan;
-  }
-  @media (max-width: 768px) {
-    width: 70%;
-  }
-  @media (max-width: 520px) {
-    width: 50%;
-    a {
-      font-size: 40px;
-    }
-  }
-`
+
 const Animated = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -142,38 +132,20 @@ const Home = () => {
   return (
     <HomeWrapper>
       <TextWrap>
-        {animateLetters("Hi,", "top")}
+        {animateLetters("Welcome", "top")}
+        {animateLetters("to the Uncanny Valle", "middle")}
         {animateLetters("I'm Julian", "bottom")}
         <hr />
-        <h2>Front-End Developer</h2>
-        <p></p>
+        <h2 className="front">Front-End Developer</h2>
+        <p>
+          I'm Julian,I am a self taught developer and tech support specialist
+          specializing in creating fast and cutting edge sites using the latest
+          Javascript tools. I'm a creative and passionate guy who's mantra is,
+          "Never stop learning." If you are in need of help with your next web
+          project, hit me up. I am always happy to help out on new or ongoing
+          projects and collaborate with like minded people.
+        </p>
       </TextWrap>
-      <SocialWrapper>
-        <a
-          href="https://linkedin.com/in/uncannyvalle/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a
-          href="https://github.com/uncannyvalle/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a
-          href="https://twitter.com/theuncannyvalle/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-      </SocialWrapper>
     </HomeWrapper>
   )
 }

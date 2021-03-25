@@ -59,7 +59,7 @@ const Projects = props => {
           }
         }
       }
-     
+
       avocado: file(relativePath: { eq: "avocado.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
@@ -76,6 +76,7 @@ const Projects = props => {
         <SkillsWrapper>
           <Skills
             image={data.atole.childImageSharp.fluid}
+            title={"Atole Blog"}
             site={"https://atolemedia.com"}
             text={"A Blog website for game and movie reviews"}
             tech={"React | JS | CSS | GraphQl"}
@@ -83,6 +84,7 @@ const Projects = props => {
           />
           <Skills
             image={data.sapa.childImageSharp.fluid}
+            title={"Sapa Fashion Store"}
             site={"https://sapa-fashion.netlify.app/"}
             text={"An Ecomerce Site Using Shopify"}
             tech={"Gatsby | React | JS | GraphQl | Shopify"}
@@ -90,6 +92,7 @@ const Projects = props => {
           />
           <Skills
             image={data.avocado.childImageSharp.fluid}
+            title={"Work Clock-Avocado"}
             site={"https://avocadoclock.netlify.com/"}
             text={"An anti procrastination timer using react"}
             tech={"React | JS | XML | CSS"}
@@ -106,10 +109,9 @@ const Projects = props => {
           /> */}
           <Skills
             image={data.movie.childImageSharp.fluid}
+            title={"Movie Quoter"}
             site={"https://movie-quote-machine.netlify.com/"}
-            text={
-              "Built in React, uses an external API to access data"
-            }
+            text={"Built in React, uses an external API to access data"}
             tech={"React | JS | CSS | HTML | Netlify"}
             gitHub={"https://github.com/UncannyValle/MovieQuote-machine"}
           />
@@ -122,6 +124,7 @@ const Projects = props => {
           /> */}
           <Skills
             image={data.mario.childImageSharp.fluid}
+            title={"Mario Drum Machine"}
             site={"https://mp-soundmaker.netlify.com"}
             text={"A sound tester with the music of Mario Paint"}
             tech={"React | JS | CSS | HTML | Netlify"}
@@ -129,6 +132,7 @@ const Projects = props => {
           />
           <Skills
             image={data.calcutron.childImageSharp.fluid}
+            title={"Calculator App"}
             site={"https://calcutron.netlify.com"}
             text={"Just a calculator made with React"}
             tech={"React | JS | CSS | HTML | Netlify"}

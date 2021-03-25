@@ -14,7 +14,6 @@ const Button = styled(Link)`
   &:hover {
     cursor: pointer;
     color: ${({ theme }) => theme.colors.uncannyCyan};
-    /* font-size: 2rem; */
     padding: none;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
@@ -39,32 +38,17 @@ const Menu = styled.ul`
 const DesktopMenu = () => (
   <Menu>
     <li id="projects-link">
-      <Button
-        to="/project-page"
-        activeClassName="selected"
-      >
+      <Button to="/project-page" activeClassName="selected">
         Projects
       </Button>
     </li>
     <li id="about-link">
-      <Button
-        paintDrip
-        hex="#7c4dff"
-        duration={0.75}
-        to="/blog"
-        activeClassName="selected"
-      >
+      <Button to="/blog" activeClassName="selected">
         About Me
       </Button>
     </li>
     <li>
-      <Button
-        paintDrip
-        hex="#7c4dff"
-        duration={0.75}
-        to="/contact-page"
-        activeClassName="selected"
-      >
+      <Button to="/contact-page" activeClassName="selected">
         Hit me up!
       </Button>
     </li>
