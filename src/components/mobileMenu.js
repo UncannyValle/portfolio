@@ -56,7 +56,7 @@ const MobileMenu = ({ open }) => {
         </span>
         Projects
       </Links>
-      <Links to="/blog">
+      <Links to="/about-page">
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
         </span>

@@ -43,7 +43,7 @@ const DesktopMenu = () => (
       </Button>
     </li>
     <li id="about-link">
-      <Button to="/blog" activeClassName="selected">
+      <Button to="/about-page" activeClassName="selected">
         About Me
       </Button>
     </li>

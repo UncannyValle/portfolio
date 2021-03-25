@@ -9,7 +9,7 @@ import SectionWrapper from "./sectionWrapper"
 const SkillsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 90%;
+  width: 95%;
   grid-gap: 1em 1em;
   margin: 0 auto;
   @media (max-width: 768px) {

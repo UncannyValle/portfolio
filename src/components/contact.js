@@ -12,6 +12,16 @@ import {
 
 const ContactWrapper = styled(Wrapper)`
   margin-bottom: 0rem;
+  p {
+    color: ${({ theme }) => theme.colors.uncannyPlatinum};
+    margin: 0 auto;
+    text-align: center;
+  }
+  a {
+    color: ${({ theme }) => theme.colors.uncannyCyan};
+    font-size: 1.5rem;
+    transition: 0.5s;
+  }
 `
 const SocialWrapper = styled.div`
   display: flex;
@@ -20,6 +30,7 @@ const SocialWrapper = styled.div`
   justify-content: space-around;
   height: 7rem;
   align-items: center;
+
   a {
     color: ${({ theme }) => theme.colors.uncannyPurple};
     font-size: 3rem;
@@ -36,6 +47,12 @@ const Contact = props => (
   <div id={props.id}>
     <ContactWrapper>
       <Title>Contact Me</Title>
+      <p>
+        Feel free to contact me at{" "}
+        <a href="mailto:julianv@atolemedia.com">julianv@atolemedia.com</a>
+        <br />
+        or use the contact form below.
+      </p>
       <Form />
       <SocialWrapper>
         <a

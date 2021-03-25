@@ -43,8 +43,8 @@ const Title = styled(Link)`
     font-size: 2.5rem;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding-left: 1.5rem;
-    font-size: 1.2rem;
+    padding-left: 2rem;
+    font-size: 2rem;
   }
 `
 
