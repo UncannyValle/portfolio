@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 //styles
-const Button = styled(AniLink)`
+const Button = styled(Link)`
   color: white;
   display: block;
   font-size: 1.5rem;
@@ -13,8 +13,7 @@ const Button = styled(AniLink)`
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.color.neon};
-    /* font-size: 2rem; */
+    color: ${({ theme }) => theme.colors.uncannyCyan};
     padding: none;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
@@ -39,35 +38,17 @@ const Menu = styled.ul`
 const DesktopMenu = () => (
   <Menu>
     <li id="projects-link">
-      <Button
-        paintDrip
-        hex="#7c4dff"
-        duration={0.75}
-        to="/project-page"
-        activeClassName="selected"
-      >
+      <Button to="/project-page" activeClassName="selected">
         Projects
       </Button>
     </li>
     <li id="about-link">
-      <Button
-        paintDrip
-        hex="#7c4dff"
-        duration={0.75}
-        to="/blog"
-        activeClassName="selected"
-      >
+      <Button to="/about-page" activeClassName="selected">
         About Me
       </Button>
     </li>
     <li>
-      <Button
-        paintDrip
-        hex="#7c4dff"
-        duration={0.75}
-        to="/contact-page"
-        activeClassName="selected"
-      >
+      <Button to="/contact-page" activeClassName="selected">
         Hit me up!
       </Button>
     </li>

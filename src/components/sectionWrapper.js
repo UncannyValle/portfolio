@@ -1,13 +1,9 @@
 import styled from "styled-components"
 
 const SectionWrapper = styled.div`
-  background-color: #c5cae9;
-  color: white;
   height: auto;
-  padding: 1rem;
   text-align: center;
-  margin: 12vh 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-top: 12vh;
 
   @media only screen and (max-width: 768px) {
     align-items: center;

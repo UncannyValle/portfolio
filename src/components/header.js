@@ -1,9 +1,9 @@
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import React, { useState } from "react"
 import styled from "styled-components"
 import Hamburger from "../components/hamburger"
 import DesktopMenu from "../components/desktopMenu"
 import MobileMenu from "../components/mobileMenu"
+import { Link } from "gatsby"
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -16,7 +16,7 @@ const HeaderWrapper = styled.header`
   transition: all 200ms ease-in;
 
   .selected {
-    color: ${({ theme }) => theme.color.neon};
+    color: ${({ theme }) => theme.colors.uncannyCyan};
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
   }
@@ -32,13 +32,13 @@ const HeaderWrapper = styled.header`
     padding: 1rem 0;
   }
 `
-const Title = styled(AniLink)`
-  color: white;
+const Title = styled(Link)`
   font-size: 2.5rem;
   transition: all 0.2s ease-out;
   padding-left: 3rem;
   text-align: center;
-
+  font-family: ${({ theme }) => theme.font.display};
+  color: ${({ theme }) => theme.colors.uncannyCyan};
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
@@ -55,13 +55,11 @@ const Header = () => {
     <HeaderWrapper>
       <nav className="navbar">
         <Title
-          paintDrip
-          hex="#7c4dff"
-          duration={0.5}
+          
           to="/"
           activeClassName="selected"
         >
-          Julian Valle
+          JV
         </Title>
         <DesktopMenu />
         <MobileMenu open={open} setOpen={setOpen} />

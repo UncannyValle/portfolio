@@ -14,7 +14,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-transition-link`,
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -52,7 +51,12 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Roboto", "Titillium Web", "Bungee Shade"],
+          families: [
+            "Roboto",
+            "Titillium Web",
+            "Bungee Shade",
+            "Bungee Inline",
+          ],
         },
       },
     },
