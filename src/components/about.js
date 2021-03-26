@@ -9,7 +9,6 @@ const AboutWrapper = styled.div`
   height: auto;
   width: 100%;
   margin: 0 auto;
-
   .text {
     width: 60%;
     margin: 0 auto;
@@ -41,17 +40,8 @@ const AboutWrapper = styled.div`
     &:hover {
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
-  }
-  @media only screen and (max-width: 768px) {
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
-    .text {
-      width: 90%;
-      text-align: justify;
-    }
-    .resume {
-      margin: 1rem 0.5rem;
+    @media (max-width: 768px) {
+      margin: 0 1rem;
     }
   }
 
@@ -72,6 +62,20 @@ const AboutWrapper = styled.div`
       border: none;
       border-radius: 290486px;
       cursor: context-menu;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    .text {
+      width: 90%;
+    }
+    .resume {
+      margin: 1rem;
+    }
+    .skills {
+      font-size: 1rem;
     }
   }
 `

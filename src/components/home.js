@@ -11,21 +11,22 @@ const HomeWrapper = styled.div`
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  position: relative;
-  top: 12vh;
+  margin-top: 12vh;
+  margin-bottom: 5rem;
 
   @media (max-width: 768px) {
-    margin: 0;
     text-align: center;
     top: 25vh;
   }
   @media (max-width: 520px) {
-    margin: 0;
     text-align: center;
   }
 `
 const TextWrap = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
   .top {
     width: 20vw;
@@ -50,7 +51,8 @@ const TextWrap = styled.div`
     margin: 1.5rem auto;
   }
   .front {
-    margin: 1rem auto;
+    margin: 0 0 1.5rem;
+    color: cyan;
   }
   h1 {
     font-size: 5rem;
@@ -76,49 +78,51 @@ const TextWrap = styled.div`
     width: 95%;
     .top {
       h1 {
-        font-size: 1.5rem;
+        font-size: 3.5rem;
       }
     }
     .middle {
       h1 {
-        font-size: 1rem;
+        font-size: 2.5rem;
       }
     }
     .bottom {
       h1 {
-        font-size: 2rem;
+        font-size: 3rem;
       }
     }
     p {
-      font-size: 1rem;
+      font-size: 1.5rem;
       width: 90vw;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 520px) {
     width: 95%;
-    h1 {
-      font-size: 2.5rem;
-    }
-    h2 {
-      font-size: 1.2rem;
-    }
+
     .top {
       width: 30vw;
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
     .bottom {
       width: 50vw;
       h1 {
-        font-size: 2.5rem;
+        font-size: 1.7rem;
       }
     }
     .middle {
       width: 75vw;
       h1 {
-        font-size: 2rem;
+        font-size: 1.3rem;
       }
+    }
+    .front {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      width: 90%;
     }
   }
 `
@@ -158,12 +162,14 @@ const Home = () => {
         <hr />
         <h2 className="front">Front-End Developer</h2>
         <p>
-          I'm Julian,I am a self taught developer and tech support specialist
+          I'm Julian, I am a self taught developer and tech support specialist
           specializing in creating fast and cutting edge sites using the latest
           Javascript tools. I'm a creative and passionate guy who's mantra is,
-          "Never stop learning." If you are in need of help with your next web
-          project, hit me up. I am always happy to help out on new or ongoing
-          projects and collaborate with like minded people.
+          "Never stop learning."
+          <br /> <br />
+          If you are in need of help with your next web project, hit me up. I am
+          always happy to help out on new or ongoing projects and collaborate
+          with like minded people.
         </p>
       </TextWrap>
     </HomeWrapper>

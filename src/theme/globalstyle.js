@@ -27,13 +27,18 @@ export const GlobalStyle = createGlobalStyle`
   }
   html {
     box-sizing: border-box;
-    font-family: ${({ theme }) => theme.font.text}
+    font-family: ${({ theme }) => theme.font.text};
   }
   body {
     line-height: 1.5;
     letter-spacing: 0;
     background-color: #3f51b5;
+    min-height:100vh;
+ position: relative;
+ padding-bottom: 7rem;
+
   }
+
   h1{
     font-family: ${({ theme }) => theme.font.display};
     font-size: 5rem;

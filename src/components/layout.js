@@ -17,27 +17,45 @@ import {
   faGithub,
   faTwitter,
   faLinkedin,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 
 const Main = styled.main`
   max-width: 1366px;
   text-align: center;
-  margin: 0 auto;
-  min-height: 100vh;
 `
 
 const Footer = styled.footer`
   width: 100%;
-  bottom: 0;
   color: white;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background-color: #7c4dff;
+  position: absolute;
+  bottom: 0;
+  a {
+    color: cyan;
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+  .text {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
   @media (max-width: 768px) {
-    p {
-      margin: 0 1rem;
+  }
+  @media (max-width: 520px) {
+    height: 7rem;
+    .text {
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-size: 1rem;
+      height: 100%;
     }
   }
 `
@@ -47,6 +65,7 @@ const SocialWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
   a svg {
     width: 100%;
     height: 100%;
@@ -63,8 +82,14 @@ const SocialWrapper = styled.div`
     width: 70%;
   }
   @media (max-width: 520px) {
-    width: 30%;
+    width: 40%;
+    height: 100%;
+    flex-wrap: wrap;
     flex-direction: column;
+    a {
+      height: 50%;
+      padding: 1rem;
+    }
   }
 `
 
@@ -88,8 +113,10 @@ const Layout = ({ children }) => {
       <Main>{children}</Main>
 
       <Footer>
-        <p>The Uncanny Valle©</p> <p>|</p>
-        <p> Made by Julian Valle 2020 - {new Date().getFullYear()}</p>
+        <div className="text">
+          <a href="mailto:julianv@atolemedia.com">The Uncanny Valle© </a>
+          <p> Made by Julian Valle 2020 - {new Date().getFullYear()}</p>
+        </div>
         <SocialWrapper>
           <a
             href="https://linkedin.com/in/uncannyvalle/"
@@ -106,6 +133,14 @@ const Layout = ({ children }) => {
           >
             {" "}
             <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a
+            href="https://www.instagram.com/the_unncanny_valle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
             href="https://twitter.com/theuncannyvalle/"
