@@ -23,6 +23,7 @@ import {
 const Main = styled.main`
   max-width: 1366px;
   text-align: center;
+  margin: 0 auto;
 `
 
 const Footer = styled.footer`

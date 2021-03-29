@@ -56,6 +56,7 @@ module.exports = {
             "Titillium Web",
             "Bungee Shade",
             "Bungee Inline",
+            "Bungee"
           ],
         },
       },

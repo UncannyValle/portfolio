@@ -11,8 +11,7 @@ const HomeWrapper = styled.div`
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  margin-top: 12vh;
-  margin-bottom: 5rem;
+  margin: 12vh auto 5rem auto;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -44,6 +43,8 @@ const TextWrap = styled.div`
     width: 40vw;
     h1 {
       font-size: 5rem;
+
+      font-family: ${({ theme }) => theme.font.display};
     }
   }
   hr {
@@ -58,7 +59,6 @@ const TextWrap = styled.div`
     font-size: 5rem;
     transition: all 0.3s ease-in;
     width: 5rem;
-    font-family: ${({ theme }) => theme.font.display};
 
     color: white;
     display: block;
