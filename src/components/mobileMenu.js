@@ -14,7 +14,6 @@ const StyledMenu = styled.nav`
   position: absolute;
   top: 10vh;
   right: 0;
-
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (!open ? "translateX(100%)" : "translateX(0)")};
 
@@ -39,6 +38,7 @@ const Links = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: 1.2rem;
     text-align: center;
