@@ -33,6 +33,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-image`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -48,20 +50,6 @@ module.exports = {
 
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: "gatsby-plugin-web-font-loader",
-    //   options: {
-    //     google: {
-    //       families: [
-    //         "Roboto",
-    //         "Titillium Web",
-    //         "Audiowide",
-    //         "Bungee Inline",
-    //         "Bungee",
-    //       ],
-    //     },
-    //   },
-    // },
     {
       resolve: "gatsby-omni-font-loader",
       options: {

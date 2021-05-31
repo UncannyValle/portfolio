@@ -17,7 +17,6 @@ const Wrapper = styled.div`
     margin: 1.5rem 1rem;
   }
   h2 {
-    color: #ed6a5a;
     font-weight: 700;
     min-height: 6rem;
     margin-bottom: 1rem;
@@ -70,8 +69,7 @@ const Skills = props => {
     <Wrapper>
       <h2>{props.title}</h2>
       <a className="img_wrap" href={props.site}>
-        <Image fluid={props.image} alt="project" />
-        {/* <h2 className="hoverText">Visit Page</h2> */}
+        {props.image}
       </a>
       <p>{props.text}</p>
       <h3>{props.tech}</h3>

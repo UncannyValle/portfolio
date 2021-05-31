@@ -3,6 +3,7 @@ import Skills from "./skills"
 import Title from "./title"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 import SectionWrapper from "./sectionWrapper"
 
@@ -21,7 +22,7 @@ const SkillsWrapper = styled.div`
   }
 `
 
-const Projects = props => {
+const Projects = (props) => {
   const data = useStaticQuery(graphql`
     {
       calcutron: file(relativePath: { eq: "calcutron.png" }) {
@@ -75,7 +76,9 @@ const Projects = props => {
         <Title>A bit of my work</Title>
         <SkillsWrapper>
           <Skills
-            image={data.atole.childImageSharp.fluid}
+            image={
+              <StaticImage src="../images/atole_pic.png" alt="atole site" />
+            }
             title={"Atole Blog"}
             site={"https://atolemedia.com"}
             text={"A Blog website for game and movie reviews"}
@@ -83,7 +86,7 @@ const Projects = props => {
             gitHub={"https://github.com/UncannyValle/AtoleMedia"}
           />
           <Skills
-            image={data.sapa.childImageSharp.fluid}
+            image={<StaticImage src="../images/sapa.jpg" alt="ecomerce site" />}
             title={"Sapa Fashion Store"}
             site={"https://sapa-fashion.netlify.app/"}
             text={"An Ecomerce Site Using Shopify"}
@@ -91,39 +94,34 @@ const Projects = props => {
             gitHub={"https://github.com/UncannyValle/Sapa-fashion"}
           />
           <Skills
-            image={data.avocado.childImageSharp.fluid}
+            image={
+              <StaticImage src="../images/avocado.jpg" alt="avocado clock" />
+            }
             title={"Work Clock-Avocado"}
             site={"https://avocadoclock.netlify.com/"}
             text={"An anti procrastination timer using react"}
             tech={"React | JS | XML | CSS"}
             gitHub={"https://github.com/UncannyValle/Avocado-Clock"}
           />
-          {/* <Skills
-            image={data.danny.childImageSharp.fluid}
-            site={"https://lbalvarez8.github.io/Happy-Birthday-Danny/"}
-            text={
-              "A JS browser game, worked in a team and helped code the gameplay"
-            }
-            tech={"Javascript | jQuery | CSS | HTML | Git "}
-            gitHub={"https://github.com/UncannyValle/Danny-Boy"}
-          /> */}
+
           <Skills
-            image={data.movie.childImageSharp.fluid}
+            image={
+              <StaticImage
+                src="../images/movie.png"
+                alt="movie quote machine"
+              />
+            }
             title={"Movie Quoter"}
             site={"https://movie-quote-machine.netlify.com/"}
             text={"Built in React, uses an external API to access data"}
             tech={"React | JS | CSS | HTML | Netlify"}
             gitHub={"https://github.com/UncannyValle/MovieQuote-machine"}
           />
-          {/* <Skills
-            image={data.markdown.childImageSharp.fluid}
-            site={"https://mrkdw-preview-machine.netlify.com/"}
-            text={"A markdown previewer using React"}
-            tech={"React | JS | CSS | HTML | Netlify"}
-            gitHub={"https://github.com/UncannyValle/markdown-previewer"}
-          /> */}
+
           <Skills
-            image={data.mario.childImageSharp.fluid}
+            image={
+              <StaticImage src="../images/mario.jpg" alt="mario drummer" />
+            }
             title={"Mario Drum Machine"}
             site={"https://mp-soundmaker.netlify.com"}
             text={"A sound tester with the music of Mario Paint"}
@@ -131,7 +129,9 @@ const Projects = props => {
             gitHub={"https://github.com/UncannyValle/MarioPaintSoundMachine"}
           />
           <Skills
-            image={data.calcutron.childImageSharp.fluid}
+            image={
+              <StaticImage src="../images/calcutron.png" alt="calculator app" />
+            }
             title={"Calculator App"}
             site={"https://calcutron.netlify.com"}
             text={"Just a calculator made with React"}
