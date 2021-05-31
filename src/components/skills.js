@@ -59,7 +59,7 @@ const Skills = (props) => {
   return (
     <Wrapper>
       <h2>{props.title}</h2>
-      <a className="img_wrap" href={props.site}>
+      <a className="img_wrap" href={props.site} target="_blank">
         {props.image}
       </a>
       <p>{props.text}</p>

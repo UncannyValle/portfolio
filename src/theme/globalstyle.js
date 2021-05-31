@@ -43,7 +43,8 @@ export const GlobalStyle = createGlobalStyle`
     min-height:100vh;
     position: relative;
     padding-bottom: 7rem;
-    animation: fadeInAnimation ease-in 1s;
+    ${
+      "" /* animation: fadeInAnimation ease-in 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     @keyframes fadeInAnimation {
@@ -55,7 +56,8 @@ export const GlobalStyle = createGlobalStyle`
      }
 }
     
-  }
+  } */
+    }
 
   h1{
     font-family: ${({ theme }) => theme.font.display2};

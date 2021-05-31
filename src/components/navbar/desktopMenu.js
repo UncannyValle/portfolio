@@ -49,7 +49,7 @@ const DesktopMenu = () => (
     </li>
     <li>
       <Button to="/contact-page" activeClassName="selected">
-        Hit me up!
+        Contact{" "}
       </Button>
     </li>
   </Menu>

@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: ${({ theme }) => theme.colors.uncannyPurple};
   height: 90vh;
   text-align: center;

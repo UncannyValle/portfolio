@@ -79,24 +79,29 @@ const AboutWrapper = styled.div`
     }
   }
 `
-const About = props => (
+const About = (props) => (
   <div id={props.id}>
     <SectionWrapper>
       <Title>A bit about me...</Title>
       <AboutWrapper>
         <p className="text">
           I'm Julian Valle, I love to make creative, beautiful and responsive
-          websites for small businesses and beyond! I am a self taught developer working mainly in React and in the JAMstack making sites using Gatsby and that ecosystem
-          <br/><br/>
-          So far I have ben trying to absorb as much as possible in order to be able to hit the ground running in any new project I am needed in. So I have been learning what would me be most needed as Junior Developer and get prepared there.
-          <br/><br/>
-          I live in New York City with my lovely wife, where we spend our time walking the city and getting into strange adventures!
-
-
+          websites for small businesses and beyond! I am a self taught developer
+          working mainly in React and in the JAMstack making sites using Gatsby
+          and that ecosystem
+          <br />
+          <br />
+          So far I have ben trying to absorb as much as possible in order to be
+          able to hit the ground running in any new project I am needed in. So I
+          have been learning what would me be most needed as Junior Developer
+          and get prepared there.
+          <br />
+          <br />I live in New York City with my lovely wife, where we spend our
+          time walking the city and getting into strange adventures!
         </p>
         <a
           className="resume"
-          href="https://docs.google.com/document/d/16hguuxwODZmWrIda3N7RkRgHPfI2kE6LimPfL_PGYkg/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1KHadlWe19VAhHycZVBANUl4MczKRKzdn/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
