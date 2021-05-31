@@ -25,6 +25,7 @@ const SkillsWrapper = styled.div`
 `
 
 const Projects = (props) => {
+  
   return (
     <div id={props.id}>
       <SectionWrapper>

@@ -73,15 +73,13 @@ const Form = () => {
   }
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <input type="hidden" name="form-name" value="contact" />
-
-      <label>Name</label>
+      <label htmlFor="name">Name</label>
       <input type="text" name="name" required="required" />
 
       <label htmlFor="email">E-mail</label>
       <input type="email" name="email" required="required" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <label>Message</label>
+      <label htmlFor="message">Message</label>
       <textarea id="message" name="message" required="required" />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button type="submit" disabled={state.submitting}>
