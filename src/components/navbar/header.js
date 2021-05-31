@@ -1,26 +1,22 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import Hamburger from "../components/hamburger"
-import DesktopMenu from "../components/desktopMenu"
-import MobileMenu from "../components/mobileMenu"
+import Hamburger from "./hamburger"
+import DesktopMenu from "./desktopMenu"
+import MobileMenu from "./mobileMenu"
 import { Link } from "gatsby"
-
-
-
-
 
 const HeaderWrapper = styled.header`
   position: fixed;
   z-index: 5;
   top: 0;
   width: 100vw;
-  background-color: #303f9f;
+  background-color: var(--purple);
   height: 10vh;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 200ms ease-in;
 
   .selected {
-    color: ${({ theme }) => theme.colors.uncannyCyan};
+    color: var(--cyan);
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
   }
@@ -58,11 +54,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <nav className="navbar">
-        <Title
-          
-          to="/"
-          activeClassName="selected"
-        >
+        <Title to="/" activeClassName="selected">
           JV
         </Title>
         <DesktopMenu />

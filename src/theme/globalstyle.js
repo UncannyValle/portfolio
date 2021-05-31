@@ -5,8 +5,8 @@ export const theme = {
   font: {
     title: "Titillium Web, sans-serif",
     text: "Roboto, sans-serif",
-    display: "Bungee Shade, sans",
-    display2: "Bungee, sans"
+    display: "Audiowide, sans",
+    display2: "Audiowide, sans",
   },
   colors: {
     uncannyBlue: "#3F51B5",
@@ -25,7 +25,13 @@ export const GlobalStyle = createGlobalStyle`
   ${reset}
   *, *:before, *:after {
     box-sizing: border-box;
+    --purple:#711c91;
+    --pink:	#ea00d9;
+    --cyan:#0abdc6;
+    --blue: #133e7c;
+    --black:#091833; 
   }
+  
   html {
     box-sizing: border-box;
     font-family: ${({ theme }) => theme.font.text};
@@ -33,22 +39,24 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     letter-spacing: 0;
-    background-color: #3f51b5;
+    background-color: var(--blue);
     min-height:100vh;
- position: relative;
- padding-bottom: 7rem;
+    position: relative;
+    padding-bottom: 7rem;
+    &:hover {
 
+    }
   }
 
   h1{
     font-family: ${({ theme }) => theme.font.display2};
     font-size: 5rem;
-    color: white;
+    color: var(--pink);
   }
   h2{
-    font-family: ${({ theme }) => theme.font.title};
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.uncannyPlatinum};
+    font-family: ${({ theme }) => theme.font.display2};
+    font-size: 3rem;
+    color: var(--cyan);
     margin:.5rem 0;
   }
   h3{

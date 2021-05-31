@@ -1,7 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { animated, useSpring, useTrail } from "react-spring"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"
+import { useState } from "react"
+import { AsyncMode } from "react-is"
 
 const HomeWrapper = styled.div`
   width: 100%;
@@ -26,21 +29,19 @@ const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-end;
   text-align: center;
   .top {
-    width: 20vw;
     h1 {
       font-size: 3rem;
     }
   }
   .middle {
-    width: 70vw;
     h1 {
       font-size: 3.5rem;
     }
   }
   .bottom {
-    width: 40vw;
     h1 {
       font-size: 5rem;
 
@@ -48,31 +49,24 @@ const TextWrap = styled.div`
     }
   }
   hr {
-    width: 50%;
     margin: 1.5rem auto;
   }
   .front {
-    margin: 0 0 1.5rem;
-    color: cyan;
+    margin: 0 2rem;
+    align-self: flex-end;
   }
   h1 {
-    font-size: 5rem;
     transition: all 0.3s ease-in;
-    width: 5rem;
 
-    color: white;
     display: block;
   }
-  h2 {
-    font-size: 3rem;
-    color: #50c5b7;
-  }
+
   p {
     font-size: 1.2rem;
     color: white;
-    text-align: left;
+    text-align: right;
     width: 70%;
-    margin: 0 auto;
+    margin: 0 2rem;
   }
   @media (max-width: 768px) {
     width: 95%;
@@ -127,39 +121,55 @@ const TextWrap = styled.div`
   }
 `
 
-const Animated = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  margin: 0 auto;
-  width: 90%;
-  align-items: center;
+const Animated = styled.h1`
+  align-self: flex-start;
+  margin: 0 2rem 2rem;
+  text-align: left;
   height: auto;
-  & > * {
+  span {
+    transition: all ease-in 0.2s;
+    display: inline-block;
+    min-width: 1rem;
   }
-  & > *:hover {
+  span:hover {
     transform: scale(1.5);
     color: ${({ theme }) => theme.colors.cyan};
     cursor: default;
   }
 `
 
-const Home = () => {
-  function animateLetters(string, classword) {
-    let split = string.split("").map((letter, index) => {
-      return <h1 key={index}>{letter}</h1>
-    })
+const items = [
+  { text: "Welcome", id: 1 },
+  { text: "To My Portfolio!", id: 2 },
+  { text: "I'm Julian", id: 3 },
+]
 
-    return <Animated className={classword}>{split}</Animated>
-  }
+const Home = () => {
+  const trail = useTrail(items.length, { opacity: 1, from: { opacity: 0 } })
+
+  // function animateLetters(string, classword) {
+  //   let split = string.split("").map((letter, index) => {
+  //     return <span key={index}>{letter} </span>
+  //   })
+  //   return <Animated className={classword}>{split}</Animated>
+  // }
 
   return (
     <HomeWrapper>
       <TextWrap>
-        {animateLetters("Welcome", "top")}
-        {animateLetters("to the Uncanny Valle", "middle")}
-        {animateLetters("I'm Julian", "bottom")}
-        <hr />
+        {trail.map((props, i) => (
+          <Animated style={props} key={i}>
+            {items[i].text}
+          </Animated>
+        ))}
+
+        {/* <Animated open={open}>
+          <h1>Welcome</h1>
+          <h1>To My Portfolio</h1>
+          <h1>I'm Julian</h1>
+        </Animated> */}
+        {/* {animateLetters(text[1], "middle")}
+        {animateLetters(text[2], "bottom")} */}
         <h2 className="front">Front-End Developer</h2>
         <p>
           I'm Julian, I am a self taught developer and tech support specialist

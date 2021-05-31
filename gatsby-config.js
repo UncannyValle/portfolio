@@ -55,7 +55,7 @@ module.exports = {
           families: [
             "Roboto",
             "Titillium Web",
-            "Bungee Shade",
+            "Audiowide",
             "Bungee Inline",
             "Bungee",
           ],
