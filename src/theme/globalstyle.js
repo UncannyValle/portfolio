@@ -84,6 +84,30 @@ export const GlobalStyle = createGlobalStyle`
     h1{
        font-size: 3.5rem;
     }
-
+    h2{
+      font-size: 2.5rem;
+    }
  }
+ 
+  @media (max-width: 768px) {    
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+      width: 90vw;
+    }
+  }
+  @media (max-width: 520px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
 `

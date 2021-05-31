@@ -1,7 +1,6 @@
 import React from "react"
 import Skills from "./skills"
 import Title from "./title"
-import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -10,66 +9,22 @@ import SectionWrapper from "./sectionWrapper"
 const SkillsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 95%;
+  align-content: center;
+  width: 100%;
+  padding: 0 2rem;
   grid-gap: 1em 1em;
   margin: 0 auto;
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0;
   }
-  @media only screen and (max-width: 520px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 2em;
+    padding: 0 2rem;
   }
 `
 
 const Projects = (props) => {
-  const data = useStaticQuery(graphql`
-    {
-      calcutron: file(relativePath: { eq: "calcutron.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      atole: file(relativePath: { eq: "atole_pic.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      movie: file(relativePath: { eq: "movie.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      mario: file(relativePath: { eq: "mario.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      sapa: file(relativePath: { eq: "sapa.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-
-      avocado: file(relativePath: { eq: "avocado.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-  `)
   return (
     <div id={props.id}>
       <SectionWrapper>
@@ -97,7 +52,7 @@ const Projects = (props) => {
             image={
               <StaticImage src="../images/avocado.jpg" alt="avocado clock" />
             }
-            title={"Work Clock-Avocado"}
+            title={"Avocado Clock"}
             site={"https://avocadoclock.netlify.com/"}
             text={"An anti procrastination timer using react"}
             tech={"React | JS | XML | CSS"}

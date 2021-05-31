@@ -1,60 +1,51 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: black;
+  color: white;
   border-radius: 15px;
-  background-color: #c5cae9;
+  background-color: var(--black);
+  min-height: 70vh;
   p {
     font-size: 1.2rem;
-    margin: 1.5rem 1rem;
+    display: inline-block;
   }
   h2 {
-    font-weight: 700;
-    min-height: 6rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    min-height: 9rem;
   }
 
-  .img_wrap {
-    position: relative;
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  .img_wrap:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
   @media (max-width: 768px) {
-    text-align: center;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
+    p {
+      width: 70%;
+      text-align: center;
+    }
   }
 `
-const Image = styled(Img)`
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: 0.2s all ease-in;
-  &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transform: scale(1.15);
-  }
+const Buttons = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 `
-const GitHubButton = styled.a`
+const Button = styled.a`
   padding: 0.5rem 1rem;
   background-color: #7c4dff;
   border-radius: 290486px;
-  width: 50%;
+  width: 30%;
   color: white;
   margin: 1rem 0;
-  transition: 0.2s all ease-in-out;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s all ease-in-out;
+  display: inline-block;
   &:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 10px 20px var(--pink), 0 6px 6px var(--pink);
   }
   &:active {
     box-shadow: none;
@@ -64,7 +55,7 @@ const GitHubButton = styled.a`
   }
 `
 
-const Skills = props => {
+const Skills = (props) => {
   return (
     <Wrapper>
       <h2>{props.title}</h2>
@@ -73,9 +64,14 @@ const Skills = props => {
       </a>
       <p>{props.text}</p>
       <h3>{props.tech}</h3>
-      <GitHubButton href={props.gitHub} target="_blank">
-        GitHub
-      </GitHubButton>{" "}
+      <Buttons>
+        <Button href={props.gitHub} target="_blank">
+          GitHub
+        </Button>{" "}
+        <Button href={props.site} target="_blank">
+          Site
+        </Button>
+      </Buttons>
     </Wrapper>
   )
 }
