@@ -32,7 +32,11 @@ const Projects = (props) => {
         <SkillsWrapper>
           <Skills
             image={
-              <StaticImage src="../images/atole_pic.png" alt="atole site" />
+              <StaticImage
+                src="../images/atole_pic.png"
+                alt="atole site"
+                placeholder="blurred"
+              />
             }
             title={"Atole Blog"}
             site={"https://atolemedia.com"}
@@ -41,7 +45,13 @@ const Projects = (props) => {
             gitHub={"https://github.com/UncannyValle/AtoleMedia"}
           />
           <Skills
-            image={<StaticImage src="../images/sapa.jpg" alt="ecomerce site" />}
+            image={
+              <StaticImage
+                src="../images/sapa.jpg"
+                alt="ecomerce site"
+                placeholder="blurred"
+              />
+            }
             title={"Sapa Fashion Store"}
             site={"https://sapa-fashion.netlify.app/"}
             text={"An Ecomerce Site Using Shopify"}
@@ -50,7 +60,11 @@ const Projects = (props) => {
           />
           <Skills
             image={
-              <StaticImage src="../images/avocado.jpg" alt="avocado clock" />
+              <StaticImage
+                src="../images/avocado.jpg"
+                alt="avocado clock"
+                placeholder="blurred"
+              />
             }
             title={"Avocado Clock"}
             site={"https://avocadoclock.netlify.com/"}
@@ -64,6 +78,7 @@ const Projects = (props) => {
               <StaticImage
                 src="../images/movie.png"
                 alt="movie quote machine"
+                placeholder="blurred"
               />
             }
             title={"Movie Quoter"}
@@ -75,7 +90,11 @@ const Projects = (props) => {
 
           <Skills
             image={
-              <StaticImage src="../images/mario.jpg" alt="mario drummer" />
+              <StaticImage
+                src="../images/mario.jpg"
+                alt="mario drummer"
+                placeholder="blurred"
+              />
             }
             title={"Mario Drum Machine"}
             site={"https://mp-soundmaker.netlify.com"}
@@ -85,7 +104,11 @@ const Projects = (props) => {
           />
           <Skills
             image={
-              <StaticImage src="../images/calcutron.png" alt="calculator app" />
+              <StaticImage
+                src="../images/calcutron.png"
+                alt="calculator app"
+                placeholder="blurred"
+              />
             }
             title={"Calculator App"}
             site={"https://calcutron.netlify.com"}

@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: `%s | Julian Valle's Portfolio`,
     description: `Front-end web developer with an eye for detail! I make sites, apps and tacos!`,
     author: `Julian Valle`,
-    siteUrl: `https://theuncannyvalle.com`,
+    siteUrl: `https://julianvalle.dev`,
     image: `/selfie.jpg`,
     imageAlt: `Me drinking some coffee before coding.`,
     twitterUsername: `@theuncannyvalle`,
@@ -14,7 +14,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
