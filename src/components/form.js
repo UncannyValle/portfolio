@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useForm, ValidationError } from "@formspree/react"
 
 const StyledForm = styled.form`
   height: auto;
@@ -17,26 +18,25 @@ const StyledForm = styled.form`
   }
 
   label {
-    margin: .5rem auto;
-    width: 70%;
+    width: 100%;
     text-align: left;
-    color: white;
+    color: var(--pink);
     border: none;
   }
-  label input {
+  input {
     width: 100%;
     height: 3rem;
-    background-color: white;
-    color: black;
+    background-color: var(--black);
+    color: cyan;
     border-radius: 15px;
     border: none;
     font-size: 2rem;
     padding: 1rem;
   }
-  label textarea {
+  textarea {
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: var(--black);
+    color: cyan;
     height: 10rem;
     font-size: 1.5rem;
     padding: 1rem;
@@ -66,29 +66,29 @@ const StyledForm = styled.form`
   }
 `
 
-const Form = () => (
-  <StyledForm
-    name="contact"
-    method="post"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="form-name" value="contact" />
+const Form = () => {
+  const [state, handleSubmit] = useForm("xvodaqva")
+  if (state.succeeded) {
+    return <h2>Thanks for joining!</h2>
+  }
+  return (
+    <StyledForm onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="contact" />
 
-    <label>
-      Name
+      <label>Name</label>
       <input type="text" name="name" required="required" />
-    </label>
-    <label>
-      E-mail
+
+      <label htmlFor="email">E-mail</label>
       <input type="email" name="email" required="required" />
-    </label>
-    <label>
-      Message
-      <textarea name="message" required="required" />
-    </label>
-    <button type="submit">Send</button>
-  </StyledForm>
-)
+      <ValidationError prefix="Email" field="email" errors={state.errors} />
+      <label>Message</label>
+      <textarea id="message" name="message" required="required" />
+      <ValidationError prefix="Message" field="message" errors={state.errors} />
+      <button type="submit" disabled={state.submitting}>
+        Send
+      </button>
+    </StyledForm>
+  )
+}
 
 export default Form
