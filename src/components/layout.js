@@ -1,5 +1,3 @@
-
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -16,8 +14,7 @@ import {
 
 const Main = styled.main`
   max-width: 1366px;
-  text-align: center;
-  margin: 0 auto;
+  margin-top: 12vh;
 `
 
 const Footer = styled.footer`
@@ -101,7 +98,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>{children}</Main>

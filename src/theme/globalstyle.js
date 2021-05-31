@@ -43,20 +43,19 @@ export const GlobalStyle = createGlobalStyle`
     min-height:100vh;
     position: relative;
     padding-bottom: 7rem;
-    &:hover {
-
-    }
+    
   }
 
   h1{
     font-family: ${({ theme }) => theme.font.display2};
     font-size: 5rem;
     color: var(--pink);
+
   }
   h2{
     font-family: ${({ theme }) => theme.font.display2};
     font-size: 3rem;
-    color: var(--cyan);
+    color: cyan;
     margin:.5rem 0;
   }
   h3{
@@ -69,5 +68,11 @@ export const GlobalStyle = createGlobalStyle`
  }  
  p{
    text-align: left;
+ }
+ @media (max-width: 1024px){
+    h1{
+       font-size: 3.5rem;
+    }
+
  }
 `

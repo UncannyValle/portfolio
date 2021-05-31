@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import Projects from "../components/projects"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const ProjectPage = () => {
   return (
     <Layout>
-      <SEO title="Projects" />
+      <Seo title="Projects" />
       <Projects />
     </Layout>
   )

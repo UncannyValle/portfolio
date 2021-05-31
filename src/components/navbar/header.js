@@ -16,7 +16,7 @@ const HeaderWrapper = styled.header`
   transition: all 200ms ease-in;
 
   .selected {
-    color: var(--cyan);
+    color: cyan;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
   }
@@ -38,7 +38,7 @@ const Title = styled(Link)`
   padding-left: 3rem;
   text-align: center;
   font-family: ${({ theme }) => theme.font.display};
-  color: ${({ theme }) => theme.colors.uncannyCyan};
+  color: cyan;
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }

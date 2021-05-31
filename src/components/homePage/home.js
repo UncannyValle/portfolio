@@ -1,36 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { animated, useSpring, useTrail } from "react-spring"
+import { animated, useTrail } from "react-spring"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import { useState } from "react"
-import { AsyncMode } from "react-is"
 
 const HomeWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   text-align: center;
-  flex-wrap: wrap;
-  margin: 12vh auto 5rem auto;
+  padding: 0 5rem;
 
-  @media (max-width: 768px) {
-    text-align: center;
-    top: 25vh;
-  }
-  @media (max-width: 520px) {
-    text-align: center;
-  }
-`
-const TextWrap = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  text-align: center;
   .top {
     h1 {
       font-size: 3rem;
@@ -51,14 +29,10 @@ const TextWrap = styled.div`
   hr {
     margin: 1.5rem auto;
   }
-  .front {
-    margin: 0 2rem;
-    align-self: flex-end;
-  }
-  h1 {
-    transition: all 0.3s ease-in;
-
-    display: block;
+  h2 {
+    margin: 2rem;
+    text-align: right;
+    position: relative;
   }
 
   p {
@@ -66,75 +40,42 @@ const TextWrap = styled.div`
     color: white;
     text-align: right;
     width: 70%;
-    margin: 0 2rem;
+    margin: 2rem 0 2rem auto;
+    position: relative;
   }
+
   @media (max-width: 768px) {
-    width: 95%;
-    .top {
-      h1 {
-        font-size: 3.5rem;
-      }
+    width: 100%;
+    padding: 0 2rem;
+    h1 {
+      font-size: 3.5rem;
     }
-    .middle {
-      h1 {
-        font-size: 2.5rem;
-      }
-    }
-    .bottom {
-      h1 {
-        font-size: 3rem;
-      }
-    }
+
     p {
       font-size: 1.5rem;
       width: 90vw;
     }
   }
   @media (max-width: 520px) {
-    width: 95%;
+    h1 {
+      font-size: 2.5rem;
+    }
 
-    .top {
-      width: 30vw;
-      h1 {
-        font-size: 2rem;
-      }
-    }
-    .bottom {
-      width: 50vw;
-      h1 {
-        font-size: 1.7rem;
-      }
-    }
-    .middle {
-      width: 75vw;
-      h1 {
-        font-size: 1.3rem;
-      }
-    }
-    .front {
-      font-size: 1.5rem;
+    h2 {
+      font-size: 2rem;
     }
     p {
       font-size: 1rem;
-      width: 90%;
     }
   }
 `
 
-const Animated = styled.h1`
-  align-self: flex-start;
-  margin: 0 2rem 2rem;
+const Animated = styled(animated.h1)`
   text-align: left;
   height: auto;
-  span {
-    transition: all ease-in 0.2s;
-    display: inline-block;
-    min-width: 1rem;
-  }
-  span:hover {
-    transform: scale(1.5);
-    color: ${({ theme }) => theme.colors.cyan};
-    cursor: default;
+  position: relative;
+  @media (max-width: 512px) {
+    margin-top: 3vh;
   }
 `
 
@@ -143,45 +84,55 @@ const items = [
   { text: "To My Portfolio!", id: 2 },
   { text: "I'm Julian", id: 3 },
 ]
+const items2 = [
+  { text: "Front-End Developer", id: 1 },
+  {
+    text: `I'm Julian, I am a self taught developer and tech support specialist
+        specializing in creating fast and cutting edge sites using the latest
+        Javascript tools. I'm a creative and passionate guy who's mantra is,
+        "Never stop learning."`,
+    id: 2,
+  },
+  {
+    text: `If you are in need of help with your next web project, hit me up. I am
+        always happy to help out on new or ongoing projects and collaborate with
+        like minded people.`,
+    id: 3,
+  },
+]
 
 const Home = () => {
-  const trail = useTrail(items.length, { opacity: 1, from: { opacity: 0 } })
+  const trail = useTrail(items.length, {
+    opacity: 1,
+    right: "0vw",
+    from: {
+      opacity: 0,
+      right: "100vw",
+    },
+  })
+  const trail2 = useTrail(items2.length, {
+    opacity: 1,
+    left: "0vw",
+    from: {
+      opacity: 0,
+      left: "100vw",
+    },
+  })
 
-  // function animateLetters(string, classword) {
-  //   let split = string.split("").map((letter, index) => {
-  //     return <span key={index}>{letter} </span>
-  //   })
-  //   return <Animated className={classword}>{split}</Animated>
   // }
 
   return (
     <HomeWrapper>
-      <TextWrap>
-        {trail.map((props, i) => (
-          <Animated style={props} key={i}>
-            {items[i].text}
-          </Animated>
-        ))}
-
-        {/* <Animated open={open}>
-          <h1>Welcome</h1>
-          <h1>To My Portfolio</h1>
-          <h1>I'm Julian</h1>
-        </Animated> */}
-        {/* {animateLetters(text[1], "middle")}
-        {animateLetters(text[2], "bottom")} */}
-        <h2 className="front">Front-End Developer</h2>
-        <p>
-          I'm Julian, I am a self taught developer and tech support specialist
-          specializing in creating fast and cutting edge sites using the latest
-          Javascript tools. I'm a creative and passionate guy who's mantra is,
-          "Never stop learning."
-          <br /> <br />
-          If you are in need of help with your next web project, hit me up. I am
-          always happy to help out on new or ongoing projects and collaborate
-          with like minded people.
-        </p>
-      </TextWrap>
+      {trail.map((props, i) => (
+        <Animated style={props} key={i}>
+          {items[i].text}
+        </Animated>
+      ))}
+      {trail2.map((props, i) => {
+        if (i === 0) {
+          return <animated.h2 style={props}>{items2[i].text}</animated.h2>
+        } else return <animated.p style={props}>{items2[i].text}</animated.p>
+      })}
     </HomeWrapper>
   )
 }
