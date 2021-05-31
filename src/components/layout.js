@@ -14,7 +14,7 @@ import {
 
 const Main = styled.main`
   max-width: 1366px;
-  margin-top: 12vh;
+  margin: 12vh auto 0 auto;
 `
 
 const Footer = styled.footer`

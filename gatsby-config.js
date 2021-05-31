@@ -48,22 +48,44 @@ module.exports = {
 
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     google: {
+    //       families: [
+    //         "Roboto",
+    //         "Titillium Web",
+    //         "Audiowide",
+    //         "Bungee Inline",
+    //         "Bungee",
+    //       ],
+    //     },
+    //   },
+    // },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: "gatsby-omni-font-loader",
       options: {
-        google: {
-          families: [
-            "Roboto",
-            "Titillium Web",
-            "Audiowide",
-            "Bungee Inline",
-            "Bungee",
-          ],
-        },
+        preconnect: ["https://fonts.gstatic.com"],
+        mode: "render-blocking",
+
+        web: [
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: "Roboto",
+            /* URL to the font CSS file with @font-face definition */
+            file: "https://fonts.googleapis.com/css2?family=Roboto",
+          },
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: "Audiowide",
+            /* URL to the font CSS file with @font-face definition */
+            file: "https://fonts.googleapis.com/css2?family=Audiowide",
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

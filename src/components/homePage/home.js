@@ -130,8 +130,17 @@ const Home = () => {
       ))}
       {trail2.map((props, i) => {
         if (i === 0) {
-          return <animated.h2 style={props}>{items2[i].text}</animated.h2>
-        } else return <animated.p style={props}>{items2[i].text}</animated.p>
+          return (
+            <animated.h2 style={props} key={i}>
+              {items2[i].text}
+            </animated.h2>
+          )
+        } else
+          return (
+            <animated.p style={props} key={i}>
+              {items2[i].text}
+            </animated.p>
+          )
       })}
     </HomeWrapper>
   )
