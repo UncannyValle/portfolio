@@ -1,7 +1,8 @@
+import { animated, useSpring, config } from "@react-spring/web"
 import React from "react"
 import styled from "styled-components"
 
-const Wrapper = styled.div`
+const Wrapper = styled(animated.div)`
   padding: 2rem 1.5rem;
   text-align: center;
   display: flex;
@@ -11,14 +12,17 @@ const Wrapper = styled.div`
   color: white;
   border-radius: 15px;
   background-color: var(--black);
-  min-height: 70vh;
+  .title {
+    margin-bottom: 2rem;
+  }
+  .line {
+    height: 5px;
+    background-color: var(--pink);
+    margin: 0 auto;
+  }
   p {
     font-size: 1.2rem;
     display: inline-block;
-  }
-  h2 {
-    margin: 0;
-    min-height: 9rem;
   }
 
   @media (max-width: 768px) {
@@ -56,9 +60,20 @@ const Button = styled.a`
 `
 
 const Skills = (props) => {
+  const animateBorder = useSpring({
+    width: "100%",
+    delay: 300,
+    config: config.molasses,
+    from: {
+      width: "0%",
+    },
+  })
   return (
-    <Wrapper>
-      <h2>{props.title}</h2>
+    <Wrapper style={props.style}>
+      <div className="title">
+        <h3>{props.title}</h3>
+        <animated.div className="line" style={animateBorder}></animated.div>
+      </div>
       <a
         className="img_wrap"
         href={props.site}
@@ -68,13 +83,9 @@ const Skills = (props) => {
         {props.image}
       </a>
       <p>{props.text}</p>
-      <h3>{props.tech}</h3>
+      <p>{props.tech}</p>
       <Buttons>
-        <Button
-          href={props.gitHub}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Button href={props.gitHub} target="_blank" rel="noreferrer">
           GitHub
         </Button>{" "}
         <Button href={props.site} target="_blank" rel="noreferrer">

@@ -73,7 +73,10 @@ export const GlobalStyle = createGlobalStyle`
     margin:.5rem 0;
   }
   h3{
+    font-family: ${({ theme }) => theme.font.display2};
     text-align:center;
+    font-size: 2rem;
+    color: cyan;
   }
   a {
     text-decoration: none ;
