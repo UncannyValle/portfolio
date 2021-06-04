@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { animated, useTrail } from "react-spring"
-
-import "@fortawesome/fontawesome-svg-core/styles.css"
+// import "@fortawesomefontawesome-svg-core/styles.css"
 
 const HomeWrapper = styled.div`
   width: 100%;

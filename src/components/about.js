@@ -4,6 +4,7 @@ import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
+import { faReact } from "@fortawesome/free-brands-svg-icons"
 
 const AboutWrapper = styled.div`
   height: auto;
@@ -99,21 +100,13 @@ const About = (props) => (
           <br />I live in New York City with my lovely wife, where we spend our
           time walking the city and getting into strange adventures!
         </p>
-        <a
-          className="resume"
-          href="https://drive.google.com/file/d/1KHadlWe19VAhHycZVBANUl4MczKRKzdn/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <FontAwesomeIcon icon={faFile} />
-          <h2>View Resume</h2>
-        </a>
 
         <Title>Skills</Title>
 
         <ul className="skills">
-          <li>JavaScript</li>
+          <li>
+            JavaScript
+          </li>
           <li>HTML</li>
           <li>CSS</li>
           <li>React.js</li>
@@ -126,6 +119,16 @@ const About = (props) => (
           <li>Gatsby</li>
           <li>CSS-In-Js</li>
         </ul>
+        <a
+          className="resume"
+          href="https://drive.google.com/file/d/1KHadlWe19VAhHycZVBANUl4MczKRKzdn/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <FontAwesomeIcon icon={faFile} />
+          <h2>View Resume</h2>
+        </a>
       </AboutWrapper>
     </SectionWrapper>
   </div>

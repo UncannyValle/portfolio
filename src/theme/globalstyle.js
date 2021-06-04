@@ -44,21 +44,8 @@ export const GlobalStyle = createGlobalStyle`
     min-height:100vh;
     position: relative;
     padding-bottom: 7rem;
-    ${
-      "" /* animation: fadeInAnimation ease-in 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-    
-  } */
-    }
+   
+   
 
   h1{
     font-family: ${({ theme }) => theme.font.display2};
