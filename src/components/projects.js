@@ -119,12 +119,10 @@ export const Projects = (props) => {
     },
   ]
   const boxTrail = useTrail(skillList.length, {
-    // backgroundColor: "black",
     opacity: 1,
     config: config.molasses,
     from: {
       opacity: .0,
-      // backgroundColor: "cyan",
     },
   })
   return (
