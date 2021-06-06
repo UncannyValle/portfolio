@@ -3,14 +3,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./navbar/header"
 import styled from "styled-components"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faGithub,
-  faTwitter,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons"
+import { Linkedin } from "@styled-icons/bootstrap/Linkedin"
+import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
+import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
+import { TwitterSquare } from "@styled-icons/fa-brands"
 
 const Main = styled.main`
   max-width: 1366px;
@@ -28,16 +24,17 @@ const Footer = styled.footer`
   position: absolute;
   bottom: 0;
   a {
-    color: cyan;
+    color: white;
     transition: all 0.2s ease-in;
-    &:hover {
-      transform: scale(1.3);
-    }
   }
+
   .text {
     width: 50%;
     display: flex;
     justify-content: space-between;
+  }
+  a:hover {
+    color: var(--pink);
   }
   @media (max-width: 768px) {
   }
@@ -59,15 +56,13 @@ const SocialWrapper = styled.div`
   align-items: center;
 
   a svg {
-    width: 100%;
-    height: 100%;
+    width: 20%;
   }
   a {
     color: white;
     transition: 0.5s;
   }
   a:hover {
-    transform: scale(2);
     color: cyan;
   }
   @media (max-width: 768px) {
@@ -104,8 +99,9 @@ const Layout = ({ children }) => {
 
       <Footer>
         <div className="text">
-          <a href="mailto:julianv@atolemedia.com">The Uncanny Valle© </a>
-          <p> Made by Julian Valle 2020 - {new Date().getFullYear()}</p>
+          <a href="mailto:julianv@atolemedia.com">
+            Made by Julian Valle {new Date().getFullYear()}
+          </a>
         </div>
         <SocialWrapper>
           <a
@@ -114,7 +110,7 @@ const Layout = ({ children }) => {
             rel="noopener noreferrer"
           >
             {" "}
-            <FontAwesomeIcon icon={faLinkedin} />
+            <Linkedin />
           </a>
           <a
             href="https://github.com/uncannyvalle/"
@@ -122,7 +118,7 @@ const Layout = ({ children }) => {
             rel="noopener noreferrer"
           >
             {" "}
-            <FontAwesomeIcon icon={faGithub} />
+            <GithubSquare />
           </a>
           <a
             href="https://www.instagram.com/the_unncanny_valle/"
@@ -130,7 +126,7 @@ const Layout = ({ children }) => {
             rel="noopener noreferrer"
           >
             {" "}
-            <FontAwesomeIcon icon={faInstagram} />
+            <LogoInstagram />
           </a>
           <a
             href="https://twitter.com/theuncannyvalle/"
@@ -138,7 +134,7 @@ const Layout = ({ children }) => {
             rel="noopener noreferrer"
           >
             {" "}
-            <FontAwesomeIcon icon={faTwitter} />
+            <TwitterSquare />
           </a>
         </SocialWrapper>
       </Footer>

@@ -2,9 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFile } from "@fortawesome/free-solid-svg-icons"
-import { faReact } from "@fortawesome/free-brands-svg-icons"
+import { FileDownload } from "@styled-icons/fa-solid"
 
 const AboutWrapper = styled.div`
   height: auto;
@@ -104,9 +102,7 @@ const About = (props) => (
         <Title>Skills</Title>
 
         <ul className="skills">
-          <li>
-            JavaScript
-          </li>
+          <li>JavaScript</li>
           <li>HTML</li>
           <li>CSS</li>
           <li>React.js</li>
@@ -126,7 +122,7 @@ const About = (props) => (
           rel="noopener noreferrer"
         >
           {" "}
-          <FontAwesomeIcon icon={faFile} />
+          <FileDownload size="30" />
           <h2>View Resume</h2>
         </a>
       </AboutWrapper>

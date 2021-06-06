@@ -28,7 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     --purple:#711c91;
     --pink:	#ea00d9;
     --cyan:#0abdc6;
-    ${"" /* --blue: #133e7c; */}
     --blue: #274e87;
     --black:#091833; 
   }
