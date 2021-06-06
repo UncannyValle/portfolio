@@ -70,7 +70,7 @@ export const Projects = (props) => {
       site: "https://atolemedia.com",
       text: "A Blog website for game and movie reviews",
       tech: "React | JS | CSS | GraphQl",
-      gitHub: "https://github.com/UncannyValle/AtoleMedia",
+      gitHub: "https://github.com/Atole-Media/atole-tech-website",
     },
     {
       title: "Sapa Fashion Store",
@@ -82,13 +82,22 @@ export const Projects = (props) => {
       gitHub: "https://github.com/UncannyValle/Sapa-fashion",
     },
     {
+      title: "Calculator App",
+      src: getImage(data.calculator),
+      alt: "calculator app",
+      site: "https://calcutron.netlify.com",
+      text: "Just a calculator made with React",
+      tech: "React | JS | CSS | HTML | Netlify",
+      gitHub: "https://github.com/UncannyValle/calcutron",
+    },
+    {
       title: "Avocado Clock",
       src: getImage(data.avocado),
       alt: "avocado clock",
-      site: "https://sapa-fashion.netlify.app/",
-      text: "An Ecomerce Site Using Shopify",
-      tech: "Gatsby | React | JS | GraphQl | Shopify",
-      gitHub: "https://github.com/UncannyValle/Sapa-fashion",
+      site: "https://avocadoclock.netlify.app/",
+      text: "A work timer, to keep you motivated",
+      tech: " React | JS| React-Spring",
+      gitHub: "https://github.com/UncannyValle/Avocado-Clock",
     },
     {
       title: "Movie Quoter",
@@ -108,21 +117,12 @@ export const Projects = (props) => {
       tech: "React | JS | CSS | HTML | Netlify",
       gitHub: "https://github.com/UncannyValle/MarioPaintSoundMachine",
     },
-    {
-      title: "Calculator App",
-      src: getImage(data.calculator),
-      alt: "calculator app",
-      site: "https://calcutron.netlify.com",
-      text: "Just a calculator made with React",
-      tech: "React | JS | CSS | HTML | Netlify",
-      gitHub: "https://github.com/UncannyValle/calcutron",
-    },
   ]
   const boxTrail = useTrail(skillList.length, {
     opacity: 1,
     config: config.molasses,
     from: {
-      opacity: .0,
+      opacity: 0.0,
     },
   })
   return (
