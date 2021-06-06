@@ -68,8 +68,8 @@ export const Projects = (props) => {
       src: getImage(data.atole),
       alt: "atole site",
       site: "https://atolemedia.com",
-      text: "A Blog website for game and movie reviews",
-      tech: "React | JS | CSS | GraphQl",
+      text: "Freelance website: Where folklore meets design",
+      tech: "React | JS | Styled-Components | GraphQl",
       gitHub: "https://github.com/Atole-Media/atole-tech-website",
     },
     {
