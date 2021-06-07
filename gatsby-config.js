@@ -1,12 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `The Uncanny Valle | Julian Valle's Portfolio`,
-    titleTemplate: `%s | Julian Valle's Portfolio`,
+    title: `Julian Valle's Portfolio`,
     description: `Front-end web developer with an eye for detail! I make sites, apps and tacos!`,
-    author: `Julian Valle`,
+    author: `@julianvalle`,
     siteUrl: `https://julianvalle.dev`,
-    image: `/selfie.jpg`,
-    imageAlt: `Me drinking some coffee before coding.`,
+    keywords: `developer, frontend, react, jamstack, gatsby, web developer, javascript, web design`,
+    image: `/src/images/JAM Stack (1).png`,
     twitterUsername: `@theuncannyvalle`,
     twitter: `https://twitter.com/theuncannyvalle`,
     gitHub: `https://github.com/uncannyvalle`,
@@ -48,7 +47,6 @@ module.exports = {
     },
 
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-omni-font-loader",
       options: {
