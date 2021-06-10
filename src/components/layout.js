@@ -7,6 +7,7 @@ import { Linkedin } from "@styled-icons/bootstrap/Linkedin"
 import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
 import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
 import { TwitterSquare } from "@styled-icons/fa-brands"
+import { StyledIconBase } from "@styled-icons/styled-icon"
 
 const Main = styled.main`
   max-width: 1366px;
@@ -19,20 +20,16 @@ const Footer = styled.footer`
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: #7c4dff;
   position: absolute;
   bottom: 0;
+  padding: 0 1rem;
   a {
     color: white;
     transition: all 0.2s ease-in;
   }
 
-  .text {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-  }
   a:hover {
     color: var(--pink);
   }
@@ -40,11 +37,9 @@ const Footer = styled.footer`
   }
   @media (max-width: 520px) {
     height: 7rem;
+    justify-content: space-between;
     .text {
-      flex-direction: column;
-      justify-content: space-evenly;
       font-size: 1rem;
-      height: 100%;
     }
   }
 `
@@ -54,28 +49,30 @@ const SocialWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  a svg {
-    width: 20%;
+  ${StyledIconBase} {
+    width: 2rem;
   }
+
   a {
     color: white;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
   }
   a:hover {
     color: cyan;
   }
   @media (max-width: 768px) {
-    width: 70%;
+    width: 50%;
   }
   @media (max-width: 520px) {
-    width: 40%;
     height: 100%;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 40%;
+
     a {
       height: 50%;
-      padding: 1rem;
     }
   }
 `
@@ -98,11 +95,10 @@ const Layout = ({ children }) => {
       <Main>{children}</Main>
 
       <Footer>
-        <div className="text">
-          <a href="mailto:julianv@atolemedia.com">
-            Made by Julian Valle {new Date().getFullYear()}
-          </a>
-        </div>
+        <a className="text" href="mailto:julianv@atolemedia.com">
+          Made by Julian Valle {new Date().getFullYear()}
+        </a>
+
         <SocialWrapper>
           <a
             href="https://linkedin.com/in/uncannyvalle/"
