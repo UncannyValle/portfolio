@@ -29,7 +29,7 @@ const SkillsWrapper = styled.div`
 export const Projects = (props) => {
   const data = useStaticQuery(graphql`
     query images {
-      atole: file(relativePath: { eq: "atole_pic.png" }) {
+      atole: file(relativePath: { eq: "atole.jpg" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
@@ -64,10 +64,10 @@ export const Projects = (props) => {
 
   const skillList = [
     {
-      title: "Atole Blog",
+      title: "Atole Tech",
       src: getImage(data.atole),
       alt: "atole site",
-      site: "https://atolemedia.com",
+      site: "https://atoletech.gatsbyjs.io",
       text: "Freelance website: Where folklore meets design",
       tech: "React | JS | Styled-Components | GraphQl",
       gitHub: "https://github.com/Atole-Media/atole-tech-website",
