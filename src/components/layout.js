@@ -11,7 +11,9 @@ import { StyledIconBase } from "@styled-icons/styled-icon"
 
 const Main = styled.main`
   max-width: 1366px;
+  width: 100%;
   margin: 12vh auto 0 auto;
+  padding: 0 2rem;
 `
 
 const Footer = styled.footer`
@@ -25,6 +27,7 @@ const Footer = styled.footer`
   position: absolute;
   bottom: 0;
   padding: 0 1rem;
+
   a {
     color: white;
     transition: all 0.2s ease-in;

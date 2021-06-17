@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 
 const HeaderWrapper = styled.header`
   position: fixed;
+
   z-index: 5;
   top: 0;
   width: 100vw;
@@ -23,9 +24,11 @@ const HeaderWrapper = styled.header`
   .navbar {
     height: 100%;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
+    max-width: 1366px;
+    padding: 0 2rem;
+    margin: 0 auto;
   }
 
   @media (max-width: 520px) {
@@ -35,8 +38,7 @@ const HeaderWrapper = styled.header`
 const Title = styled(Link)`
   font-size: 2.5rem;
   transition: all 0.2s ease-out;
-  padding-left: 3rem;
-  text-align: center;
+  text-align: left;
   font-family: ${({ theme }) => theme.font.display};
   color: cyan;
   @media (max-width: 768px) {

@@ -5,7 +5,6 @@ import { animated, useTrail } from "react-spring"
 const HomeWrapper = styled.div`
   width: 100%;
   text-align: center;
-  padding: 0 5rem;
 
   .top {
     h1 {

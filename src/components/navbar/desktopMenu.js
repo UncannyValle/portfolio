@@ -7,6 +7,8 @@ const Button = styled(Link)`
   color: white;
   display: block;
   font-size: 1.5rem;
+  font-family: Audiowide;
+  text-transform: uppercase;
   box-shadow: none;
   transition: all 200ms ease-in-out;
   -webkit-transition: all 200ms ease-in-out;
@@ -27,8 +29,7 @@ const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
-  margin-right: 3rem;
+  width: 50%;
   @media (max-width: 768px) {
     display: none;
   }

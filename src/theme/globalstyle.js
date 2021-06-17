@@ -48,21 +48,24 @@ export const GlobalStyle = createGlobalStyle`
 
   h1{
     font-family: ${({ theme }) => theme.font.display2};
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--pink);
+    text-transform: uppercase;
 
   }
   h2{
     font-family: ${({ theme }) => theme.font.display2};
     font-size: 3rem;
     color: cyan;
-    margin:.5rem 0;
+    margin:.5rem 0;    text-transform: uppercase;
+
   }
   h3{
     font-family: ${({ theme }) => theme.font.display2};
     text-align:center;
     font-size: 2rem;
-    color: cyan;
+    color: cyan;    text-transform: uppercase;
+
   }
   a {
     text-decoration: none ;
