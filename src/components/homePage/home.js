@@ -19,7 +19,6 @@ const HomeWrapper = styled.div`
   .bottom {
     h1 {
       font-size: 5rem;
-
       font-family: ${({ theme }) => theme.font.display};
     }
   }
@@ -38,19 +37,18 @@ const HomeWrapper = styled.div`
     text-align: right;
     width: 70%;
     margin: 2rem 0 2rem auto;
-    position: relative;
   }
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 ;
     h1 {
       font-size: 3.5rem;
     }
 
     p {
       font-size: 1.5rem;
-      width: 90vw;
+      width: 100%;
     }
   }
   @media (max-width: 520px) {
