@@ -1,78 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { animated, useTrail } from "react-spring"
-
-const HomeWrapper = styled.div`
-  width: 100%;
-  text-align: center;
-
-  .top {
-    h1 {
-      font-size: 3rem;
-    }
-  }
-  .middle {
-    h1 {
-      font-size: 3.5rem;
-    }
-  }
-  .bottom {
-    h1 {
-      font-size: 5rem;
-      font-family: ${({ theme }) => theme.font.display};
-    }
-  }
-  hr {
-    margin: 1.5rem auto;
-  }
-  h2 {
-    margin: 2rem;
-    text-align: right;
-    position: relative;
-  }
-
-  p {
-    font-size: 1.2rem;
-    color: white;
-    text-align: right;
-    width: 70%;
-    margin: 2rem 0 2rem auto;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 ;
-    h1 {
-      font-size: 3.5rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-      width: 100%;
-    }
-  }
-  @media (max-width: 520px) {
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-  }
-`
-
-const Animated = styled(animated.h1)`
-  text-align: left;
-  height: auto;
-  position: relative;
-  @media (max-width: 512px) {
-    margin-top: 3vh;
-  }
-`
+import { animated, useTrail, config } from "react-spring"
 
 const items = [
   { text: "Welcome", id: 1 },
@@ -100,17 +28,21 @@ const Home = () => {
   const trail = useTrail(items.length, {
     opacity: 1,
     right: "0vw",
+    config: config.slow,
     from: {
       opacity: 0,
       right: "100vw",
+      overflow: "hidden",
     },
   })
   const trail2 = useTrail(items2.length, {
     opacity: 1,
     left: "0vw",
+    config: config.slow,
     from: {
       opacity: 0,
       left: "100vw",
+      overflow: "hidden",
     },
   })
 
@@ -119,26 +51,82 @@ const Home = () => {
   return (
     <HomeWrapper>
       {trail.map((props, i) => (
-        <Animated style={props} key={i}>
+        <AnimatedTop style={props} key={i}>
           {items[i].text}
-        </Animated>
+        </AnimatedTop>
       ))}
+
       {trail2.map((props, i) => {
         if (i === 0) {
           return (
-            <animated.h2 style={props} key={i}>
+            <AnimatedBottomTitle style={props} key={i}>
               {items2[i].text}
-            </animated.h2>
+            </AnimatedBottomTitle>
           )
         } else
           return (
-            <animated.p style={props} key={i}>
+            <AnimatedBottomText style={props} key={i}>
               {items2[i].text}
-            </animated.p>
+            </AnimatedBottomText>
           )
       })}
     </HomeWrapper>
   )
 }
+const HomeWrapper = styled.div`
+  max-width: 100vw;
+  width: 100%;
+  max-height: 100vh;
+  height: calc(100vh - 100px);
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+  }
+  @media (max-width: 520px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+`
+
+const AnimatedTop = styled(animated.h1)`
+  text-align: left;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 512px) {
+    margin-top: 3vh;
+  }
+`
+const AnimatedBottomTitle = styled(animated.h2)`
+  text-align: right;
+  position: relative;
+`
+const AnimatedBottomText = styled(animated.p)`
+  font-size: 1.2rem;
+  color: white;
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+`
 
 export default Home

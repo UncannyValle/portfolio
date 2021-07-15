@@ -7,14 +7,14 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   background: ${({ theme }) => theme.colors.uncannyPurple};
   height: 90vh;
   text-align: center;
-  padding: 0 10rem;
   position: absolute;
   top: 10vh;
-  right: 0;
-  transition: transform 0.3s ease-in-out;
+  right: 0px;
+  transition: transform 0.5s ease-in-out;
   transform: ${({ open }) => (!open ? "translateX(100%)" : "translateX(0)")};
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
@@ -28,7 +28,8 @@ const Links = styled(Link)`
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
-  height: 7rem;
+  height: 125px;
+  width: 400px;
   letter-spacing: 0.5rem;
   color: ${({ theme }) => theme.colors.uncannyCyan};
   text-decoration: none;
@@ -42,7 +43,8 @@ const Links = styled(Link)`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     font-size: 1.2rem;
     text-align: center;
-    height: 5rem;
+    height: 100px;
+    width: 300px;
     background-color: ${({ theme }) => theme.colors.uncannyBlue};
   }
 `

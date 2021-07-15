@@ -27,9 +27,9 @@ const Button = styled(Link)`
 `
 const Menu = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 50%;
+  width: 70%;
   @media (max-width: 768px) {
     display: none;
   }

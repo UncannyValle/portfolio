@@ -29,11 +29,11 @@ const StyledBurger = styled.button`
   }
 
   div {
-    width: 4rem;
-    height: 0.3rem;
-    background: ${({ theme }) => theme.colors.uncannyCyan};
+    width: 60px;
+    height: 5px;
+    background: cyan;
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.5s ease-in-out;
     position: relative;
     transform-origin: 1px;
     @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -43,6 +43,7 @@ const StyledBurger = styled.button`
   }
   #one {
     transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    background-color: ${({ open }) => (open ? "var(--pink)" : "cyan")};
   }
 
   #two {

@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     letter-spacing: 0;
-    background-color: var(--blue);
+    background-color: var(--black);
     min-height:100vh;
     position: relative;
     padding-bottom: 7rem;

@@ -19,11 +19,11 @@ const Main = styled.main`
 const Footer = styled.footer`
   width: 100%;
   color: white;
-  height: 5rem;
+  height: 75px;
   display: flex;
+  background-color: var(--black);
   align-items: center;
   justify-content: space-around;
-  background-color: #7c4dff;
   position: absolute;
   bottom: 0;
   padding: 0 1rem;
