@@ -36,10 +36,16 @@ const HeaderWrapper = styled.header`
 `
 const Title = styled(Link)`
   font-size: 2.5rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.5s ease-out;
   text-align: left;
   font-family: ${({ theme }) => theme.font.display};
   color: cyan;
+  &:hover {
+    cursor: pointer;
+    color: var(--pink);
+    padding: none;
+  }
+
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }

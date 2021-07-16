@@ -11,14 +11,12 @@ const Button = styled(Link)`
   text-transform: uppercase;
   box-shadow: none;
   transition: all 200ms ease-in-out;
-  -webkit-transition: all 200ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
 
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.uncannyCyan};
+    color: var(--pink);
     padding: none;
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
   }
 
   @media (max-width: 768px) {

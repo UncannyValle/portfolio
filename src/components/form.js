@@ -27,21 +27,21 @@ const StyledForm = styled.form`
     width: 100%;
     height: 3rem;
     background-color: var(--black);
-    color: cyan;
-    border-radius: 15px;
-    border: none;
+    color: var(--pink);
+    border-radius: 10px;
+    border: 2px solid cyan;
     font-size: 2rem;
     padding: 1rem;
   }
   textarea {
     width: 100%;
     background-color: var(--black);
-    color: cyan;
+    color: var(--pink);
     height: 10rem;
     font-size: 1.5rem;
     padding: 1rem;
-    border-radius: 15px;
-    border: none;
+    border-radius: 10px;
+    border: 2px solid cyan;
   }
   button {
     margin: 1em auto;
