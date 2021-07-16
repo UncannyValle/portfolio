@@ -44,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     padding-bottom: 7rem;
    
-   
+  }
 
   h1{
     font-family: ${({ theme }) => theme.font.display2};
@@ -105,4 +105,4 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 1rem;
     }
   }
-`
+  `

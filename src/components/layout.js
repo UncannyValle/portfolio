@@ -70,10 +70,6 @@ const SocialWrapper = styled.div`
   }
   @media (max-width: 520px) {
     height: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 40%;
-
     a {
       height: 50%;
     }
