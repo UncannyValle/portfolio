@@ -115,6 +115,7 @@ const AnimatedTop = styled(animated.h1)`
   overflow: hidden;
   @media (max-width: 512px) {
     margin-top: 3vh;
+    
   }
 `
 const AnimatedBottomTitle = styled(animated.h2)`

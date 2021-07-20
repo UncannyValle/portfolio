@@ -40,7 +40,7 @@ const AboutWrapper = styled.div`
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
     @media (max-width: 768px) {
-      margin: 0 1rem;
+      margin: 0;
     }
   }
 
@@ -71,7 +71,8 @@ const AboutWrapper = styled.div`
       width: 90%;
     }
     .resume {
-      margin: 1rem;
+      margin: 0;
+      width: 100%;
     }
     .skills {
       font-size: 1rem;

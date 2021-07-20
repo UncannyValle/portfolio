@@ -37,8 +37,8 @@ const StyledBurger = styled.button`
     position: relative;
     transform-origin: 1px;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      width: 2.5rem;
-      height: 0.25rem;
+      width: 38px;
+      height: 5px;
     }
   }
   #one {
