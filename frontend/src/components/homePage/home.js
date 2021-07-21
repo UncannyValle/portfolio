@@ -76,7 +76,7 @@ const Home = () => {
 const HomeWrapper = styled.div`
   max-width: 100vw;
   width: 100%;
-  max-height: 100vh;
+  min-height: 100vh;
   height: calc(100vh - 100px);
   position: relative;
   overflow: hidden;
