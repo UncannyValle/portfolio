@@ -16,8 +16,16 @@ export const Projects = (props) => {
           node {
             image {
               asset {
-                gatsbyImageData(width: 500, height: 350, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 500
+                  height: 300
+                  placeholder: BLURRED
+                  fit: SCALE
+                )
               }
+            }
+            slug {
+              current
             }
             gitHubUrl
             projectUrl
@@ -37,6 +45,7 @@ export const Projects = (props) => {
       opacity: 0.0,
     },
   })
+
   return (
     <div id={props.id}>
       <SectionWrapper>
@@ -62,6 +71,7 @@ export const Projects = (props) => {
               text={data.allSanityProject.edges[i].node.description}
               tech={data.allSanityProject.edges[i].node.tech}
               gitHub={data.allSanityProject.edges[i].node.gitHubUrl}
+              slug={data.allSanityProject.edges[i].node.slug.current}
             />
           ))}
         </SkillsWrapper>
@@ -72,11 +82,10 @@ export const Projects = (props) => {
 
 const SkillsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-content: center;
-  width: 100%;
-  padding: 0 2rem;
-  grid-gap: 1em 1em;
+  max-width: 1000px;
+  grid-gap: 5rem;
   margin: 0 auto;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
