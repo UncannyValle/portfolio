@@ -10,6 +10,7 @@ const Wrapper = styled(animated.h1)`
   font-weight: 800;
   overflow: hidden;
   position: relative;
+  padding: 50px 0;
 
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -18,6 +19,7 @@ const Wrapper = styled(animated.h1)`
   }
   @media (max-width: 520px) {
     font-size: 2rem;
+    width: 100%;
   }
 `
 const Title = ({ children }) => {

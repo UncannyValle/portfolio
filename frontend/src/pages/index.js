@@ -1,13 +1,13 @@
 import React from "react"
 import Seo from "../components/seo"
-import Home from "../components/homePage/home"
+import Splash from "../components/homePage/splash"
 import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Main Page" />
-      <Home />
+      <Splash />
     </Layout>
   )
 }

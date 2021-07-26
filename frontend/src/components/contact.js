@@ -18,19 +18,19 @@ const ContactWrapper = styled(Wrapper)`
   }
 `
 
-
-const Contact = props => (
+const Contact = (props) => (
   <div id={props.id}>
     <ContactWrapper>
       <Title>Contact Me</Title>
       <p>
-        Feel free to contact me at{" "}
+        If you are in need of help with your next web project, hit me up. I am
+        always happy to help out on new or ongoing projects and collaborate with
+        like minded people.
         <a href="mailto:julianv@atolemedia.com">julianv@atolemedia.com</a>
         <br />
         or use the contact form below.
       </p>
       <Form />
-      
     </ContactWrapper>
   </div>
 )

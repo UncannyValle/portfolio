@@ -7,10 +7,9 @@ import { FileDownload } from "@styled-icons/fa-solid"
 const AboutWrapper = styled.div`
   height: auto;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 ;
   .text {
     width: 60%;
-    margin: 0 auto;
     font-size: 1.25rem;
     color: white;
   }
@@ -65,10 +64,10 @@ const AboutWrapper = styled.div`
   }
   @media (max-width: 768px) {
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     align-items: center;
     .text {
-      width: 90%;
+      width: 100%;
     }
     .resume {
       margin: 0;
@@ -91,6 +90,7 @@ const About = (props) => {
             websites for small businesses and beyond! I am a self taught
             developer working mainly in React and in the JAMstack making sites
             using Gatsby and that ecosystem
+            I started development when one day I got asked, "What is the one thing you could do all day without
             <br />
             <br />
             So far I have ben trying to absorb as much as possible in order to

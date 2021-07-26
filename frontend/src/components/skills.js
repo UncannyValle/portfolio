@@ -11,8 +11,7 @@ const Wrapper = styled(animated.div)`
   align-items: center;
   color: white;
   border-radius: 15px;
-  width: 80%;
-  margin: 0 auto;
+  margin-bottom: 50px;
 
   .title {
     margin-bottom: 1rem;
@@ -23,21 +22,31 @@ const Wrapper = styled(animated.div)`
     background-color: var(--pink);
     margin: 0 auto;
   }
+  .tech {
+    color: cyan;
+  }
 
   p {
-    font-size: 1.2rem;
     text-align: center;
     padding: 0.5rem 0;
     display: inline-block;
+    font-size: 2rem;
   }
 
   @media (max-width: 768px) {
-    width: 95%;
-    margin: 0 auto;
     padding: 0;
     p {
       width: 70%;
       text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 512px) {
+    p {
+      width: 100%;
+    }
+    h3 {
+      font-size: 1.75rem;
     }
   }
 `
@@ -62,9 +71,12 @@ const InfoButton = styled(Link)`
     -webkit-box-shadow: 2px 5px 15px 5px #ea00d9;
     box-shadow: 2px 5px 15px 5px #ea00d9;
   }
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     text-align: center;
     width: 50%;
+  }
+  @media (max-width: 512px) {
+    font-size: 1.25rem;
   }
 `
 
@@ -83,11 +95,13 @@ const Skills = (props) => {
         <h3>{props.title}</h3>
         <animated.div className="line" style={animateBorder}></animated.div>
       </div>
-      <ImageWrapper href={props.site}>{props.image}</ImageWrapper>
+      <ImageWrapper href={props.site} target="_blank" rel="noopener noreferrer">
+        {props.image}{" "}
+      </ImageWrapper>
       <p>{props.text}</p>
       <p className="tech">{props.tech}</p>
       <InfoButton className="button" to={`/${props.slug}`}>
-        More Info
+        Project Info
       </InfoButton>
     </Wrapper>
   )

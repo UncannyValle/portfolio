@@ -10,21 +10,19 @@ const items = [
 const items2 = [
   { text: "Front-End Developer", id: 1 },
   {
-    text: `I'm Julian, I am a self taught developer and tech support specialist
+    text: `I'm Julian, I am a self taught developer 
         specializing in creating fast and cutting edge sites using the latest
-        Javascript tools. I'm a creative and passionate guy who's mantra is,
-        "Never stop learning."`,
+        Javascript tools.`,
     id: 2,
   },
   {
-    text: `If you are in need of help with your next web project, hit me up. I am
-        always happy to help out on new or ongoing projects and collaborate with
-        like minded people.`,
+    text: `My mantra is
+        "Never stop learning."`,
     id: 3,
   },
 ]
 
-const Home = () => {
+const Splash = () => {
   const trail = useTrail(items.length, {
     opacity: 1,
     right: "0vw",
@@ -49,7 +47,7 @@ const Home = () => {
   // }
 
   return (
-    <HomeWrapper>
+    <SplashWrapper>
       {trail.map((props, i) => (
         <AnimatedTop style={props} key={i}>
           {items[i].text}
@@ -70,15 +68,15 @@ const Home = () => {
             </AnimatedBottomText>
           )
       })}
-    </HomeWrapper>
+    </SplashWrapper>
   )
 }
-const HomeWrapper = styled.div`
+const SplashWrapper = styled.div`
   max-width: 100vw;
   width: 100%;
   height: 100%;
   padding: 50px;
-  position:relative;
+  position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -129,4 +127,4 @@ const AnimatedBottomText = styled(animated.p)`
   margin-left: auto;
 `
 
-export default Home
+export default Splash

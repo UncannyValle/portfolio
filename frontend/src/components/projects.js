@@ -4,7 +4,6 @@ import Title from "./title"
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import SectionWrapper from "./sectionWrapper"
 import { useTrail, config } from "@react-spring/core"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -16,11 +15,7 @@ export const Projects = (props) => {
           node {
             images {
               asset {
-                gatsbyImageData(
-                  
-                  placeholder: BLURRED
-                  fit: FILLMAX
-                )
+                gatsbyImageData(placeholder: BLURRED, fit: FILLMAX)
               }
             }
             slug {
@@ -46,36 +41,34 @@ export const Projects = (props) => {
   })
 
   return (
-    <div id={props.id}>
-      <SectionWrapper>
-        <Title>A bit of my work</Title>
-        <SkillsWrapper>
-          {boxTrail.map((style, i) => (
-            <Skills
-              style={style}
-              key={i}
-              title={data.allSanityProject.edges[i].node.title}
-              image={
-                <GatsbyImage
-                  image={
-                    data.allSanityProject.edges[i].node.images[0].asset
-                      .gatsbyImageData
-                  }
-                  a
-                  alt={data.allSanityProject.edges[i].node.title}
-                  placeholder="blurred"
-                />
-              }
-              site={data.allSanityProject.edges[i].node.projectUrl}
-              text={data.allSanityProject.edges[i].node.description}
-              tech={data.allSanityProject.edges[i].node.tech}
-              gitHub={data.allSanityProject.edges[i].node.gitHubUrl}
-              slug={data.allSanityProject.edges[i].node.slug.current}
-            />
-          ))}
-        </SkillsWrapper>
-      </SectionWrapper>
-    </div>
+    <>
+      <Title>A bit of my work</Title>
+      <SkillsWrapper>
+        {boxTrail.map((style, i) => (
+          <Skills
+            style={style}
+            key={i}
+            title={data.allSanityProject.edges[i].node.title}
+            image={
+              <GatsbyImage
+                image={
+                  data.allSanityProject.edges[i].node.images[0].asset
+                    .gatsbyImageData
+                }
+                a
+                alt={data.allSanityProject.edges[i].node.title}
+                placeholder="blurred"
+              />
+            }
+            site={data.allSanityProject.edges[i].node.projectUrl}
+            text={data.allSanityProject.edges[i].node.description}
+            tech={data.allSanityProject.edges[i].node.tech}
+            gitHub={data.allSanityProject.edges[i].node.gitHubUrl}
+            slug={data.allSanityProject.edges[i].node.slug.current}
+          />
+        ))}
+      </SkillsWrapper>
+    </>
   )
 }
 
@@ -83,12 +76,10 @@ const SkillsWrapper = styled.div`
   /* display: grid; */
   grid-template-columns: repeat(2, 1fr);
   align-content: center;
-  max-width: 1000px;
   grid-gap: 5rem;
-  margin: 0 auto;
+  width: 100%;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
-    margin: 0;
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
