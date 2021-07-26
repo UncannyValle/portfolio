@@ -3,14 +3,13 @@ import styled from "styled-components"
 import { useSpring, animated, config } from "react-spring"
 
 const Wrapper = styled(animated.h1)`
-  margin: 1rem auto;
+  margin: 0 auto;
   text-align: center;
   display: block;
   width: 70%;
   font-weight: 800;
   overflow: hidden;
   position: relative;
-  z-index: -30;
 
   @media only screen and (max-width: 768px) {
     text-align: center;

@@ -8,73 +8,7 @@ import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
 import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
 import { TwitterSquare } from "@styled-icons/fa-brands"
 import { StyledIconBase } from "@styled-icons/styled-icon"
-
-const Main = styled.main`
-  max-width: 1366px;
-  width: 100%;
-  margin: 12vh auto 0 auto;
-  padding: 0 2rem;
-`
-
-const Footer = styled.footer`
-  width: 100%;
-  color: white;
-  height: 75px;
-  display: flex;
-  background-color: var(--black);
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 0;
-  padding: 0 1rem;
-
-  a {
-    color: white;
-    transition: all 0.2s ease-in;
-  }
-
-  a:hover {
-    color: var(--pink);
-  }
-  @media (max-width: 768px) {
-  }
-  @media (max-width: 520px) {
-    height: 7rem;
-    justify-content: space-between;
-    .text {
-      font-size: 1rem;
-    }
-  }
-`
-const SocialWrapper = styled.div`
-  text-align: center;
-  width: 30%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  ${StyledIconBase} {
-    width: 2rem;
-  }
-
-  a {
-    color: white;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-  }
-  a:hover {
-    color: cyan;
-  }
-  @media (max-width: 768px) {
-    width: 50%;
-  }
-  @media (max-width: 520px) {
-    height: 100%;
-    a {
-      height: 50%;
-    }
-  }
-`
+import timelapse from "../videos/street.mp4"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -91,7 +25,12 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
 
-      <Main>{children}</Main>
+      <Main>
+        <VideoBackground autoPlay={true} loop={true} playsInline={true}>
+          <source src={timelapse} type="video/mp4" />
+        </VideoBackground>
+        <div className="content">{children}</div>
+      </Main>
 
       <Footer>
         <a className="text" href="mailto:julianv@atolemedia.com">
@@ -136,6 +75,86 @@ const Layout = ({ children }) => {
     </>
   )
 }
+
+const Main = styled.main`
+  background-color: rgba(12, 32, 69, 0.75);
+  position: relative;
+  padding-bottom: 100px;
+  .content {
+    max-width: 1366px;
+    width: 100%;
+    margin: 75px auto 0 auto;
+    padding: 0 2rem;
+    min-height: 100vh;
+  }
+`
+const VideoBackground = styled.video`
+  position: fixed;
+  height: 130vh;
+  left: 0;
+  top: 0;
+  z-index: -10;
+`
+
+const Footer = styled.footer`
+  width: 100%;
+  color: white;
+  height: 100px;
+  display: flex;
+  background-color: var(--black);
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  a {
+    color: white;
+    transition: all 0.2s ease-in;
+  }
+
+  a:hover {
+    color: var(--pink);
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 520px) {
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    .text {
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+`
+const SocialWrapper = styled.div`
+  text-align: center;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  ${StyledIconBase} {
+    width: 2rem;
+  }
+
+  a {
+    color: white;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+  }
+  a:hover {
+    color: cyan;
+  }
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 520px) {
+    a {
+      height: 50%;
+    }
+  }
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -6,13 +6,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ProjectPage = ({ data }) => {
   const project = data.allSanityProject.edges[0].node
-  const image = getImage(project.image.asset)
+  const image = getImage(project.images.asset)
 
   return (
     <Layout>
       <Title>{project.title}</Title>
-      <Description>{project.description}</Description>
       <Tech>{project.tech}</Tech>
+      <Description>{project.description}</Description>
       <Image>
         <GatsbyImage image={image} alt={project.title} />
       </Image>
@@ -51,7 +51,7 @@ export const query = graphql`
           description
           tech
           body
-          image {
+          images {
             asset {
               gatsbyImageData(placeholder: BLURRED, width: 800)
             }

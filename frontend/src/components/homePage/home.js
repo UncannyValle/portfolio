@@ -76,9 +76,9 @@ const Home = () => {
 const HomeWrapper = styled.div`
   max-width: 100vw;
   width: 100%;
-  min-height: 100vh;
-  height: calc(100vh - 100px);
-  position: relative;
+  height: 100%;
+  padding: 50px;
+  position:relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -115,7 +115,6 @@ const AnimatedTop = styled(animated.h1)`
   overflow: hidden;
   @media (max-width: 512px) {
     margin-top: 3vh;
-    
   }
 `
 const AnimatedBottomTitle = styled(animated.h2)`

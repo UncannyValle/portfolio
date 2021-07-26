@@ -39,11 +39,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     letter-spacing: 0;
-    background-color: var(--black);
-    min-height:100vh;
+    background-color: var(--black);  
     position: relative;
-    padding-bottom: 7rem;
-   
   }
 
   h1{

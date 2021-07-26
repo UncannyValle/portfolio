@@ -44,9 +44,10 @@ export default {
       to: { type: "author" },
     },
     {
-      name: "image",
+      name: "images",
       title: "Project Screenshot",
-      type: "image",
+      type: "array",
+      of: [{ type: "image" }],
       options: {
         hotspot: true,
       },

@@ -14,13 +14,12 @@ export const Projects = (props) => {
       allSanityProject(sort: { fields: createdAt, order: ASC }) {
         edges {
           node {
-            image {
+            images {
               asset {
                 gatsbyImageData(
-                  width: 500
-                  height: 300
+                  
                   placeholder: BLURRED
-                  fit: SCALE
+                  fit: FILLMAX
                 )
               }
             }
@@ -59,7 +58,7 @@ export const Projects = (props) => {
               image={
                 <GatsbyImage
                   image={
-                    data.allSanityProject.edges[i].node.image.asset
+                    data.allSanityProject.edges[i].node.images[0].asset
                       .gatsbyImageData
                   }
                   a
@@ -81,7 +80,7 @@ export const Projects = (props) => {
 }
 
 const SkillsWrapper = styled.div`
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(2, 1fr);
   align-content: center;
   max-width: 1000px;
