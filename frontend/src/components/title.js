@@ -6,7 +6,6 @@ const Wrapper = styled(animated.h1)`
   margin: 0 auto;
   text-align: center;
   display: block;
-  width: 70%;
   font-weight: 800;
   overflow: hidden;
   position: relative;

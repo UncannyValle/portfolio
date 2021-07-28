@@ -6,6 +6,7 @@
   "author": "Julian Valle <julianv@atolemedia.com>",
   "dependencies": {
     "@formspree/react": "^2.2.3",
+    "@sanity/block-content-to-react": "^3.0.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^3.5.0",
     "gatsby-background-image": "^1.1.1",

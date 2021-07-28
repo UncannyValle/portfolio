@@ -81,7 +81,7 @@ const Main = styled.main`
   position: relative;
   padding-bottom: 100px;
   .content {
-    max-width: 768px;
+    max-width: 1024px;
     width: 100%;
     margin: 75px auto 0 auto;
     padding: 0 2rem;

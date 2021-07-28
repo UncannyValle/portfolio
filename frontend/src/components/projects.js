@@ -55,7 +55,6 @@ export const Projects = (props) => {
                   data.allSanityProject.edges[i].node.images[0].asset
                     .gatsbyImageData
                 }
-                a
                 alt={data.allSanityProject.edges[i].node.title}
                 placeholder="blurred"
               />
