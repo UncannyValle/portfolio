@@ -141,11 +141,6 @@ export const query = graphql`
       description
       _rawBody
       projectUrl
-      images {
-        asset {
-          gatsbyImageData(placeholder: BLURRED, width: 800)
-        }
-      }
     }
   }
 `
