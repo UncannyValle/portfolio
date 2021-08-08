@@ -52,7 +52,7 @@ export const Projects = (props) => {
             image={
               <GatsbyImage
                 image={
-                  data.allSanityProject.edges[i].node.images[0].asset
+                  data.allSanityProject.edges[i].node.images.asset
                     .gatsbyImageData
                 }
                 alt={data.allSanityProject.edges[i].node.title}
