@@ -10,7 +10,7 @@ const BlockContent = require("@sanity/block-content-to-react")
 
 const ProjectInfo = ({ data }) => {
   const project = data.sanityProject
-  
+
   const BlockRenderer = (props) => {
     const { style = "normal" } = props.node
 
@@ -30,8 +30,6 @@ const ProjectInfo = ({ data }) => {
     // Fall back to default handling
     return BlockContent.defaultSerializers.types.block(props)
   }
-
-  console.log(project._rawBody[0].style)
 
   return (
     <Layout>
@@ -54,17 +52,10 @@ const ProjectInfo = ({ data }) => {
             Visit Site <TransitEnterexit />
           </a>
         </Links>
-        <Image>
-          <GatsbyImage
-            image={project.images[0].asset.gatsbyImageData}
-            alt={`${project.title} #1`}
-            placeholder="blurred"
-          />
-        </Image>
         <Body
           serializers={{ types: { block: BlockRenderer } }}
           blocks={project._rawBody}
-          imageOptions={{ w: 320, h: 240, fit: "max" }}
+          imageOptions={{ maxWidth: 800, height: 500 }}
           projectId="w35schq2"
           dataset="production"
         />
@@ -121,15 +112,23 @@ const Links = styled.div`
     color: cyan;
   }
 `
-const Image = styled.div`
-  text-align: center;
-  padding: 2rem 0;
-`
+
 const Body = styled(BlockContent)`
   color: white;
   text-align: left;
   p {
     font-size: 21px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
   }
 `
 

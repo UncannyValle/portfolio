@@ -84,7 +84,6 @@ const Main = styled.main`
     max-width: 1024px;
     width: 100%;
     margin: 75px auto 0 auto;
-    padding: 0 2rem;
     min-height: 100vh;
   }
 `

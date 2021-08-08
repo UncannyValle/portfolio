@@ -43,15 +43,7 @@ export default {
       type: "reference",
       to: { type: "author" },
     },
-    {
-      name: "images",
-      title: "Project Screenshot",
-      type: "array",
-      of: [{ type: "image" }],
-      options: {
-        hotspot: true,
-      },
-    },
+
     {
       name: "createdAt",
       title: "Created at",

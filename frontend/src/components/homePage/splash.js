@@ -77,6 +77,7 @@ const SplashWrapper = styled.div`
   height: 100%;
   padding: 50px;
   position: relative;
+  z-index: 500;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -110,7 +111,7 @@ const AnimatedTop = styled(animated.h1)`
   text-align: left;
   height: auto;
   position: relative;
-  overflow: hidden;
+
   @media (max-width: 512px) {
     margin-top: 3vh;
   }
