@@ -84,7 +84,7 @@ const Main = styled.main`
     max-width: 1024px;
     width: 100%;
     margin: 75px auto 0 auto;
-    min-height: 100vh;
+    min-height: calc(100vh - 175px);
   }
 `
 const VideoBackground = styled.video`
