@@ -111,6 +111,9 @@ const AnimatedTop = styled(animated.h1)`
   text-align: left;
   height: auto;
   position: relative;
+  &:last-child{
+    margin-bottom: 50px;
+  }
 
   @media (max-width: 512px) {
     margin-top: 3vh;

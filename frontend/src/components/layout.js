@@ -26,7 +26,12 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>
-        <VideoBackground autoPlay={true} loop={true} playsInline={true}>
+        <VideoBackground
+          autoPlay={true}
+          loop={true}
+          playsInline={true}
+          muted={true}
+        >
           <source src={timelapse} type="video/mp4" />
         </VideoBackground>
         <div className="content">{children}</div>
