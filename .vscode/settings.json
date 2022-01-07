@@ -1,7 +1,4 @@
 {
-  "cSpell.words": [
-    "calcutron",
-    "globalstyle",
-    "sapa"
-  ]
+  "cSpell.words": ["calcutron", "globalstyle", "sapa"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
