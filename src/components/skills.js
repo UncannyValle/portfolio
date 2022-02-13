@@ -3,7 +3,6 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled(animated.div)`
-  padding: 2rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;

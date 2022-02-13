@@ -13,8 +13,7 @@ const SkillsWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   align-content: center;
   width: 100%;
-  padding: 0 2rem;
-  grid-gap: 1em 1em;
+  grid-gap: 2rem;
   margin: 0 auto;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
@@ -22,7 +21,7 @@ const SkillsWrapper = styled.div`
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
   }
 `
 
