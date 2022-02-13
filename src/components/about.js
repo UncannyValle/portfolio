@@ -61,9 +61,9 @@ const About = (props) => {
 
 const AboutWrapper = styled.div`
   height: auto;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 5rem;
   .text {
     margin: 2rem auto;
     font-size: 1.25rem;
