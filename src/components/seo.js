@@ -39,6 +39,10 @@ const Seo = ({ description, title, article, image, keywords }) => {
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
       {seo.keywords && <meta name="keywords" content={seo.keywords} />}
+      <meta
+        name="google-site-verification"
+        content="Wg7GS6Jxt7lLctP9j_rbSCgKzuTYCBhbD0kXL2EvxF4"
+      />
 
       <meta name="twitter:card" content="summary_large_image" />
       {twitterUsername && (
