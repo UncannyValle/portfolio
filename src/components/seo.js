@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
+import { Sepa } from "styled-icons/simple-icons"
+import src from "gsap/src"
 
-const Seo = ({ description, lang, title, meta, image }) => {
+const Seo = ({ description, title, article, image }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -15,7 +17,7 @@ const Seo = ({ description, lang, title, meta, image }) => {
     siteUrl,
     defaultImage,
     twitterUsername,
-    keywords,
+    defaultKeywords,
   } = site.siteMetadata
 
   const seo = {
@@ -23,66 +25,29 @@ const Seo = ({ description, lang, title, meta, image }) => {
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
+    keywords: `${defaultKeywords}, ${keywords || ""}`,
   }
 
   return (
-    <Helmet
-      title={seo.title}
-      titleTemplate={titleTemplate}
-      htmlAttributes={{
-        lang,
-      }}
-      meta={[
-        {
-          name: `description`,
-          content: description,
-        },
-        {
-          name: `keywords`,
-          content: keywords,
-        },
-        {
-          name: `image`,
-          content: image,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: description,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: image,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:image`,
-          content: image,
-        },
-        {
-          name: `twitter:creator`,
-          content: twitterUsername || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: description,
-        },
-      ].concat(meta)}
-    />
+    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+
+      {seo.url && <meta property="or:url" content={seo.url} />}
+      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.keywords && <meta name="keywords" content={seo.keywords} />}
+
+      <meta name="twitter:card" content="summary_large_image" />
+      {twitterUsername && (
+        <meta name="twitterL:description" content={seo.description} />
+      )}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+    </Helmet>
   )
 }
 
