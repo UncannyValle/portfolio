@@ -3,10 +3,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from "@reach/router"
-import { Sepa } from "styled-icons/simple-icons"
-import src from "gsap/src"
 
-const Seo = ({ description, title, article, image }) => {
+const Seo = ({ description, title, article, image, keywords }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -80,7 +78,7 @@ const query = graphql`
         defaultImage: image
         twitterUsername
         author
-        keywords
+        defaultKeywords
         image
       }
     }
