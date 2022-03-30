@@ -49,6 +49,10 @@ function Seo({ description, lang, title, meta }) {
           content: keywords,
         },
         {
+          name: `image`,
+          content: image
+        },
+        {
           property: `og:title`,
           content: title,
         },

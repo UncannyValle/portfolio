@@ -49,7 +49,7 @@ const Home = () => {
   // }
 
   return (
-    <HomeWrapper>
+    <>
       {trail.map((props, i) => (
         <AnimatedTop style={props} key={i}>
           {items[i].text}
@@ -70,57 +70,71 @@ const Home = () => {
             </AnimatedBottomText>
           )
       })}
-    </HomeWrapper>
+    </>
   )
 }
-const HomeWrapper = styled.div`
-  max-width: 100vw;
-  width: 100%;
-  max-height: 100vh;
-  height: calc(100vh - 100px);
-  position: relative;
-  overflow: hidden;
+// const HomeWrapper = styled.div`
+//   max-width: 100vw;
+//   width: 100%;
+//   max-height: 100vh;
+//   height: calc(100vh - 100px);
+//   position: relative;
+//   overflow: hidden;
 
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 0;
+//   @media (max-width: 768px) {
+//     width: 100%;
+//     padding: 0;
 
-    h1 {
-      font-size: 3.5rem;
-    }
+//     h1 {
+//       font-size: 3.5rem;
+//     }
 
-    p {
-      font-size: 1.5rem;
-      width: 100%;
-    }
-  }
-  @media (max-width: 520px) {
-    h1 {
-      font-size: 2.5rem;
-    }
+//     p {
+//       font-size: 1.5rem;
+//       width: 100%;
+//     }
+//   }
+//   @media (max-width: 520px) {
+//     h1 {
+//       font-size: 2.5rem;
+//     }
 
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-  }
-`
+//     h2 {
+//       font-size: 2rem;
+//     }
+//     p {
+//       font-size: 1rem;
+//     }
+//   }
+// `
 
 const AnimatedTop = styled(animated.h1)`
   text-align: left;
   height: auto;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   @media (max-width: 512px) {
     margin-top: 3vh;
-    
+    font-size: 2.5rem;
   }
 `
 const AnimatedBottomTitle = styled(animated.h2)`
   text-align: right;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 512px) {
+    font-size: 2rem;
+  }
+
 `
 const AnimatedBottomText = styled(animated.p)`
   font-size: 1.2rem;
@@ -128,6 +142,15 @@ const AnimatedBottomText = styled(animated.p)`
   position: relative;
   width: 50%;
   margin-left: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 512px) {
+    margin-top: 3vh;
+    font-size: 1rem;
+  }
 `
 
 export default Home

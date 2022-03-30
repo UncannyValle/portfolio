@@ -15,6 +15,7 @@ const StyledBurger = styled.button`
   cursor: pointer;
   z-index: 10;
   margin-right: 3rem;
+
   @media (max-width: ${({ theme }) => theme.tablet}) {
     display: flex;
   }
@@ -42,17 +43,17 @@ const StyledBurger = styled.button`
     }
   }
   #one {
-    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    transform: ${({ open }) => (open ? "rotate(40deg)" : "rotate(0)")};
     background-color: ${({ open }) => (open ? "var(--pink)" : "cyan")};
   }
 
   #two {
     opacity: ${({ open }) => (open ? "0" : "1")};
-    transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+    transform: ${({ open }) => (open ? "translateX(30px)" : "translateX(0)")};
   }
 
   #three {
-    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    transform: ${({ open }) => (open ? "rotate(-40deg)" : "rotate(0)")};
   }
 `
 

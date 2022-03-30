@@ -17,7 +17,7 @@ export const theme = {
     uncannyTurquoise: "#50C5B7",
     uncannyPurple: "#7c4dff",
   },
-  mobile: "520px",
+  mobile: "512px",
   tablet: "768px",
 }
 
