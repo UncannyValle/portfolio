@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `FrontEnd Dev`,
     titleTemplate: "%s | Julian Valle's Portfolio",
-    description: `Front-end web developer with an eye for detail! I make sites, apps and tacos!`,
+    defaultTitle: `Julian Valle's Portfolio`,
+    description: `Web developer with an eye for detail. I make sites, apps and tacos!`,
     author: `@uncannyvalle`,
     url: `https://julianvalle.dev`,
-    keywords: `developer, frontend, react, jamstack, gatsby, web developer, javascript, web design, Vue, Ruby, fullstack, front-end, full-stack, react.js`,
+    defaultKeywords: `developer, frontend, react, jamstack, gatsby, web developer, javascript, web design, Vue, Ruby, fullstack, front-end, full-stack, react.js`,
     image: `/SEOthumbnail.png`,
     twitterUsername: `@theuncannyvalle`,
     twitter: `https://twitter.com/theuncannyvalle`,
