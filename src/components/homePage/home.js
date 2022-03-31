@@ -10,16 +10,14 @@ const items = [
 const items2 = [
   { text: "Front-End Developer", id: 1 },
   {
-    text: `I'm Julian, I am a self taught developer and tech support specialist
-        specializing in creating fast and cutting edge sites using the latest
-        Javascript tools. I'm a creative and passionate guy who's mantra is,
-        "Never stop learning."`,
+    text: `I'm Julian, I am a Front End developer
+        specializing in creating fast, responsive and accessible sites that everyone can marvel at. My mantra is,
+        "Never stop learning"`, 
     id: 2,
   },
   {
-    text: `If you are in need of help with your next web project, hit me up. I am
-        always happy to help out on new or ongoing projects and collaborate with
-        like minded people.`,
+    text: `If you are in need of help with your next website, hit me up. I am
+        always happy to help out and collaborate with cool, like minded people.`,
     id: 3,
   },
 ]

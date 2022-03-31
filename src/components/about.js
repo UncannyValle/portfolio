@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Title from "./title"
 import SectionWrapper from "./sectionWrapper"
-import { FileDownload } from "@styled-icons/fa-solid"
 
 const About = (props) => {
   return (
@@ -43,16 +42,6 @@ const About = (props) => {
             <li>Gatsby</li>
             <li>Vue.js</li>
           </ul>
-          <a
-            className="resume"
-            href="https://drive.google.com/file/d/1KHadlWe19VAhHycZVBANUl4MczKRKzdn/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <FileDownload size="30" />
-            <h2>View Resume</h2>
-          </a>
         </AboutWrapper>
       </SectionWrapper>
     </div>

@@ -4,7 +4,7 @@ import { bool } from "prop-types"
 import { Link } from "gatsby"
 
 const StyledMenu = styled.nav`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -19,6 +19,7 @@ const StyledMenu = styled.nav`
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     width: 100%;
+    display: flex;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 0 3rem;
