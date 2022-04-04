@@ -68,10 +68,23 @@ export const Projects = (props) => {
           gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
+      onestop: file(relativePath: { eq: "onestop.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+        }
+      }
     }
   `)
 
   const skillList = [
+    {
+      title: "Onestop Portal",
+      src: getImage(data.onestop),
+      alt: "Maryland onestop",
+      site: "https://onestop.md.gov",
+      text: "Project for the state of Maryland. Worked on Front End and design system.",
+      tech: "Vue | Ruby on Rails | Sass"
+    },
     {
       title: "Disney+ Clone",
       src: getImage(data.disney),

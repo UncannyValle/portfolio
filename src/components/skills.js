@@ -14,7 +14,7 @@ const Wrapper = styled(animated.div)`
     margin-bottom: 2rem;
     h3 {
       font-size: 1.7rem;
-      @media(max-width: 512px) {
+      @media (max-width: 512px) {
         font-size: 1.3rem;
       }
     }
@@ -29,9 +29,11 @@ const Wrapper = styled(animated.div)`
   p {
     font-size: 1.2rem;
     display: inline-block;
+    text-align: center;
   }
   .img-wrapper {
     transition: 0.6s all ease-in-out;
+    padding-bottom: .5rem;
   }
   .img-wrapper:hover {
     filter: hue-rotate(90deg);
@@ -102,7 +104,7 @@ const Skills = (props) => {
       <Buttons>
         <Button href={props.gitHub} target="_blank" rel="noreferrer">
           GitHub
-        </Button>{" "}
+        </Button>
         <Button href={props.site} target="_blank" rel="noreferrer">
           Site
         </Button>
