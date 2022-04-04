@@ -33,7 +33,7 @@ const Wrapper = styled(animated.div)`
   }
   .img-wrapper {
     transition: 0.6s all ease-in-out;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
   }
   .img-wrapper:hover {
     filter: hue-rotate(90deg);
@@ -66,7 +66,8 @@ const Button = styled.a`
   transition: 0.5s all ease-in-out;
   display: inline-block;
   &:hover {
-    box-shadow: 0 10px 20px var(--pink), 0 6px 6px var(--pink);
+    -webkit-box-shadow: 0px 5px 15px 5px var(--pink);
+    box-shadow: 0px 5px 15px 5px var (--pink);
   }
   &:active {
     box-shadow: none;
