@@ -30,38 +30,67 @@ export const Projects = (props) => {
     query images {
       atole: file(relativePath: { eq: "atole.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
       sapa: file(relativePath: { eq: "sapa.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
       avocado: file(relativePath: { eq: "avocado.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
       movie: file(relativePath: { eq: "movie.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
       mario: file(relativePath: { eq: "mario.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
       calculator: file(relativePath: { eq: "calcutron.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+        }
+      }
+      marco: file(relativePath: { eq: "marco.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+        }
+      }
+      disney: file(relativePath: { eq: "disney.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
         }
       }
     }
   `)
 
   const skillList = [
+    {
+      title: "Disney+ Clone",
+      src: getImage(data.disney),
+      alt: "Disney Clone",
+      site: "https://disneyclone-ccbe6.web.app",
+      text: "Disney+ clone with sign in functionality",
+      tech: "React | Firebase | Google OAuth",
+      gitHub: "https://github.com/UncannyValle/disney-clone",
+    },
+    {
+      title: "Marco's Studio",
+      src: getImage(data.marco),
+      alt: "Marco's studio",
+      site: "https://marcostudio.gatsbyjs.io",
+      text: "Art Gallery site",
+      tech: "React | Gatsby | Styled Components",
+      gitHub:
+        "https://github.com/UncannyValle/marco-studio/tree/main/src/components",
+    },
     {
       title: "Atole Tech",
       src: getImage(data.atole),

@@ -9,24 +9,40 @@ const Wrapper = styled(animated.div)`
   justify-content: space-between;
   align-items: center;
   color: white;
-  border-radius: 15px;
-  background-color: var(--black);
+
   .title {
     margin-bottom: 2rem;
+    h3 {
+      font-size: 1.7rem;
+      @media(max-width: 512px) {
+        font-size: 1.3rem;
+      }
+    }
   }
+
   .line {
     height: 5px;
     background-color: var(--pink);
     margin: 0 auto;
   }
+
   p {
     font-size: 1.2rem;
     display: inline-block;
+  }
+  .img-wrapper {
+    transition: 0.6s all ease-in-out;
+  }
+  .img-wrapper:hover {
+    filter: hue-rotate(90deg);
+    -webkit-box-shadow: 0px 0px 15px 5px var(--cyan);
+    box-shadow: 0px 0px 15px 5px var(--cyan);
   }
 
   @media (max-width: 768px) {
     width: 95%;
     margin: 0 auto;
+
     p {
       width: 70%;
       text-align: center;
@@ -74,7 +90,7 @@ const Skills = (props) => {
         <animated.div className="line" style={animateBorder}></animated.div>
       </div>
       <a
-        className="img_wrap"
+        className="img-wrapper"
         href={props.site}
         target="_blank"
         rel="noreferrer"

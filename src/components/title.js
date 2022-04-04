@@ -11,6 +11,7 @@ const Wrapper = styled(animated.h1)`
   overflow: hidden;
   position: relative;
   z-index: -30;
+  font-size: 1rem;
 
   @media only screen and (max-width: 768px) {
     text-align: center;
