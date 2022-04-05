@@ -7,7 +7,7 @@ const Button = styled(Link)`
   color: white;
   display: block;
   font-size: 1.5rem;
-  font-family: Audiowide;
+  font-family: Archivo;
   text-transform: uppercase;
   box-shadow: none;
   transition: all 200ms ease-in-out;

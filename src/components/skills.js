@@ -1,6 +1,8 @@
 import { animated, useSpring, config } from "@react-spring/web"
 import React from "react"
 import styled from "styled-components"
+import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
+import { LinkExternal } from "@styled-icons/boxicons-regular/LinkExternal"
 
 const Wrapper = styled(animated.div)`
   text-align: center;
@@ -26,14 +28,23 @@ const Wrapper = styled(animated.div)`
     margin: 0 auto;
   }
 
-  p {
+  p,
+  .site-link {
     font-size: 1.2rem;
     display: inline-block;
     text-align: center;
   }
+  .site-link {
+    color: white;
+    text-decoration: underline;
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      color: var(--pink);
+    }
+  }
   .img-wrapper {
     transition: 0.6s all ease-in-out;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
   .img-wrapper:hover {
     filter: hue-rotate(90deg);
@@ -55,22 +66,22 @@ const Buttons = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  margin-top: 1rem;
 `
 const Button = styled.a`
-  padding: 0.5rem 1rem;
-  background-color: #7c4dff;
-  border-radius: 290486px;
-  width: 30%;
+  width: 2rem;
   color: white;
-  margin: 1rem 0;
   transition: 0.5s all ease-in-out;
-  display: inline-block;
-  &:hover {
-    -webkit-box-shadow: 0px 5px 15px 5px var(--pink);
-    box-shadow: 0px 5px 15px 5px var (--pink);
-  }
-  &:active {
-    box-shadow: none;
+
+  .icon {
+    transition: 0.5s all ease-in-out;
+
+    &:hover {
+      color: var(--pink);
+    }
+    &:active {
+      box-shadow: none;
+    }
   }
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -103,11 +114,13 @@ const Skills = (props) => {
       <p>{props.text}</p>
       <p>{props.tech}</p>
       <Buttons>
-        <Button href={props.gitHub} target="_blank" rel="noreferrer">
-          GitHub
-        </Button>
+        {props.gitHub ? (
+          <Button href={props.gitHub} target="_blank" rel="noreferrer">
+            <GithubSquare className="icon" />
+          </Button>
+        ) : null}
         <Button href={props.site} target="_blank" rel="noreferrer">
-          Site
+          <LinkExternal className="icon" />
         </Button>
       </Buttons>
     </Wrapper>

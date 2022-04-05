@@ -64,9 +64,9 @@ module.exports = {
           },
           {
             /* Exact name of the font as defied in @font-face CSS rule */
-            name: "Audiowide",
+            name: "Archivo",
             /* URL to the font CSS file with @font-face definition */
-            file: "https://fonts.googleapis.com/css2?family=Audiowide",
+            file: "https://fonts.googleapis.com/css2?family=Archivo",
           },
         ],
       },

@@ -10,18 +10,15 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const SkillsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-content: center;
   width: 100%;
-  grid-gap: 2rem;
+  grid-gap: 10rem;
   margin: 0 auto;
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0;
-  }
+  
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-    /* padding: 0 2rem; */
+    grid-gap: 2rem;
   }
 `
 
@@ -30,47 +27,47 @@ export const Projects = (props) => {
     query images {
       atole: file(relativePath: { eq: "atole.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       sapa: file(relativePath: { eq: "sapa.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       avocado: file(relativePath: { eq: "avocado.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       movie: file(relativePath: { eq: "movie.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       mario: file(relativePath: { eq: "mario.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       calculator: file(relativePath: { eq: "calcutron.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       marco: file(relativePath: { eq: "marco.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       disney: file(relativePath: { eq: "disney.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
       onestop: file(relativePath: { eq: "onestop.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, height: 200, aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
     }
@@ -179,7 +176,6 @@ export const Projects = (props) => {
               image={
                 <GatsbyImage
                   image={skillList[i].src}
-                  a
                   alt={skillList[i].alt}
                   placeholder="blurred"
                 />

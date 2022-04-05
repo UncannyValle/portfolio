@@ -12,7 +12,7 @@ const items2 = [
   {
     text: `I'm Julian, I am a Front End developer
         specializing in creating fast, responsive and accessible sites that everyone can marvel at. My mantra is,
-        "Never stop learning"`, 
+        "Never stop learning"`,
     id: 2,
   },
   {
@@ -71,40 +71,7 @@ const Home = () => {
     </>
   )
 }
-// const HomeWrapper = styled.div`
-//   max-width: 100vw;
-//   width: 100%;
-//   max-height: 100vh;
-//   height: calc(100vh - 100px);
-//   position: relative;
-//   overflow: hidden;
-
-//   @media (max-width: 768px) {
-//     width: 100%;
-//     padding: 0;
-
-//     h1 {
-//       font-size: 3.5rem;
-//     }
-
-//     p {
-//       font-size: 1.5rem;
-//       width: 100%;
-//     }
-//   }
-//   @media (max-width: 520px) {
-//     h1 {
-//       font-size: 2.5rem;
-//     }
-
-//     h2 {
-//       font-size: 2rem;
-//     }
-//     p {
-//       font-size: 1rem;
-//     }
-//   }
-// `
+// con
 
 const AnimatedTop = styled(animated.h1)`
   text-align: left;
@@ -124,7 +91,7 @@ const AnimatedTop = styled(animated.h1)`
 const AnimatedBottomTitle = styled(animated.h2)`
   text-align: right;
   position: relative;
-
+  color: var(--pink);
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -132,7 +99,6 @@ const AnimatedBottomTitle = styled(animated.h2)`
   @media (max-width: 512px) {
     font-size: 2rem;
   }
-
 `
 const AnimatedBottomText = styled(animated.p)`
   font-size: 1.2rem;

@@ -3,10 +3,10 @@ import reset from "styled-reset"
 
 export const theme = {
   font: {
-    title: "Titillium Web, sans-serif",
+    title: "Archivo, sans-serif",
     text: "Roboto, sans-serif",
-    display: "Audiowide, sans",
-    display2: "Audiowide, sans",
+    display: "Archivo, sans",
+    display2: "Archivo, sans",
   },
   colors: {
     uncannyBlue: "#3F51B5",
@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
   h1{
     font-family: ${({ theme }) => theme.font.display2};
     font-size: 4rem;
-    color: var(--pink);
+    color: var(--cyan);
     text-transform: uppercase;
 
   }
