@@ -10,8 +10,8 @@ const HeaderWrapper = styled.header`
   z-index: 5;
   top: 0;
   width: 100vw;
-  height: 75px;
-  background-color: var(--black);
+  height: 4rem;
+  background-color: black;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 200ms ease-in;
 

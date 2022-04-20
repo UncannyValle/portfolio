@@ -164,7 +164,7 @@ export const Projects = (props) => {
     },
   })
   return (
-    <div id={props.id}>
+    <>
       <SectionWrapper>
         <Title>A bit of my work</Title>
         <SkillsWrapper>
@@ -188,6 +188,6 @@ export const Projects = (props) => {
           ))}
         </SkillsWrapper>
       </SectionWrapper>
-    </div>
+    </>
   )
 }

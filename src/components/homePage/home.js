@@ -47,7 +47,7 @@ const Home = () => {
   // }
 
   return (
-    <>
+    <SplashContainer className="spash-container">
       {trail.map((props, i) => (
         <AnimatedTop style={props} key={i}>
           {items[i].text}
@@ -68,11 +68,13 @@ const Home = () => {
             </AnimatedBottomText>
           )
       })}
-    </>
+    </SplashContainer>
   )
 }
-// con
-
+const SplashContainer = styled.div`
+  min-height: calc(100vh - 4rem);
+  padding: 2rem;
+`
 const AnimatedTop = styled(animated.h1)`
   text-align: left;
   height: auto;

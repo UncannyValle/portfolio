@@ -10,9 +10,9 @@ import { TwitterSquare } from "@styled-icons/fa-brands"
 import { StyledIconBase } from "@styled-icons/styled-icon"
 
 const Main = styled.main`
-  max-width: 1366px;
+  max-width: 1080px;
   width: 100%;
-  margin: 12vh auto 0 auto;
+  margin: 4rem auto 0 auto;
   padding: 0 2rem;
 `
 
@@ -52,6 +52,7 @@ const SocialWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  
   ${StyledIconBase} {
     width: 2rem;
   }
@@ -63,7 +64,7 @@ const SocialWrapper = styled.div`
     align-items: center;
   }
   a:hover {
-    color: cyan;
+    color: var(--cyan);
   }
   @media (max-width: 768px) {
     width: 50%;
