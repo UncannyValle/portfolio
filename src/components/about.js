@@ -5,7 +5,7 @@ import SectionWrapper from "./sectionWrapper"
 
 const About = (props) => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <Title>A bit about me...</Title>
       <AboutWrapper>
         <p className="text">

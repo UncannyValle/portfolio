@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { bool } from "prop-types"
-import { Link } from "gatsby"
 
 const StyledMenu = styled.nav`
   display: none;
@@ -25,7 +24,7 @@ const StyledMenu = styled.nav`
     padding: 0 3rem;
   }
 `
-const Links = styled(Link)`
+const Links = styled.a`
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -50,22 +49,22 @@ const Links = styled(Link)`
   }
 `
 
-const MobileMenu = ({ open }) => {
+const MobileMenu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <Links to="/project-page">
+      <Links href="#projects" onClick={() => setOpen(!open)}>
         <span role="img" aria-label="projects">
           &#x1f4b8;
         </span>
         Projects
       </Links>
-      <Links to="/about-page">
+      <Links href="#about" onClick={() => setOpen(!open)}>
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
         </span>
         About me
       </Links>
-      <Links to="/contact-page">
+      <Links href="#contact" onClick={() => setOpen(!open)}>
         <span role="img" aria-label="contact">
           &#x1f4e9;
         </span>

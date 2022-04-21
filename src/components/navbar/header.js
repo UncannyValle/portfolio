@@ -61,7 +61,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <nav className="navbar">
-        <Title to="/" activeClassName="selected">
+        <Title to="/" activeClassName="selected" onClick={() => setOpen(false)}>
           JV
         </Title>
         <DesktopMenu />

@@ -138,30 +138,28 @@ export const Projects = (props) => {
     },
   })
   return (
-    
-      <SectionWrapper>
-        <Title>A bit of my work</Title>
-        <SkillsWrapper>
-          {boxTrail.map((style, i) => (
-            <Skills
-              style={style}
-              key={i}
-              title={skillList[i].title}
-              image={
-                <GatsbyImage
-                  image={skillList[i].src}
-                  alt={skillList[i].alt}
-                  placeholder="blurred"
-                />
-              }
-              site={skillList[i].site}
-              text={skillList[i].text}
-              tech={skillList[i].tech}
-              gitHub={skillList[i].gitHub}
-            />
-          ))}
-        </SkillsWrapper>
-      </SectionWrapper>
-    
+    <SectionWrapper id="projects">
+      <Title>A bit of my work</Title>
+      <SkillsWrapper>
+        {boxTrail.map((style, i) => (
+          <Skills
+            style={style}
+            key={i}
+            title={skillList[i].title}
+            image={
+              <GatsbyImage
+                image={skillList[i].src}
+                alt={skillList[i].alt}
+                placeholder="blurred"
+              />
+            }
+            site={skillList[i].site}
+            text={skillList[i].text}
+            tech={skillList[i].tech}
+            gitHub={skillList[i].gitHub}
+          />
+        ))}
+      </SkillsWrapper>
+    </SectionWrapper>
   )
 }

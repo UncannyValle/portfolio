@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 //styles
-const Button = styled(Link)`
+const Button = styled.a`
   color: white;
   display: block;
   font-size: 1.5rem;
@@ -37,17 +36,17 @@ const Menu = styled.ul`
 const DesktopMenu = () => (
   <Menu>
     <li id="projects-link">
-      <Button to="/project-page" activeClassName="selected">
+      <Button href="#projects" activeClassName="selected">
         Projects
       </Button>
     </li>
     <li id="about-link">
-      <Button to="/about-page" activeClassName="selected">
+      <Button href="#about" activeClassName="selected">
         About Me
       </Button>
     </li>
     <li>
-      <Button to="/contact-page" activeClassName="selected">
+      <Button href="#contact" activeClassName="selected">
         Contact{" "}
       </Button>
     </li>

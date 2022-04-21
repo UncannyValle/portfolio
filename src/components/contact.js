@@ -21,17 +21,15 @@ const ContactWrapper = styled(Wrapper)`
 `
 
 const Contact = (props) => (
-  <div id={props.id}>
-    <ContactWrapper>
-      <Title>Contact Me</Title>
-      <p>
-        Feel free to contact me at{" "}
-        <a href="mailto:julianv@atolemedia.com">julianv@atolemedia.com</a>
-        <br />
-        or use the contact form below.
-      </p>
-      <Form />
-    </ContactWrapper>
-  </div>
+  <ContactWrapper id="contact">
+    <Title>Contact Me</Title>
+    <p>
+      Feel free to contact me at{" "}
+      <a href="mailto:julianv@atolemedia.com">julianv@atolemedia.com</a>
+      <br />
+      or use the contact form below.
+    </p>
+    <Form />
+  </ContactWrapper>
 )
 export default Contact
