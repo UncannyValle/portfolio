@@ -10,7 +10,7 @@ const items = [
 const items2 = [
   { text: "A Front-End Developer", id: 1 },
   {
-    text: `I Build Websites`,
+    text: `I Build React/Vue Websites`,
     id: 2,
   },
 ]
