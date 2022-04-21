@@ -1,8 +1,60 @@
 import { animated, useSpring, config } from "@react-spring/web"
-import React from "react"
+import React, { useRef } from "react"
 import styled from "styled-components"
 import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
 import { LinkExternal } from "@styled-icons/boxicons-regular/LinkExternal"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
+
+const Skills = (props) => {
+  const triggerRef = useRef()
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  })
+
+  const animateBorder = useSpring({
+    delay: 300,
+    config: config.molasses,
+    from: {
+      width: "0%",
+    },
+    to: {
+      width: dataRef?.isIntersecting ? "100%" : "0%",
+    },
+  })
+
+  return (
+    <Wrapper style={props.style}>
+      <div className="title">
+        <h3>{props.title}</h3>
+        <animated.div
+          className="line"
+          style={animateBorder}
+          ref={triggerRef}
+        ></animated.div>
+      </div>
+      <a
+        className="img-wrapper"
+        href={props.site}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {props.image}
+      </a>
+      <p>{props.text}</p>
+      <p>{props.tech}</p>
+      <Buttons>
+        {props.gitHub ? (
+          <Button href={props.gitHub} target="_blank" rel="noreferrer">
+            <GithubSquare className="icon" />
+          </Button>
+        ) : null}
+        <Button href={props.site} target="_blank" rel="noreferrer">
+          <LinkExternal className="icon" />
+        </Button>
+      </Buttons>
+    </Wrapper>
+  )
+}
 
 const Wrapper = styled(animated.div)`
   text-align: center;
@@ -87,44 +139,5 @@ const Button = styled.a`
     text-align: center;
   }
 `
-
-const Skills = (props) => {
-  const animateBorder = useSpring({
-    width: "100%",
-    delay: 300,
-    config: config.molasses,
-    from: {
-      width: "0%",
-    },
-  })
-  return (
-    <Wrapper style={props.style}>
-      <div className="title">
-        <h3>{props.title}</h3>
-        <animated.div className="line" style={animateBorder}></animated.div>
-      </div>
-      <a
-        className="img-wrapper"
-        href={props.site}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {props.image}
-      </a>
-      <p>{props.text}</p>
-      <p>{props.tech}</p>
-      <Buttons>
-        {props.gitHub ? (
-          <Button href={props.gitHub} target="_blank" rel="noreferrer">
-            <GithubSquare className="icon" />
-          </Button>
-        ) : null}
-        <Button href={props.site} target="_blank" rel="noreferrer">
-          <LinkExternal className="icon" />
-        </Button>
-      </Buttons>
-    </Wrapper>
-  )
-}
 
 export default Skills

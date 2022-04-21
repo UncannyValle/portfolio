@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useRef } from "react"
 import styled from "styled-components"
 import { useSpring, animated, config } from "react-spring"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
 
 const Wrapper = styled(animated.h1)`
   margin: 1rem auto;
@@ -23,15 +24,28 @@ const Wrapper = styled(animated.h1)`
   }
 `
 const Title = ({ children }) => {
+  const triggerRef = useRef()
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: true,
+  })
+
   const rise = useSpring({
-    opacity: 1,
-    top: "0rem",
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      top: dataRef?.isIntersecting ? "0rem" : "5rem",
+    },
     config: config.molasses,
     from: {
       opacity: 0,
       top: "5rem",
     },
   })
-  return <Wrapper style={rise}>{children}</Wrapper>
+  return (
+    <>
+      <Wrapper style={rise} ref={triggerRef}>
+        {children}
+      </Wrapper>
+    </>
+  )
 }
 export default Title
