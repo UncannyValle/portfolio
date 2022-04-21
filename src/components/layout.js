@@ -16,10 +16,10 @@ const Main = styled.main`
   padding: 0 2rem;
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 0 1.5rem;
   }
   @media (max-width: 512px) {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 `
 
