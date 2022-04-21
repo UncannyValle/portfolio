@@ -43,7 +43,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height:100vh;
     position: relative;
     padding-bottom: 7rem;
-   
+    
   }
 
   h1{

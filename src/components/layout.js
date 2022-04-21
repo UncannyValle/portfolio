@@ -9,6 +9,76 @@ import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
 import { TwitterSquare } from "@styled-icons/fa-brands"
 import { StyledIconBase } from "@styled-icons/styled-icon"
 
+const Layout = ({ children, loading }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  return (
+    <LayoutWrapper className={loading ? "hidden" : "startup"}>
+      <Header siteTitle={data.site.siteMetadata.title} />
+
+      <Main>{children}</Main>
+
+      <Footer>
+        <a className="text" href="mailto:julianv@atolemedia.com">
+          Made by Julian Valle {new Date().getFullYear()}
+        </a>
+
+        <SocialWrapper>
+          <a
+            href="https://linkedin.com/in/uncannyvalle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <Linkedin />
+          </a>
+          <a
+            href="https://github.com/uncannyvalle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <GithubSquare />
+          </a>
+          <a
+            href="https://www.instagram.com/the_unncanny_valle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <LogoInstagram />
+          </a>
+          <a
+            href="https://twitter.com/theuncannyvalle/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <TwitterSquare />
+          </a>
+        </SocialWrapper>
+      </Footer>
+    </LayoutWrapper>
+  )
+}
+
+const LayoutWrapper = styled.div`
+  transition: 0.5s all ease-in;
+  &.hidden {
+    opacity: 0;
+  }
+  &.startup {
+    opacity: 1;
+  }
+`
 const Main = styled.main`
   max-width: 1080px;
   width: 100%;
@@ -86,67 +156,6 @@ const SocialWrapper = styled.div`
     }
   }
 `
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-
-      <Main>{children}</Main>
-
-      <Footer>
-        <a className="text" href="mailto:julianv@atolemedia.com">
-          Made by Julian Valle {new Date().getFullYear()}
-        </a>
-
-        <SocialWrapper>
-          <a
-            href="https://linkedin.com/in/uncannyvalle/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <Linkedin />
-          </a>
-          <a
-            href="https://github.com/uncannyvalle/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <GithubSquare />
-          </a>
-          <a
-            href="https://www.instagram.com/the_unncanny_valle/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <LogoInstagram />
-          </a>
-          <a
-            href="https://twitter.com/theuncannyvalle/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            <TwitterSquare />
-          </a>
-        </SocialWrapper>
-      </Footer>
-    </>
-  )
-}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
