@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { bool } from "prop-types"
+import { Link } from "react-scroll"
 
 const StyledMenu = styled.nav`
   display: none;
@@ -24,7 +25,7 @@ const StyledMenu = styled.nav`
     padding: 0 3rem;
   }
 `
-const Links = styled.a`
+const Links = styled(Link)`
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -51,19 +52,34 @@ const Links = styled.a`
 const MobileMenu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <Links href="#projects" onClick={() => setOpen(!open)}>
+      <Links
+        to="projects"
+        smooth={true}
+        spy={true}
+        onClick={() => setOpen(!open)}
+      >
         <span role="img" aria-label="projects">
           &#128187;
         </span>
         Projects
       </Links>
-      <Links href="#about" onClick={() => setOpen(!open)}>
+      <Links
+        to="about"
+        smooth={true}
+        spy={true}
+        onClick={() => setOpen(!open)}
+      >
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
         </span>
         About me
       </Links>
-      <Links href="#contact" onClick={() => setOpen(!open)}>
+      <Links
+        to="contact"
+        smooth={true}
+        spy={true}
+        onClick={() => setOpen(!open)}
+      >
         <span role="img" aria-label="contact">
           &#x1f4e9;
         </span>

@@ -3,7 +3,6 @@ import Skills from "./skills"
 import Title from "./title"
 import styled from "styled-components"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-
 import SectionWrapper from "./sectionWrapper"
 import { useTrail, config } from "@react-spring/core"
 import { graphql, useStaticQuery } from "gatsby"

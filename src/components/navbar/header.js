@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Hamburger from "./hamburger"
 import DesktopMenu from "./desktopMenu"
 import MobileMenu from "./mobileMenu"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -61,7 +61,13 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <nav className="navbar">
-        <Title to="/" activeClassName="selected" onClick={() => setOpen(false)}>
+        <Title
+          activeClass="selected"
+          to="home"
+          smooth={true}
+          spy={true}
+          onClick={() => setOpen(false)}
+        >
           JV
         </Title>
         <DesktopMenu />

@@ -4,7 +4,7 @@ import { useSpring, animated, config } from "react-spring"
 import useIntersectionObserver from "../hooks/useIntersectionObserver"
 
 const Wrapper = styled(animated.h1)`
-  margin: 1rem auto;
+  margin: 0 auto;
   text-align: center;
   display: block;
   width: 70%;

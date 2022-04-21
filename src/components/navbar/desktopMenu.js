@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-scroll"
 
 //styles
-const Button = styled.a`
+const Button = styled(Link)`
   color: white;
   display: block;
   font-size: 1.5rem;
@@ -36,17 +37,17 @@ const Menu = styled.ul`
 const DesktopMenu = () => (
   <Menu>
     <li id="projects-link">
-      <Button href="#projects" activeClassName="selected">
+      <Button activeClass="selected" to="projects" smooth={true} spy={true}>
         Projects
       </Button>
     </li>
     <li id="about-link">
-      <Button href="#about" activeClassName="selected">
+      <Button activeClass="selected" to="about" smooth={true} spy={true}>
         About Me
       </Button>
     </li>
     <li>
-      <Button href="#contact" activeClassName="selected">
+      <Button activeClass="selected" to="contact" smooth={true} spy={true}>
         Contact{" "}
       </Button>
     </li>

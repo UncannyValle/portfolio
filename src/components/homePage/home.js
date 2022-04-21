@@ -38,7 +38,7 @@ const Home = () => {
   })
 
   return (
-    <SplashContainer className="spash-container">
+    <SplashContainer className="spash-container" id="home">
       {trail.map((props, i) => (
         <AnimatedTop style={props} key={i}>
           {items[i].text}

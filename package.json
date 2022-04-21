@@ -36,6 +36,7 @@
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-is": "^18.0.0",
+    "react-scroll": "^1.8.7",
     "react-spring": "^9.2.1",
     "styled-components": "^5.2.3",
     "styled-icons": "^10.34.0",
