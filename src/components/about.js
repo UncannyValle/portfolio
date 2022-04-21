@@ -10,15 +10,13 @@ const About = (props) => {
       <AboutWrapper>
         <p className="text">
           I'm Julian Valle, I love to make creative, beautiful and responsive
-          websites for small businesses and beyond! I am a self taught developer
+          websites! I am a self taught developer
           who is extemely adaptable and loves to learn new tech!
         </p>
         <p className="text">
           My current stack is Vue, Ruby, Bootstrap and Typescript to work as a
-          team and build awesome apps! On my personal projects I also use React,
-          Gatsby, and Node. Also I am learning some Unity and C# for funsies.
-          Quite honestly I am all over the place but I love to be constantly
-          learning and be challanged.
+          team and build awesome apps! When I freelance I use React,
+          Gatsby, Next.js and Node. Always open to collaboration opportunities so don't hesitate to contact me.
         </p>
         <p className="text">
           I live in New York City with my lovely wife, where we spend our time
