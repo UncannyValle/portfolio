@@ -14,6 +14,13 @@ const Main = styled.main`
   width: 100%;
   margin: 4rem auto 0 auto;
   padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  @media (max-width: 512px) {
+    padding: 1rem;
+  }
 `
 
 const Footer = styled.footer`
@@ -38,11 +45,11 @@ const Footer = styled.footer`
   }
   @media (max-width: 768px) {
   }
-  @media (max-width: 520px) {
-    height: 7rem;
+  @media (max-width: 512px) {
+    height: 5rem;
     justify-content: space-between;
     .text {
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
   }
 `
@@ -52,9 +59,12 @@ const SocialWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
+
   ${StyledIconBase} {
     width: 2rem;
+    @media (max-width: 512px) {
+      width: 1rem;
+    }
   }
 
   a {

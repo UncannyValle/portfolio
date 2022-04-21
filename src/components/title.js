@@ -19,8 +19,9 @@ const Wrapper = styled(animated.h1)`
     width: 80%;
     font-size: 3rem;
   }
-  @media (max-width: 520px) {
-    font-size: 2rem;
+  @media (max-width: 512px) {
+    font-size: 1.5rem;
+    padding: 0;
   }
 `
 const Title = ({ children }) => {

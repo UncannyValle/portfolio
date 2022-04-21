@@ -5,7 +5,9 @@ import Title from "./title"
 import Wrapper from "./sectionWrapper"
 
 const ContactWrapper = styled(Wrapper)`
-  margin-bottom: 0rem;
+  margin-bottom: 5rem;
+  margin-top: 15rem;
+
   p {
     color: ${({ theme }) => theme.colors.uncannyPlatinum};
     margin: 0 auto;
@@ -18,8 +20,7 @@ const ContactWrapper = styled(Wrapper)`
   }
 `
 
-
-const Contact = props => (
+const Contact = (props) => (
   <div id={props.id}>
     <ContactWrapper>
       <Title>Contact Me</Title>
@@ -30,7 +31,6 @@ const Contact = props => (
         or use the contact form below.
       </p>
       <Form />
-      
     </ContactWrapper>
   </div>
 )

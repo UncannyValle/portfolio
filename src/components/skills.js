@@ -105,12 +105,19 @@ const Wrapper = styled(animated.div)`
   }
 
   @media (max-width: 768px) {
-    width: 95%;
-    margin: 0 auto;
+    padding: 2rem;
 
     p {
       width: 70%;
       text-align: center;
+    }
+  }
+  @media (max-width: 512px) {
+    padding: 1rem;
+
+    p {
+      width: 100%;
+      font-size: 1rem;
     }
   }
 `

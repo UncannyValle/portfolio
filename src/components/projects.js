@@ -14,7 +14,7 @@ const SkillsWrapper = styled.div`
   align-content: center;
   width: 100%;
   grid-gap: 10rem;
-  margin: 0 auto;
+  margin: 5rem auto;
   
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
@@ -138,7 +138,7 @@ export const Projects = (props) => {
     },
   })
   return (
-    <>
+    
       <SectionWrapper>
         <Title>A bit of my work</Title>
         <SkillsWrapper>
@@ -162,6 +162,6 @@ export const Projects = (props) => {
           ))}
         </SkillsWrapper>
       </SectionWrapper>
-    </>
+    
   )
 }

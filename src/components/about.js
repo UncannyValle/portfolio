@@ -5,48 +5,54 @@ import SectionWrapper from "./sectionWrapper"
 
 const About = (props) => {
   return (
-    <div id={props.id}>
-      <SectionWrapper>
-        <Title>A bit about me...</Title>
-        <AboutWrapper>
-          <p className="text">
-            I'm Julian Valle, I love to make creative, beautiful and responsive
-            websites for small businesses and beyond! I am a self taught
-            developer who is extemely adaptable and loves to learn new tech!
-          </p>
-          <p className="text">
-            My current stack is Vue, Ruby, Bootstrap and Typescript to work as a
-            team and build awesome apps! On my personal projects I also use
-            React, Gatsby, and Node. Also I am learning some Unity and C# for
-            funsies. Quite honestly I am all over the place but I love to be
-            constantly learning and be challanged.
-          </p>
-          <p className="text">
-            I live in New York City with my lovely wife, where we spend our time
-            walking in the city and getting into strange adventures!
-          </p>
+    <AboutSection>
+      <Title>A bit about me...</Title>
+      <AboutWrapper>
+        <p className="text">
+          I'm Julian Valle, I love to make creative, beautiful and responsive
+          websites for small businesses and beyond! I am a self taught developer
+          who is extemely adaptable and loves to learn new tech!
+        </p>
+        <p className="text">
+          My current stack is Vue, Ruby, Bootstrap and Typescript to work as a
+          team and build awesome apps! On my personal projects I also use React,
+          Gatsby, and Node. Also I am learning some Unity and C# for funsies.
+          Quite honestly I am all over the place but I love to be constantly
+          learning and be challanged.
+        </p>
+        <p className="text">
+          I live in New York City with my lovely wife, where we spend our time
+          walking in the city and getting into strange adventures!
+        </p>
 
-          <Title>Skills</Title>
+        <h1 className="skills-title">Skills</h1>
 
-          <ul className="skills">
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React.js</li>
-            <li>Ruby</li>
-            <li>Git</li>
-            <li>Bootstrap</li>
-            <li>GraphQL</li>
-            <li>Sass</li>
-            <li>mySQL</li>
-            <li>Gatsby</li>
-            <li>Vue.js</li>
-          </ul>
-        </AboutWrapper>
-      </SectionWrapper>
-    </div>
+        <ul className="skills">
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React.js</li>
+          <li>Ruby</li>
+          <li>Git</li>
+          <li>Bootstrap</li>
+          <li>GraphQL</li>
+          <li>Sass</li>
+          <li>mySQL</li>
+          <li>Gatsby</li>
+          <li>Vue.js</li>
+        </ul>
+      </AboutWrapper>
+    </AboutSection>
   )
 }
+
+const AboutSection = styled(SectionWrapper)`
+  margin-top: 15rem;
+  .skills-title {
+    font-size: 2.5rem;
+    color: var(--pink);
+  }
+`
 
 const AboutWrapper = styled.div`
   height: auto;
