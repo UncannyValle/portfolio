@@ -7,7 +7,7 @@
   "dependencies": {
     "@formspree/react": "^2.2.3",
     "babel-plugin-styled-components": "^2.0.7",
-    "gatsby": "4.7.2",
+    "gatsby": "4.12.1",
     "gatsby-background-image": "^1.1.1",
     "gatsby-cli": "^4.12.1",
     "gatsby-omni-font-loader": "^2.0.0",
@@ -25,7 +25,6 @@
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^4.12.1",
-    "gatsby-source-sanity": "^7.0.7",
     "gatsby-transformer-remark": "^5.12.1",
     "gatsby-transformer-sharp": "^4.12.1",
     "gsap": "^3.6.0",
