@@ -34,21 +34,6 @@ export const Projects = (props) => {
           gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
         }
       }
-      avocado: file(relativePath: { eq: "avocado.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
-        }
-      }
-      movie: file(relativePath: { eq: "movie.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
-        }
-      }
-      mario: file(relativePath: { eq: "mario.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
-        }
-      }
       calculator: file(relativePath: { eq: "calcutron.png" }) {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
