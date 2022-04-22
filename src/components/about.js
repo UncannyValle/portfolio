@@ -17,8 +17,10 @@ const About = (props) => {
           {" "}
           In 2021 I was lucky enough to start working full time as a Front End
           developer for Enovational. There I quickly learned Vue.js, Ruby on
-          Rails, Bootstrap and more importantly, how to work on a development
-          team with an existing codebase.{" "}
+          Rails, and Bootstrap. More importantly, I learned how to work on a
+          development team with an existing codebase as well as how to
+          communicate with the design and product team to bring prototypes to
+          life.{" "}
         </p>{" "}
         <p className="text">
           I am always learning and looking for my next opportunity, hit me up if
