@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Contact from "../components/contact"
 import { Projects } from "../components/projects"
 import About from "../components/about"
-import styled from "styled-components"
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true)

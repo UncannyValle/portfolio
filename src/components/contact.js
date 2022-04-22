@@ -6,7 +6,6 @@ import Wrapper from "./sectionWrapper"
 
 const ContactWrapper = styled(Wrapper)`
   margin-bottom: 5rem;
-  margin-top: 15rem;
 
   p {
     color: ${({ theme }) => theme.colors.uncannyPlatinum};
