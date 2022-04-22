@@ -27,9 +27,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     --purple:#711c91;
     --pink:	#ea00d9;
-    --cyan:#0abdc6;
+    --cyan:#02ffff;
     --blue: #274e87;
-    --black:#091833; 
+    --black:#360568; 
   }
   
   html {
@@ -39,11 +39,11 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.5;
     letter-spacing: 0;
-    background-color: var(--black);
+    background-color: black;
     min-height:100vh;
     position: relative;
     padding-bottom: 7rem;
-   
+    
   }
 
   h1{
@@ -56,7 +56,7 @@ export const GlobalStyle = createGlobalStyle`
   h2{
     font-family: ${({ theme }) => theme.font.display2};
     font-size: 3rem;
-    color: cyan;
+    color: var(--cyan);
     margin:.5rem 0;    text-transform: uppercase;
 
   }
@@ -64,7 +64,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.display2};
     text-align:center;
     font-size: 2rem;
-    color: cyan;    text-transform: uppercase;
+    color: var(--white);    text-transform: uppercase;
 
   }
   a {

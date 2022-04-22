@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 //styles
 const Button = styled(Link)`
@@ -37,17 +37,17 @@ const Menu = styled.ul`
 const DesktopMenu = () => (
   <Menu>
     <li id="projects-link">
-      <Button to="/project-page" activeClassName="selected">
+      <Button activeClass="selected" to="projects" smooth={true} spy={true}>
         Projects
       </Button>
     </li>
     <li id="about-link">
-      <Button to="/about-page" activeClassName="selected">
+      <Button activeClass="selected" to="about" smooth={true} spy={true}>
         About Me
       </Button>
     </li>
     <li>
-      <Button to="/contact-page" activeClassName="selected">
+      <Button activeClass="selected" to="contact" smooth={true} spy={true}>
         Contact{" "}
       </Button>
     </li>

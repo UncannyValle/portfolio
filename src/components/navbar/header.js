@@ -3,15 +3,15 @@ import styled from "styled-components"
 import Hamburger from "./hamburger"
 import DesktopMenu from "./desktopMenu"
 import MobileMenu from "./mobileMenu"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const HeaderWrapper = styled.header`
   position: fixed;
   z-index: 5;
   top: 0;
   width: 100vw;
-  height: 75px;
-  background-color: var(--black);
+  height: 4rem;
+  background-color: black;
   box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 200ms ease-in;
 
@@ -61,7 +61,13 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <nav className="navbar">
-        <Title to="/" activeClassName="selected">
+        <Title
+          activeClass="selected"
+          to="home"
+          smooth={true}
+          spy={true}
+          onClick={() => setOpen(false)}
+        >
           JV
         </Title>
         <DesktopMenu />

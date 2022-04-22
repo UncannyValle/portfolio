@@ -9,74 +9,7 @@ import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
 import { TwitterSquare } from "@styled-icons/fa-brands"
 import { StyledIconBase } from "@styled-icons/styled-icon"
 
-const Main = styled.main`
-  max-width: 1366px;
-  width: 100%;
-  margin: 12vh auto 0 auto;
-  padding: 0 2rem;
-`
-
-const Footer = styled.footer`
-  width: 100%;
-  color: white;
-  height: 75px;
-  display: flex;
-  background-color: var(--black);
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 0;
-  padding: 0 1rem;
-
-  a {
-    color: white;
-    transition: all 0.2s ease-in;
-  }
-
-  a:hover {
-    color: var(--pink);
-  }
-  @media (max-width: 768px) {
-  }
-  @media (max-width: 520px) {
-    height: 7rem;
-    justify-content: space-between;
-    .text {
-      font-size: 1rem;
-    }
-  }
-`
-const SocialWrapper = styled.div`
-  text-align: center;
-  width: 30%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  ${StyledIconBase} {
-    width: 2rem;
-  }
-
-  a {
-    color: white;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-  }
-  a:hover {
-    color: cyan;
-  }
-  @media (max-width: 768px) {
-    width: 50%;
-  }
-  @media (max-width: 520px) {
-    height: 100%;
-    a {
-      height: 50%;
-    }
-  }
-`
-
-const Layout = ({ children }) => {
+const Layout = ({ children, loading }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -88,7 +21,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <LayoutWrapper className={loading ? "hidden" : "startup"}>
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>{children}</Main>
@@ -133,9 +66,96 @@ const Layout = ({ children }) => {
           </a>
         </SocialWrapper>
       </Footer>
-    </>
+    </LayoutWrapper>
   )
 }
+
+const LayoutWrapper = styled.div`
+  transition: 0.5s all ease-in;
+  &.hidden {
+    opacity: 0;
+  }
+  &.startup {
+    opacity: 1;
+  }
+`
+const Main = styled.main`
+  max-width: 1080px;
+  width: 100%;
+  margin: 4rem auto 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+  @media (max-width: 512px) {
+    padding: 0 1rem;
+  }
+`
+
+const Footer = styled.footer`
+  width: 100%;
+  color: white;
+  height: 75px;
+  display: flex;
+  background-color: var(--black);
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  padding: 0 1rem;
+
+  a {
+    color: white;
+    transition: all 0.2s ease-in;
+  }
+
+  a:hover {
+    color: var(--pink);
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 512px) {
+    height: 5rem;
+    justify-content: space-between;
+    .text {
+      font-size: 0.75rem;
+    }
+  }
+`
+const SocialWrapper = styled.div`
+  text-align: center;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  ${StyledIconBase} {
+    width: 2rem;
+    @media (max-width: 512px) {
+      width: 1rem;
+    }
+  }
+
+  a {
+    color: white;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+  }
+  a:hover {
+    color: var(--cyan);
+  }
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 520px) {
+    height: 100%;
+    a {
+      height: 50%;
+    }
+  }
+`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

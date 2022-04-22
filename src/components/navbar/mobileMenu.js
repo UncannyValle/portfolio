@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import { bool } from "prop-types"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const StyledMenu = styled.nav`
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: ${({ theme }) => theme.colors.uncannyPurple};
+  background: black;
   height: 90vh;
   text-align: center;
   position: absolute;
@@ -35,8 +35,8 @@ const Links = styled(Link)`
   color: ${({ theme }) => theme.colors.uncannyCyan};
   text-decoration: none;
   transition: color 0.3s linear;
-  border-radius: 15px;
-  border: solid 5px ${({ theme }) => theme.colors.uncannyCyan};
+  border-radius: 1rem;
+  border: solid 3px var(--pink);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,26 +46,40 @@ const Links = styled(Link)`
     text-align: center;
     height: 100px;
     width: 300px;
-    background-color: ${({ theme }) => theme.colors.uncannyBlue};
   }
 `
 
-const MobileMenu = ({ open }) => {
+const MobileMenu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <Links to="/project-page">
+      <Links
+        to="projects"
+        smooth={true}
+        spy={true}
+        onClick={() => setOpen(!open)}
+      >
         <span role="img" aria-label="projects">
-          &#x1f4b8;
+          &#128187;
         </span>
         Projects
       </Links>
-      <Links to="/about-page">
+      <Links
+        to="about"
+        smooth={true}
+        spy={true}
+        onClick={() => setOpen(!open)}
+      >
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
         </span>
         About me
       </Links>
-      <Links to="/contact-page">
+      <Links
+        to="contact"
+        smooth={true}
+        spy={true}
+        onClick={() => setOpen(!open)}
+      >
         <span role="img" aria-label="contact">
           &#x1f4e9;
         </span>

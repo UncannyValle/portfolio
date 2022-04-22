@@ -22,26 +22,29 @@ const StyledForm = styled.form`
     text-align: left;
     color: var(--pink);
     border: none;
+    margin-top: 1rem;
   }
   input {
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     background-color: var(--black);
-    color: var(--pink);
+    color: var(--cyan);
     border-radius: 10px;
     border: 2px solid cyan;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem;
+    margin: 0.5rem 0;
   }
   textarea {
     width: 100%;
     background-color: var(--black);
-    color: var(--pink);
+    color: var(--cyan);
     height: 10rem;
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 10px;
     border: 2px solid cyan;
+    margin: 0.5rem 0;
   }
   button {
     margin: 1em auto;

@@ -3,22 +3,15 @@ import styled from "styled-components"
 import { animated, useTrail, config } from "react-spring"
 
 const items = [
-  { text: "Welcome", id: 1 },
-  { text: "To My Portfolio!", id: 2 },
+  { text: "Hi!", id: 1 },
+  // { text: "To My Portfolio!", id: 2 },
   { text: "I'm Julian", id: 3 },
 ]
 const items2 = [
-  { text: "Front-End Developer", id: 1 },
+  { text: "A Front-End Developer", id: 1 },
   {
-    text: `I'm Julian, I am a Front End developer
-        specializing in creating fast, responsive and accessible sites that everyone can marvel at. My mantra is,
-        "Never stop learning"`,
+    text: `I Build React/Vue Websites`,
     id: 2,
-  },
-  {
-    text: `If you are in need of help with your next website, hit me up. I am
-        always happy to help out and collaborate with cool, like minded people.`,
-    id: 3,
   },
 ]
 
@@ -44,10 +37,8 @@ const Home = () => {
     },
   })
 
-  // }
-
   return (
-    <>
+    <SplashContainer className="spash-container" id="home">
       {trail.map((props, i) => (
         <AnimatedTop style={props} key={i}>
           {items[i].text}
@@ -68,13 +59,19 @@ const Home = () => {
             </AnimatedBottomText>
           )
       })}
-    </>
+    </SplashContainer>
   )
 }
-// con
-
+const SplashContainer = styled.div`
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 512px) {
+  }
+`
 const AnimatedTop = styled(animated.h1)`
-  text-align: left;
+  text-align: center;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -89,7 +86,7 @@ const AnimatedTop = styled(animated.h1)`
   }
 `
 const AnimatedBottomTitle = styled(animated.h2)`
-  text-align: right;
+  text-align: center;
   position: relative;
   color: var(--pink);
   @media (max-width: 768px) {
@@ -100,12 +97,11 @@ const AnimatedBottomTitle = styled(animated.h2)`
     font-size: 2rem;
   }
 `
-const AnimatedBottomText = styled(animated.p)`
-  font-size: 1.2rem;
+const AnimatedBottomText = styled(animated.h3)`
+  font-size: 1.5rem;
   color: white;
   position: relative;
-  width: 50%;
-  margin-left: auto;
+  text-align: center;
 
   @media (max-width: 768px) {
     width: 100%;

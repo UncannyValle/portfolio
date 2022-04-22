@@ -8,21 +8,17 @@ const StyledBurger = styled.button`
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 4rem;
-  height: 4rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 10;
-  margin-right: 3rem;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     display: flex;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 1.5rem;
+    height: 25px;
   }
 
   &:focus {
@@ -30,7 +26,8 @@ const StyledBurger = styled.button`
   }
 
   div {
-    width: 60px;
+    width: 50px;
+    text-align: center;
     height: 5px;
     background: cyan;
     border-radius: 10px;
@@ -38,8 +35,8 @@ const StyledBurger = styled.button`
     position: relative;
     transform-origin: 1px;
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      width: 38px;
-      height: 5px;
+      width: 25px;
+      height: 2px;
     }
   }
   #one {
