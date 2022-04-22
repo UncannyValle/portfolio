@@ -82,7 +82,7 @@ const LayoutWrapper = styled.div`
 const Main = styled.main`
   max-width: 1080px;
   width: 100%;
-  margin: 4rem auto 0 auto;
+  margin: 0 auto;
   padding: 0 2rem;
 
   @media (max-width: 768px) {

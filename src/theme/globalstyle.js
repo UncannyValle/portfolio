@@ -90,7 +90,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     p {
       font-size: 1.5rem;
-      width: 90vw;
     }
   }
   @media (max-width: 520px) {

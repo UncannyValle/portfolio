@@ -13,7 +13,7 @@ const SkillsWrapper = styled.div`
   align-content: center;
   width: 100%;
   grid-gap: 10rem;
-  margin: 5rem auto;
+  margin: 0 auto;
   
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
