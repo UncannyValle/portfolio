@@ -27,7 +27,8 @@ const About = (props) => {
         </p>
         <ul className="fact-list">
           <li className="facts">
-            🧠  I'm learning Next.js, Node.js and Python.
+            🧠  I'm learning Next.js, Node.js and Python. Pretty much I want to
+            master the fullstack!
           </li>
           <li className="facts">
             🤝  I'm open to collaborating on creative endeavors, video games,
@@ -275,7 +276,11 @@ const About = (props) => {
           </a>
         </div>
         <h2 className="title">My GitHub Stats</h2>
-        <a href="http://www.github.com/uncannyvalle">
+        <a
+          href="http://www.github.com/uncannyvalle"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="github"
             src="https://github-readme-stats.vercel.app/api?username=uncannyvalle&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true"
@@ -292,6 +297,7 @@ const AboutSection = styled(SectionWrapper)`
     font-size: 2.5rem;
     color: var(--pink);
     margin-top: 5rem;
+    margin-bottom: 1rem;
   }
 `
 
@@ -308,11 +314,13 @@ const AboutWrapper = styled.div`
   .text {
     font-size: 1.25rem;
     color: white;
+    padding: 1rem;
   }
   .facts {
     color: white;
     text-align: left;
     padding: 0.5rem 5rem;
+    font-size: 1.25rem;
   }
 
   .skills {
@@ -329,7 +337,6 @@ const AboutWrapper = styled.div`
   }
   @media (max-width: 768px) {
     .text {
-      padding: 1rem;
     }
 
     .skills {
