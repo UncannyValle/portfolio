@@ -6,6 +6,7 @@
   "author": "Julian Valle <julianv@atolemedia.com>",
   "dependencies": {
     "@formspree/react": "^2.2.3",
+    "@react-three/fiber": "^8.0.12",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^3.5.0",
     "gatsby-background-image": "^1.1.1",
@@ -41,7 +42,8 @@
     "react-spring": "^9.2.1",
     "styled-components": "^5.2.3",
     "styled-icons": "^10.34.0",
-    "styled-reset": "^4.1.2"
+    "styled-reset": "^4.1.2",
+    "three": "^0.139.2"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0",
