@@ -14,44 +14,49 @@ const SkillsWrapper = styled.div`
   width: 100%;
   grid-gap: 10rem;
   margin: 0 auto;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
   }
 `
 
-export const Projects = (props) => {
+export const Projects = () => {
   const data = useStaticQuery(graphql`
     query images {
       atole: file(relativePath: { eq: "atole.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
         }
       }
       sapa: file(relativePath: { eq: "sapa.jpg" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
         }
       }
       calculator: file(relativePath: { eq: "calcutron.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
         }
       }
       marco: file(relativePath: { eq: "marco.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
         }
       }
       disney: file(relativePath: { eq: "disney.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
         }
       }
       onestop: file(relativePath: { eq: "onestop.png" }) {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED,  aspectRatio: 1.778)
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
+        }
+      }
+      three: file(relativePath: { eq: "three.png" }) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, aspectRatio: 1.778)
         }
       }
     }
@@ -59,12 +64,21 @@ export const Projects = (props) => {
 
   const skillList = [
     {
+      title: "Three.js Portfolio",
+      src: getImage(data.three),
+      alt: "threejs app",
+      site: "https://threejs-portfolio.netlify.app/",
+      text: "A portfolio site with 3D animations",
+      tech: "Three.js | JS | CSS | HTML | WebGL",
+      gitHub: "https://github.com/UncannyValle/3js-project",
+    },
+    {
       title: "Onestop Portal",
       src: getImage(data.onestop),
       alt: "Maryland onestop",
       site: "https://onestop.md.gov",
       text: "Project for the state of Maryland. Worked on Front End and design system.",
-      tech: "Vue | Ruby on Rails | Sass"
+      tech: "Vue | Ruby on Rails | Sass",
     },
     {
       title: "Disney+ Clone",
@@ -112,7 +126,6 @@ export const Projects = (props) => {
       tech: "React | JS | CSS | HTML | Netlify",
       gitHub: "https://github.com/UncannyValle/calcutron",
     },
-    
   ]
   const boxTrail = useTrail(skillList.length, {
     opacity: 1,
