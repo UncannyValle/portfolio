@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Contact from "../components/contact"
 import { Projects } from "../components/projects"
 import About from "../components/about"
+import TheScene from "../components/objects/scene"
+// import Box from "../components/objects/box"
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true)
@@ -14,13 +16,14 @@ const IndexPage = () => {
 
   return (
     <>
-        <Layout loading={loading}>
-          <Seo />
-          <Home />
-          <Projects />
-          <About />
-          <Contact />
-        </Layout>
+      <Layout loading={loading}>
+        <Seo />
+        <Home />
+        {/* <TheScene  /> */}
+        <Projects />
+        <About />
+        <Contact />
+      </Layout>
     </>
   )
 }
