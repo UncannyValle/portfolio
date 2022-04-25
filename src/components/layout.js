@@ -8,6 +8,7 @@ import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
 import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
 import { TwitterSquare } from "@styled-icons/fa-brands"
 import { StyledIconBase } from "@styled-icons/styled-icon"
+import { SpaceCanvas } from "./objects/SpaceCanvas"
 
 const Layout = ({ children, loading }) => {
   const data = useStaticQuery(graphql`
@@ -22,6 +23,7 @@ const Layout = ({ children, loading }) => {
 
   return (
     <LayoutWrapper className={loading ? "hidden" : "startup"}>
+      <SpaceCanvas/>
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>{children}</Main>
@@ -78,6 +80,13 @@ const LayoutWrapper = styled.div`
   &.startup {
     opacity: 1;
   }
+`
+const CanvasWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 `
 const Main = styled.main`
   max-width: 1080px;
