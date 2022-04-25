@@ -1,29 +1,34 @@
 import { useFrame } from "@react-three/fiber"
-import React, { useRef } from "react"
-import styled from "styled-components"
+import React, { useMemo, useRef, useState } from "react"
 import * as THREE from "three"
 
-const SpaceObject = () => {
-  // const myMesh = useRef()
+const SpaceObject = ({ color = "violet", ...meshProps }) => {
+  const meshRef = useRef()
+  const [isHovered, setHovered] = useState(false)
 
-  // useFrame(({ clock }) => {
-  //   myMesh.current.rotation.y = clock.getElapsedTime()
-  // })
+  useFrame(({ clock }) => {
+    meshRef.current.rotation.y = clock.getElapsedTime()
+    meshRef.current.rotation.x += THREE.MathUtils.randFloat(0.01, 0.05)
+  })
+
+  const colorChange = useMemo(() => {
+    if (isHovered) {
+      return "cyan"
+    }
+    return color
+  }, [color, isHovered])
 
   return (
-    <>
-      {[...Array(200)].map((e, id) => {
-        const [x, y, z] = Array(3)
-          .fill()
-          .map(() => THREE.MathUtils.randFloatSpread(200))
-        return (
-          <mesh position={[x, y, z]} key={id}>
-            <sphereGeometry args={[0.25, 24, 24]} />
-            <meshStandardMaterial color="#FFFFFF" />
-          </mesh>
-        )
-      })}
-    </>
+    <mesh
+      {...meshProps}
+      ref={meshRef}
+      onPointerOver={() => setHovered(true)}
+      onPointerLeave={() => setHovered(false)}
+    >
+      {/* <sphereGeometry args={[0.25, 24, 24]} /> */}
+      <boxGeometry ars={[3, 3, 3]} />
+      <meshStandardMaterial color={colorChange} />
+    </mesh>
   )
 }
 

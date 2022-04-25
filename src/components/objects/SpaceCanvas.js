@@ -2,13 +2,19 @@ import { Canvas } from "@react-three/fiber"
 import SpaceObject from "./SpaceObject"
 import React from "react"
 import styled from "styled-components"
+import * as THREE from "three"
 
 export const SpaceCanvas = () => {
   return (
     <CanvasWrapper>
       <Canvas>
-        <SpaceObject />
-        <ambientLight color="#FFFFFF" />
+        {[...Array(80)].map((e, i) => {
+          const [x, y, z] = Array(3)
+            .fill()
+            .map(() => THREE.MathUtils.randFloatSpread(100))
+          return <SpaceObject position={[x, y, z]} key={i} />
+        })}
+        <ambientLight color="#FFFFFF" intensity={0.2} />
         <directionalLight />
       </Canvas>
     </CanvasWrapper>

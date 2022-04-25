@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./navbar/header"
@@ -20,10 +20,20 @@ const Layout = ({ children, loading }) => {
       }
     }
   `)
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <LayoutWrapper className={loading ? "hidden" : "startup"}>
-      <SpaceCanvas/>
+      {!isMounted ||
+      navigator?.connection?.saveData ||
+      !matchMedia("(min-width: 768px)").matches ? null : (
+        <Suspense fallback={null}>
+          <SpaceCanvas />
+        </Suspense>
+      )}
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>{children}</Main>
@@ -81,18 +91,12 @@ const LayoutWrapper = styled.div`
     opacity: 1;
   }
 `
-const CanvasWrapper = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-`
 const Main = styled.main`
   max-width: 1080px;
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
+  z-index: 100;
 
   @media (max-width: 768px) {
     padding: 0 1.5rem;
