@@ -6,6 +6,7 @@ import Contact from "../components/contact"
 import { Projects } from "../components/projects"
 import About from "../components/about"
 
+
 const IndexPage = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -14,13 +15,13 @@ const IndexPage = () => {
 
   return (
     <>
-        <Layout loading={loading}>
-          <Seo />
-          <Home />
-          <Projects />
-          <About />
-          <Contact />
-        </Layout>
+      <Layout loading={loading}>
+        <Seo />
+        <Home />
+        <Projects />
+        <About />
+        <Contact />
+      </Layout>
     </>
   )
 }

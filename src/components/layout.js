@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./navbar/header"
@@ -8,6 +8,7 @@ import { GithubSquare } from "@styled-icons/fa-brands/GithubSquare"
 import { LogoInstagram } from "@styled-icons/ionicons-solid/LogoInstagram"
 import { TwitterSquare } from "@styled-icons/fa-brands"
 import { StyledIconBase } from "@styled-icons/styled-icon"
+import { SpaceCanvas } from "./objects/SpaceCanvas"
 
 const Layout = ({ children, loading }) => {
   const data = useStaticQuery(graphql`
@@ -19,9 +20,20 @@ const Layout = ({ children, loading }) => {
       }
     }
   `)
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <LayoutWrapper className={loading ? "hidden" : "startup"}>
+      {!isMounted ||
+      navigator?.connection?.saveData ||
+      !matchMedia("(min-width: 768px)").matches ? null : (
+        <Suspense fallback={null}>
+          <SpaceCanvas />
+        </Suspense>
+      )}
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>{children}</Main>
@@ -84,6 +96,7 @@ const Main = styled.main`
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
+  z-index: 100;
 
   @media (max-width: 768px) {
     padding: 0 1.5rem;
