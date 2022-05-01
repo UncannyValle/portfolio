@@ -38,6 +38,8 @@ const Seo = ({ description, title, article, image, keywords }) => {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.image && <meta property="og:image:type" content="image/png" />}
+      {seo.image && <meta property="og:image:secure_url" content={seo.image} />}
       {seo.keywords && <meta name="keywords" content={seo.keywords} />}
       <meta
         name="google-site-verification"
@@ -45,8 +47,9 @@ const Seo = ({ description, title, article, image, keywords }) => {
       />
 
       <meta name="twitter:card" content="summary_large_image" />
+      {seo.title && <meta property="twitter:title" content={seo.title} />}
       {twitterUsername && (
-        <meta name="twitterL:description" content={seo.description} />
+        <meta name="twitter:description" content={seo.description} />
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
