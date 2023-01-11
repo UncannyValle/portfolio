@@ -28,7 +28,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-source-sanity": "^7.0.7",
-    "gatsby-transformer-remark": "^4.3.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.6.0",
     "gsap": "^3.6.0",
     "modern-normalize": "^1.1.0",
